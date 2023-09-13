@@ -1,3 +1,5 @@
 # Kobweb ignores
 .kobweb/*
 !.kobweb/conf.yaml
+# Generated static website for production
+!.kobweb/site
