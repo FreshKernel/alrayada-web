@@ -20,7 +20,7 @@ import com.ahmedhnewa.alrayada_landing_page.sections.service.ServiceSection
 import com.ahmedhnewa.alrayada_landing_page.sections.testimonial.TestimonialSection
 import org.jetbrains.compose.web.dom.Text
 
-enum class Section(
+enum class AppSection(
     val id: String,
     val titleRes: StringRes,
     val subtitleRes: StringRes,
@@ -126,6 +126,6 @@ enum class Section(
     companion object {
 
         // In header
-        val navigationItems: List<Section> = listOf(Home, About, Service, Portfolio, Experience, Products)
+        val navigationItems: List<AppSection> = listOf(Home, About, Service, Portfolio, Experience, Products)
     }
 }
