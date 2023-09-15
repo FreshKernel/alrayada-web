@@ -26,31 +26,30 @@ fun MyImage(
     variant: ComponentVariant? = null,
     lazyLoading: Boolean = true
 ) {
-    var isLoading by remember { mutableStateOf(true) }
+//    var isLoading by remember { mutableStateOf(true) }
     val imageId = "imageId${contentDescription}"
 
-    LaunchedEffect(Unit) {
-        document.getElementById(imageId)!!
-            .addEventListener("load", {
-                isLoading = false
-                println("Load is done.")
-            })
-    }
+//    LaunchedEffect(Unit) {
+//        document.getElementById(imageId)!!
+//            .addEventListener("load", {
+//                isLoading = false
+//            })
+//    }
 
-    if (isLoading) {
-        Center(modifier = modifier) {
-            CircularProgressIndicator()
-        }
-    }
+//    if (isLoading) {
+//        Center(modifier = modifier) {
+//            CircularProgressIndicator()
+//        }
+//    }
 
     Image(
         src = src,
         desc = contentDescription,
         modifier = modifier
-            .visibility(
-                if (isLoading) Visibility.Hidden
-                else Visibility.Visible
-            )
+//            .visibility(
+//                if (isLoading) Visibility.Hidden
+//                else Visibility.Visible
+//            )
             .id(imageId)
             .attrsModifier {
                 if (lazyLoading) {

@@ -2,7 +2,7 @@ package com.ahmedhnewa.alrayada_landing_page.sections.contact
 
 import androidx.compose.runtime.*
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
-import com.ahmedhnewa.alrayada_landing_page.models.Section
+import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.sections.contact.components.ContactForm
 import com.ahmedhnewa.alrayada_landing_page.utils.ObserveViewportEntered
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.Constants
@@ -40,7 +40,7 @@ private fun ContactContent() {
 
     if (Constants.ANIMATION_ENABLED) {
         ObserveViewportEntered(
-            sectionId = Section.Contact.id,
+            sectionId = AppSection.Contact.id,
             distanceFromTop = 500.0
         ) {
             animatedRotation = 10.0
@@ -67,7 +67,7 @@ private fun ContactContent() {
                     rotate(animatedRotation.deg)
                 }
                 .transition(CSSTransition(property = "transform", duration = 500.ms)),
-            section = Section.Contact,
+            appSection = AppSection.Contact,
             alignment = Alignment.CenterHorizontally
         )
         ContactForm()

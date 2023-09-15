@@ -5,7 +5,7 @@ import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
 import com.ahmedhnewa.alrayada_landing_page.sections.main.compoments.MyHeader
-import com.ahmedhnewa.alrayada_landing_page.models.Section
+import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.sections.main.compoments.MobileNavigation
 import com.ahmedhnewa.alrayada_landing_page.sections.main.compoments.SocialBar
@@ -14,6 +14,7 @@ import com.ahmedhnewa.alrayada_landing_page.utils.constants.Constants
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.PublicRes
 import com.ahmedhnewa.alrayada_landing_page.utils.extensions.asWebPath
 import com.ahmedhnewa.alrayada_landing_page.utils.extensions.removeCharAtIndex
+import com.ahmedhnewa.alrayada_landing_page.utils.isLastDayOfTheYear
 import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.css.functions.grayscale
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -24,7 +25,6 @@ import com.varabyte.kobweb.compose.ui.*
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
-import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.breakpoint.displayBetween
 import com.varabyte.kobweb.silk.components.layout.breakpoint.displayIfAtLeast
@@ -34,11 +34,12 @@ import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.hover
-import com.varabyte.kobweb.silk.components.style.toAttrs
 import com.varabyte.kobweb.silk.components.style.toModifier
+import kotlinx.browser.window
 import kotlinx.coroutines.delay
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Button
+import org.jetbrains.compose.web.dom.I
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 
@@ -56,6 +57,7 @@ private fun MainBackground() = MyImage(
     modifier = Modifier.fillMaxSize().objectFit(ObjectFit.Cover),
     src = PublicRes.Assets.Svg.BACKGROUND,
     contentDescription = "Background Image",
+    lazyLoading = false
 )
 
 @Composable
@@ -96,7 +98,8 @@ private fun MainContent() = Column(
 
 val helloTextStyle by ComponentStyle {
     base {
-        Modifier.scale(1.0)
+        Modifier
+            .scale(1.0)
             .margin(topBottom = 0.px)
             .fontSize(45.px)
             .fontWeight(FontWeight.Normal)
@@ -113,22 +116,33 @@ val helloTextStyle by ComponentStyle {
 
 @Composable
 private fun MainText() {
+    val firstChar = 'H'
     var helloText by remember { mutableStateOf("Hello, We are") }
     @Composable
     fun AnimateHelloText() {
+        if (!isLastDayOfTheYear()) {
+            return
+        }
+        if (window.matchMedia("(max-width: 768px").matches) {
+            return
+        }
+
         var isPlusOperator = true
-        LaunchedEffect(true) {
+
+        LaunchedEffect(Unit) {
+            delay(2000L)
             val value = helloText
             helloText = ""
 
             while (true) {
+
                 for (charIndex in value.indices) {
                     if (isPlusOperator) {
                         helloText += value[charIndex]
                         delay(200L)
                         continue
                     }
-                    if (helloText[helloText.lastIndex] == 'H') {
+                    if (helloText[helloText.lastIndex] == firstChar) {
                         isPlusOperator = !isPlusOperator
                         continue
                     }
@@ -149,7 +163,10 @@ private fun MainText() {
         SocialBar(modifier = Modifier.displayIfAtLeast(Breakpoint.LG))
         Column {
             P(
-                attrs = helloTextStyle.toAttrs()
+                attrs = helloTextStyle
+                    .toModifier()
+                    .displayIfAtLeast(Breakpoint.MD)
+                    .toAttrs()
             ) {
                 Text(helloText)
             }
@@ -202,13 +219,15 @@ private fun MainText() {
                     .margin(bottom = 20.px, top = 10.px)
                     .toAttrs()
             ) {
+                val text = stringResource(StringRes.ContactUs)
                 Link(
                     modifier = Modifier
                         .color(Colors.White)
-                        .textDecorationLine(TextDecorationLine.None),
-                    path = Section.Contact.id.asWebPath(),
+                        .textDecorationLine(TextDecorationLine.None)
+                        .title(text),
+                    path = AppSection.Contact.id.asWebPath(),
                     openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB,
-                    text = stringResource(StringRes.ContactUs),
+                    text = text,
                 )
             }
         }
@@ -237,6 +256,7 @@ fun MainImage() = Column(
     MyImage(
         modifier = Modifier.fillMaxWidth().objectFit(ObjectFit.Cover),
         src = PublicRes.Assets.Images.MAIN,
-        contentDescription = "Developer photo",
+        contentDescription = "Person Photo",
+        lazyLoading = false
     )
 }

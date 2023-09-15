@@ -34,6 +34,7 @@ fun IframeMap(modifier: Modifier = Modifier, breakpoint: Breakpoint) {
     Iframe(
         attrs = Modifier
             .id(iframeMapId)
+            .title("Google map")
             .fillMaxWidth(
                 if (breakpoint > Breakpoint.LG) 65.percent
                 else if (breakpoint >= Breakpoint.MD) 70.percent

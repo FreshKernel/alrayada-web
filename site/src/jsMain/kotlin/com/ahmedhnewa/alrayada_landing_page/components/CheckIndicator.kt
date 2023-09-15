@@ -1,16 +1,15 @@
 package com.ahmedhnewa.alrayada_landing_page.components
 
 import androidx.compose.runtime.Composable
+import com.ahmedhnewa.alrayada_landing_page.components.fa.FaCheck
+import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.border
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.padding
-import com.varabyte.kobweb.silk.components.icons.fa.FaCheck
-import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import org.jetbrains.compose.web.css.CSSColorValue
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.px

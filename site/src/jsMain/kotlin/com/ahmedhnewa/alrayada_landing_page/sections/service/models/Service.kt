@@ -1,7 +1,7 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.service.models
 
+import com.ahmedhnewa.alrayada_landing_page.components.fa.IconCategory
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
-import com.varabyte.kobweb.silk.components.icons.fa.IconCategory
 
 enum class Service(
     val icon: String,

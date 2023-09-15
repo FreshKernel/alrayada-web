@@ -1,6 +1,9 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.main.compoments
 
 import androidx.compose.runtime.Composable
+import com.ahmedhnewa.alrayada_landing_page.components.fa.FaIcon
+import com.ahmedhnewa.alrayada_landing_page.components.fa.IconCategory
+import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
 import com.ahmedhnewa.alrayada_landing_page.models.SocialMediaLink
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -10,9 +13,6 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
-import com.varabyte.kobweb.silk.components.icons.fa.FaIcon
-import com.varabyte.kobweb.silk.components.icons.fa.IconCategory
-import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.hover
@@ -78,7 +78,9 @@ val SocialLinkItemStyle by ComponentStyle {
 private fun SocialLink(socialMediaLink: SocialMediaLink, row: Boolean) {
     Link(
         path = socialMediaLink.path,
-        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
+        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB,
+        modifier = Modifier
+            .title(socialMediaLink.name)
     ) {
         val isLastOne = socialMediaLink == SocialMediaLink.entries.last()
         FaIcon(

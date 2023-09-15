@@ -6,7 +6,7 @@ import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
-import com.ahmedhnewa.alrayada_landing_page.models.Section
+import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.sections.about.models.Skill
 import com.ahmedhnewa.alrayada_landing_page.utils.ObserveViewportEntered
@@ -20,10 +20,8 @@ import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.attrsModifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
-import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.components.layout.numColumns
@@ -88,7 +86,7 @@ private fun AboutMe() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         SectionTitle(
-            section = Section.About,
+            appSection = AppSection.About,
             alignment = Alignment.CenterHorizontally
         )
         P(
@@ -117,7 +115,7 @@ private fun AboutMeSkills() {
 
     if (Constants.ANIMATION_ENABLED) {
         ObserveViewportEntered(
-            sectionId = Section.About.id,
+            sectionId = AppSection.About.id,
             distanceFromTop = 600.0,
             onViewportEntered = {
                 Skill.entries.forEach { skill ->

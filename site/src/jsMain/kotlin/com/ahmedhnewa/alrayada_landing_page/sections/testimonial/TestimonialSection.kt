@@ -2,7 +2,7 @@ package com.ahmedhnewa.alrayada_landing_page.sections.testimonial
 
 import androidx.compose.runtime.*
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
-import com.ahmedhnewa.alrayada_landing_page.models.Section
+import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.sections.testimonial.componenets.NavigationIcon
 import com.ahmedhnewa.alrayada_landing_page.sections.testimonial.componenets.TestimonialCard
 import com.ahmedhnewa.alrayada_landing_page.sections.testimonial.models.Testimonial
@@ -58,7 +58,7 @@ private fun TestimonialContent() {
             modifier = Modifier
                 .fillMaxWidth()
                 .margin(bottom = 30.px),
-            section = Section.Testimonial,
+            appSection = AppSection.Testimonial,
             alignment = Alignment.CenterHorizontally
         )
         TestimonialCards(

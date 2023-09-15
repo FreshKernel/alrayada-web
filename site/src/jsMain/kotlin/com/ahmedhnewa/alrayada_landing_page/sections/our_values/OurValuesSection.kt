@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
-import com.ahmedhnewa.alrayada_landing_page.models.Section
+import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.sections.our_values.components.OurValueItem
 import com.ahmedhnewa.alrayada_landing_page.sections.our_values.models.OurValueModel
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -51,7 +51,7 @@ private fun OurValuesContent() {
             SectionTitle(
                 modifier = Modifier
                     .margin(bottom = 40.px),
-                section = Section.OurValues,
+                appSection = AppSection.OurValues,
                 alignment = Alignment.Start
             )
             OurValuesDesc()

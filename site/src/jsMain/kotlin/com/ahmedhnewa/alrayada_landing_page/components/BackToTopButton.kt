@@ -1,6 +1,8 @@
 package com.ahmedhnewa.alrayada_landing_page.components
 
 import androidx.compose.runtime.*
+import com.ahmedhnewa.alrayada_landing_page.components.fa.FaArrowUp
+import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Cursor
@@ -13,8 +15,6 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.styleModifier
-import com.varabyte.kobweb.silk.components.icons.fa.FaArrowUp
-import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.hover

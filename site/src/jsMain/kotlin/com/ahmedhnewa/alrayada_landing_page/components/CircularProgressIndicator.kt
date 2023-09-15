@@ -25,6 +25,7 @@ fun CircularProgressIndicator(modifier: Modifier = Modifier) {
             .toAttrs()
     ) {
 
+
         Div(
             attrs = Modifier
                 .fillMaxSize()

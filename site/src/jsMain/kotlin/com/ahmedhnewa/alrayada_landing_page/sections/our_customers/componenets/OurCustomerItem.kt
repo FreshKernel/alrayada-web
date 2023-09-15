@@ -2,6 +2,9 @@ package com.ahmedhnewa.alrayada_landing_page.sections.our_customers.componenets
 
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.core.CenterHorizontally
+import com.ahmedhnewa.alrayada_landing_page.components.fa.FaIcon
+import com.ahmedhnewa.alrayada_landing_page.components.fa.IconCategory
+import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.sections.our_customers.models.OurCustomer
@@ -11,13 +14,8 @@ import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
-import com.varabyte.kobweb.silk.components.icons.fa.FaIcon
-import com.varabyte.kobweb.silk.components.icons.fa.FaLock
-import com.varabyte.kobweb.silk.components.icons.fa.IconCategory
-import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.P

@@ -2,22 +2,17 @@ package com.ahmedhnewa.alrayada_landing_page.sections.our_values.components
 
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.CheckIndicator
-import com.ahmedhnewa.alrayada_landing_page.components.core.CenterVertically
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.sections.our_values.models.OurValueModel
 import com.varabyte.kobweb.compose.css.FontWeight
-import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
-import com.varabyte.kobweb.silk.components.icons.fa.FaCheck
-import com.varabyte.kobweb.silk.components.icons.fa.FaSquareCheck
 import com.varabyte.kobweb.silk.components.text.SpanText
 import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.dom.CheckboxInput
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 

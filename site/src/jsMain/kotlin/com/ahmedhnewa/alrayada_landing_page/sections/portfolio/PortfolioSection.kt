@@ -2,7 +2,9 @@ package com.ahmedhnewa.alrayada_landing_page.sections.portfolio
 
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
-import com.ahmedhnewa.alrayada_landing_page.models.Section
+import com.ahmedhnewa.alrayada_landing_page.components.fa.FaArrowLeft
+import com.ahmedhnewa.alrayada_landing_page.components.fa.FaArrowRight
+import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.sections.portfolio.components.PORTFOLIO_CARD_HEIGHT
 import com.ahmedhnewa.alrayada_landing_page.sections.portfolio.components.PortfolioCard
 import com.ahmedhnewa.alrayada_landing_page.sections.portfolio.models.Portfolio
@@ -16,8 +18,6 @@ import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.icons.fa.FaArrowLeft
-import com.varabyte.kobweb.silk.components.icons.fa.FaArrowRight
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
@@ -51,7 +51,7 @@ private fun PortfolioContent() {
             SectionTitle(
                 modifier = Modifier.fillMaxWidth()
                     .margin(bottom = 25.px),
-                section = Section.Portfolio,
+                appSection = AppSection.Portfolio,
             )
             PortfolioCards(
                 modifier = Modifier.margin(bottom = 25.px),

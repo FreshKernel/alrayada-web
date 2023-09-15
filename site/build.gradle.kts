@@ -32,10 +32,14 @@ kobweb {
                     sizes = "16x16"
                     href = "/favicon-16x16.png"
                 }
-                link {
-                    rel = "manifest"
-                    href = "/site.webmanifest"
-                }
+                link(
+                    "/site.webmanifest",
+                    "manifest"
+                )
+                link(
+                    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css",
+                    "stylesheet"
+                )
             }
             description.set("Landing page for Alrayada Alarabiah company developed by Ahmed Hnewa and powered with kotlin and kobweb")
         }
@@ -58,6 +62,10 @@ kotlin {
                 implementation(libs.kobweb.core)
                 implementation(libs.kobweb.silk.core)
                 implementation(libs.kobweb.silk.icons.fa)
+//                implementation(npm("@fortawesome/fontawesome-svg-core", "6.4.2"))
+//                implementation(npm("@fortawesome/free-brands-svg-icons", "6.4.2"))
+//                implementation(npm("@fortawesome/free-regular-svg-icons", "6.4.2"))
+//                implementation(npm("@fortawesome/free-solid-svg-icons", "6.4.2"))
 //                implementation(libs.kobwebx.markdown)
             }
         }

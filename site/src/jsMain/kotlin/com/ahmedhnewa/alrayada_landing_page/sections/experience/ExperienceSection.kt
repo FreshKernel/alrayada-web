@@ -2,7 +2,7 @@ package com.ahmedhnewa.alrayada_landing_page.sections.experience
 
 import androidx.compose.runtime.*
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
-import com.ahmedhnewa.alrayada_landing_page.models.Section
+import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.sections.experience.componenets.ExperienceCard
 import com.ahmedhnewa.alrayada_landing_page.sections.experience.models.Experience
 import com.ahmedhnewa.alrayada_landing_page.utils.ObserveViewportEntered
@@ -36,7 +36,7 @@ private fun ExperienceContent() {
 
     if (Constants.ANIMATION_ENABLED) {
         ObserveViewportEntered(
-            sectionId = Section.Experience.id,
+            sectionId = AppSection.Experience.id,
             distanceFromTop = 500.0,
         ) {
             animatedMargin = 50
@@ -57,7 +57,7 @@ private fun ExperienceContent() {
                     if (breakpoint >= Breakpoint.MD) 60.percent
                     else 90.percent
                 ),
-            section = Section.Experience,
+            appSection = AppSection.Experience,
         )
         val experiences = Experience.entries
         experiences.forEach { experience ->

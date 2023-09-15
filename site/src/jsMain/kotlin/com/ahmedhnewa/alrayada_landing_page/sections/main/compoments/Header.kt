@@ -2,8 +2,11 @@ package com.ahmedhnewa.alrayada_landing_page.sections.main.compoments
 
 import androidx.compose.runtime.*
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
+import com.ahmedhnewa.alrayada_landing_page.components.fa.FaIcon
+import com.ahmedhnewa.alrayada_landing_page.components.fa.IconCategory
+import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
-import com.ahmedhnewa.alrayada_landing_page.models.Section
+import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.PublicRes
 import com.ahmedhnewa.alrayada_landing_page.utils.extensions.asWebPath
@@ -17,10 +20,6 @@ import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
-import com.varabyte.kobweb.silk.components.graphics.Image
-import com.varabyte.kobweb.silk.components.icons.fa.FaIcon
-import com.varabyte.kobweb.silk.components.icons.fa.IconCategory
-import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.layout.breakpoint.displayBetween
 import com.varabyte.kobweb.silk.components.layout.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.components.layout.breakpoint.displayUntil
@@ -33,6 +32,7 @@ import org.jetbrains.compose.web.css.deg
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.dom.Header
 import org.jetbrains.compose.web.dom.Nav
 
 @OptIn(ExperimentalComposeWebApi::class)
@@ -70,12 +70,10 @@ val BrandingLogoStyle by ComponentStyle {
     }
 }
 
-// TODO: Add HTML 5 Header
 @Composable
-fun MyHeader() /*= Header(
-    attrs = Modifier.fillMaxWidth().toAttrs()
-) */ {
-    val content: @Composable () -> Unit = {
+fun MyHeader() {
+    @Composable
+    fun SharedContent() = Header {
         Row(
             modifier = Modifier.userSelect(UserSelect.None),
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -85,6 +83,7 @@ fun MyHeader() /*= Header(
             EndSide()
         }
     }
+
     val sharedModifier = Modifier
         .margin(topBottom = 50.px)
         .userSelect(UserSelect.None)
@@ -93,14 +92,14 @@ fun MyHeader() /*= Header(
             .then(sharedModifier)
             .toAttrs()
     ) {
-        content()
+        SharedContent()
     }
     Nav(
         attrs = Modifier.displayBetween(Breakpoint.SM, Breakpoint.LG).fillMaxWidth(90.percent)
             .then(sharedModifier)
             .toAttrs()
     ) {
-        content()
+        SharedContent()
     }
 }
 
@@ -114,6 +113,7 @@ private fun StartSide(modifier: Modifier = Modifier) {
             modifier = BrandingLogoStyle.toModifier(),
             src = PublicRes.Assets.Svg.LOGO,
             contentDescription = "Logo",
+            lazyLoading = false
         )
     }
 }
@@ -131,8 +131,10 @@ private fun EndSide(
             .onClick {
                 isMenuOpened = !isMenuOpened
 
-                val homeSection = document.getElementById(Section.Home.id) ?: throw NullPointerException("Can't find main section")
-                val mobileNavigation = homeSection.querySelector("#mobileNavigationItems") ?: throw NullPointerException("Can't find mobileNavigationItems")
+                val homeAppSection = document.getElementById(AppSection.Home.id)
+                    ?: throw NullPointerException("Can't find ${AppSection.Home.name}")
+                val mobileNavigation = homeAppSection.querySelector("#mobileNavigationItems")
+                    ?: throw NullPointerException("Can't find mobileNavigationItems")
                 mobileNavigation.classList.toggle("hidden")
                 mobileNavigation.classList.toggle("visible")
             },
@@ -155,15 +157,17 @@ private fun EndSide(
 
 @Composable
 fun NavigationLinks(eachItemModifier: Modifier = Modifier) {
-    Section.navigationItems.forEach { section ->
+    AppSection.navigationItems.forEach { section ->
+        val text = stringResource(section.titleRes)
         Link(
             path = section.id.asWebPath(),
-            text = stringResource(section.titleRes),
+            text = text,
             modifier = NavigationItemStyle
                 .toModifier()
                 .padding(right = 30.px)
                 .fontSize(18.px)
                 .fontWeight(FontWeight.Normal)
+                .title(text)
                 .textDecorationLine(TextDecorationLine.None)
                 .then(eachItemModifier),
         )

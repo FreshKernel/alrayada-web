@@ -1,6 +1,9 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.testimonial.componenets
 
 import androidx.compose.runtime.Composable
+import com.ahmedhnewa.alrayada_landing_page.components.fa.FaCircle
+import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
+import com.ahmedhnewa.alrayada_landing_page.components.fa.IconStyle
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Cursor
@@ -8,9 +11,6 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.transition
-import com.varabyte.kobweb.silk.components.icons.fa.FaCircle
-import com.varabyte.kobweb.silk.components.icons.fa.IconSize
-import com.varabyte.kobweb.silk.components.icons.fa.IconStyle
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.hover
 import com.varabyte.kobweb.silk.components.style.toModifier

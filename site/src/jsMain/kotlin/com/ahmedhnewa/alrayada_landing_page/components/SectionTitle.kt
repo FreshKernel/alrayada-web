@@ -2,7 +2,7 @@ package com.ahmedhnewa.alrayada_landing_page.components
 
 import androidx.compose.runtime.*
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
-import com.ahmedhnewa.alrayada_landing_page.models.Section
+import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.utils.ObserveViewportEntered
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.Constants
@@ -25,7 +25,7 @@ import org.jetbrains.compose.web.dom.Text
 @Composable
 fun SectionTitle(
     modifier: Modifier = Modifier,
-    section: Section,
+    appSection: AppSection,
     alignment: Alignment.Horizontal = Alignment.Start
 ) {
     val scope = rememberCoroutineScope()
@@ -34,7 +34,7 @@ fun SectionTitle(
 
     if (Constants.ANIMATION_ENABLED) {
         ObserveViewportEntered(
-            sectionId = section.id,
+            sectionId = appSection.id,
             distanceFromTop = 600.0,
         ) {
             scope.launch {
@@ -55,7 +55,7 @@ fun SectionTitle(
     }
     Column(modifier = modifier, horizontalAlignment = alignment) {
         ParagraphText(
-            stringResource(section.titleRes),
+            stringResource(appSection.titleRes),
             modifier = Modifier
                 .textAlign(textAlign)
                 .margin(
@@ -70,7 +70,7 @@ fun SectionTitle(
             color = ThemeColors.Primary.colorValue
         )
         ParagraphText(
-            stringResource(section.subtitleRes),
+            stringResource(appSection.subtitleRes),
             modifier = Modifier
                 .textAlign(textAlign)
                 .margin(

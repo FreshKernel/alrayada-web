@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
-import com.ahmedhnewa.alrayada_landing_page.models.Section
+import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.sections.service.components.ServiceCard
 import com.ahmedhnewa.alrayada_landing_page.sections.service.models.Service
 import com.varabyte.kobweb.compose.css.FontWeight
@@ -44,7 +44,7 @@ private fun ServiceContent() {
     ) {
         SectionTitle(
             modifier = Modifier.fillMaxWidth().margin(bottom = 20.px),
-            section = Section.Service,
+            appSection = AppSection.Service,
             alignment = Alignment.CenterHorizontally
         )
         ServiceSectionText(

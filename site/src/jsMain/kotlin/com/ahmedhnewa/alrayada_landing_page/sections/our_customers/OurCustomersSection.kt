@@ -2,17 +2,14 @@ package com.ahmedhnewa.alrayada_landing_page.sections.our_customers
 
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
-import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
-import com.ahmedhnewa.alrayada_landing_page.models.Section
+import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.sections.our_customers.componenets.OurCustomerItem
 import com.ahmedhnewa.alrayada_landing_page.sections.our_customers.models.OurCustomer
-import com.ahmedhnewa.alrayada_landing_page.utils.constants.PublicRes
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
@@ -20,7 +17,6 @@ import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.AlignContent
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.dom.Text
 
 @Composable
 fun OurCustomersSection() = Box(
@@ -44,7 +40,7 @@ private fun OurCustomersContent() {
     ) {
         // TODO: Create Custom Wave component maybe
         SectionTitle(
-            section = Section.OurCustomers,
+            appSection = AppSection.OurCustomers,
             modifier = Modifier.fillMaxWidth(
                 if (breakpoint >= Breakpoint.MD) 60.percent
                 else 90.percent

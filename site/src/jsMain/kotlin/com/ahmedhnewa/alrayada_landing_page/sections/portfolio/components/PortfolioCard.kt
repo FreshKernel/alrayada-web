@@ -2,6 +2,8 @@ package com.ahmedhnewa.alrayada_landing_page.sections.portfolio.components
 
 import androidx.compose.runtime.*
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
+import com.ahmedhnewa.alrayada_landing_page.components.fa.FaArrowUpRightFromSquare
+import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.sections.portfolio.PortfolioSectionStyle
 import com.ahmedhnewa.alrayada_landing_page.sections.portfolio.models.Portfolio
@@ -20,9 +22,6 @@ import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
-import com.varabyte.kobweb.silk.components.graphics.Image
-import com.varabyte.kobweb.silk.components.icons.fa.FaArrowUpRightFromSquare
-import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.toModifier
 import kotlinx.browser.window
@@ -41,6 +40,7 @@ fun PortfolioCard(
     Link(
         modifier = PortfolioSectionStyle.toModifier()
             .textDecorationLine(TextDecorationLine.None)
+            .title(portfolio.title)
             .userSelect(UserSelect.None),
         path = portfolio.link,
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB

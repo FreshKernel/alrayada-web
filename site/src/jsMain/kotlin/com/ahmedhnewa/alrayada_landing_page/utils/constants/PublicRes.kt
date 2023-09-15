@@ -8,35 +8,25 @@ object PublicRes {
             private const val PATH = "${Assets.PATH}/images"
             const val MAIN = "$PATH/main_image.webp"
             const val ABOUT = "$PATH/about_image.webp"
-            const val FRESH_PLATFORM = "$PATH/fresh_platform.png"
-            const val DR_RIADH_LAB = "$PATH/dr_riadh_lab.png"
-            const val ALRAYADA_PROJECT = "$PATH/alrayada_project.png"
-            const val WALLPAPER_ENGINE = "$PATH/wallpaper_engine.jpg"
-            const val AHMED_HNEWA_SOCIAL_MEDIA = "$PATH/ahmedhnewa_social_media.png"
 
             object Brands {
                 private const val PATH = "${Images.PATH}/brands"
-                const val SNIBE_LOGO = "${PATH}/snibe_logo.jpg"
-                const val DIRUI_LOGO = "${PATH}/dirui_logo.png"
-                const val LIFOTRONIC_LOGO = "${PATH}/lifotronic_logo.png"
-                const val URIT = "${PATH}/urit_logo.jpg"
+                const val SNIBE_LOGO = "${PATH}/snibe_logo.webp"
+                const val DIRUI_LOGO = "${PATH}/dirui_logo.webp"
+                const val LIFOTRONIC_LOGO = "${PATH}/lifotronic_logo.webp"
+                const val URIT = "${PATH}/urit_logo.webp"
             }
 
             object Labs {
                 private const val PATH = "${Images.PATH}/labs"
-                const val MEDICAL_LAB1 = "$PATH/medical_lab1.jpeg"
-                const val MEDICAL_LAB2 = "$PATH/medical_lab2.jpeg"
+                const val MEDICAL_LAB1 = "$PATH/medical_lab1.webp"
+                const val MEDICAL_LAB2 = "$PATH/medical_lab2.webp"
             }
 
             object Testimonials {
                 private const val PATH = "${Images.PATH}/testimonials"
 
-                const val ALBERT_EINSTEIN = "$PATH/albert_einstein.jpg"
-                const val STEVE_JOBS = "$PATH/steve_jobs.jpeg"
-                const val THOMAS_EDISON = "$PATH/thomas_edison.jpg"
-                const val JOHN_WICK = "$PATH/john_wick.jpg"
-                const val UNCLE_BOB = "$PATH/uncle_bob.png"
-                const val MARCIN_IWINSKI = "$PATH/marcin_iwinski.jpg"
+//                const val ALBERT_EINSTEIN = "$PATH/albert_einstein.jpg"
             }
         }
 

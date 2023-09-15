@@ -1,11 +1,10 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.location
 
 import androidx.compose.runtime.Composable
-import com.ahmedhnewa.alrayada_landing_page.components.CircularProgressIndicator
 import com.ahmedhnewa.alrayada_landing_page.components.core.Center
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
-import com.ahmedhnewa.alrayada_landing_page.models.Section
+import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.sections.location.components.IframeMap
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.PublicRes
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -13,7 +12,6 @@ import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
@@ -47,7 +45,7 @@ private fun LocationContent() {
                     else 100.percent
                 )
                 .margin(bottom = 40.px),
-            section = Section.Location,
+            appSection = AppSection.Location,
             alignment = Alignment.Start
         )
         Box(

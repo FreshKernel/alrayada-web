@@ -1,6 +1,8 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.service.components
 
 import androidx.compose.runtime.Composable
+import com.ahmedhnewa.alrayada_landing_page.components.fa.FaIcon
+import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.sections.service.ServiceCardStyle
@@ -12,8 +14,6 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.attrsModifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
-import com.varabyte.kobweb.silk.components.icons.fa.FaIcon
-import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.style.toModifier
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.px
