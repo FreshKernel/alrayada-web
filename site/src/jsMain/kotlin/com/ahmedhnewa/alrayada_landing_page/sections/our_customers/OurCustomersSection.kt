@@ -38,7 +38,6 @@ private fun OurCustomersContent() {
             ),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // TODO: Create Custom Wave component maybe
         SectionTitle(
             appSection = AppSection.OurCustomers,
             modifier = Modifier.fillMaxWidth(

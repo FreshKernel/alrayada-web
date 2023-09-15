@@ -30,7 +30,7 @@ fun OurCustomerItem(
         modifier = Modifier
             .minHeight(300.px)
             .maxWidth(250.px)
-            .padding(8.px)
+            .padding(16.px)
             .then(modifier)
     ) {
         ImageBox(

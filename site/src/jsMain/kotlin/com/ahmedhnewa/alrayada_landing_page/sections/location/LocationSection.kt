@@ -12,6 +12,7 @@ import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.silk.components.layout.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
@@ -49,12 +50,15 @@ private fun LocationContent() {
             alignment = Alignment.Start
         )
         Box(
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier
+                .fillMaxSize()
         ) {
             MyImage(
                 src = PublicRes.Assets.Svg.Waves.WAVE_1,
                 contentDescription = "Wave Image",
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .displayIfAtLeast(Breakpoint.SM)
+                    .fillMaxWidth()
             )
             Center {
                 IframeMap(breakpoint = breakpoint)

@@ -1,20 +1,77 @@
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
 import kotlinx.html.link
+import kotlinx.html.meta
+import org.jetbrains.kotlin.psi.propertyVisitor
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.kobweb.application)
-//    alias(libs.plugins.kobwebx.markdown)
 }
 
 group = "com.ahmedhnewa.alrayada_landing_page"
 version = "1.0-SNAPSHOT"
 
+val webDesc =
+    "Landing page for Alrayada Alarabiah company developed by Ahmed Hnewa and powered with kotlin and kobweb"
+val image = ""
+
 kobweb {
     app {
         index {
             head.add {
+                meta(
+                    name = "apple-mobile-web-app-capable",
+                    content = "yes"
+                )
+                meta(
+                    name = "author",
+                    content = "Ahmed Hnewa"
+                )
+//                meta {
+//                    httpEquiv = "Content-Security-Policy"
+//                    content = "default-src 'self' cdnjs.cloudflare.com"
+//                }
+                meta(
+                    name = "referrer",
+                    content = "no-referrer"
+                )
+                meta {
+                    attributes["property"] = "og:title"
+                    content = "Alrayada"
+                }
+                meta {
+                    attributes["property"] = "og:description"
+                    content = webDesc
+                }
+                meta {
+                    attributes["property"] = "og:image"
+                    content = image
+                }
+                meta(
+                    name = "twitter:card",
+                    content = "summary"
+                )
+                meta(
+                    name = "twitter:title",
+                    content = "Alrayada"
+                )
+                meta(
+                    name = "twitter:description",
+                    content = webDesc
+                )
+                meta(
+                    name = "twitter:image",
+                    content = image
+                )
+                meta(
+                    name = "copyright",
+                    content = "© 2023 Alrayada"
+                )
+                link(
+                    rel = "canonical",
+                    href = "https://alrayada.net/"
+                )
                 link {
                     rel = "apple-touch-icon"
                     sizes = "180x180"
@@ -37,11 +94,16 @@ kobweb {
                     rel = "manifest"
                 )
                 link(
-                    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css",
-                    "stylesheet"
-                )
+                    href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css",
+                    rel = "stylesheet",
+                ) {
+                    integrity =
+                        "sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+                    attributes["crossorigin"] = "anonymous"
+                    attributes["referrerpolicy"] = "no-referrer"
+                }
             }
-            description.set("Landing page for Alrayada Alarabiah company developed by Ahmed Hnewa and powered with kotlin and kobweb")
+            description.set(webDesc)
         }
     }
 }
@@ -62,18 +124,7 @@ kotlin {
                 implementation(libs.kobweb.core)
                 implementation(libs.kobweb.silk.core)
 //                implementation(libs.kobweb.silk.icons.fa)
-//                implementation(npm("@fortawesome/fontawesome-svg-core", "6.4.2"))
-//                implementation(npm("@fortawesome/free-brands-svg-icons", "6.4.2"))
-//                implementation(npm("@fortawesome/free-regular-svg-icons", "6.4.2"))
-//                implementation(npm("@fortawesome/free-solid-svg-icons", "6.4.2"))
-//                implementation(libs.kobwebx.markdown)
             }
         }
-
-//        val jvmMain by getting {
-//            dependencies {
-//                implementation(libs.kobweb.api)
-//            }
-//        }
     }
 }
