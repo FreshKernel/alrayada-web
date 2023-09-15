@@ -17,3 +17,5 @@ import com.varabyte.kobweb.compose.ui.Modifier
 @Composable fun FaArrowLeft(modifier: Modifier = Modifier, size: IconSize? = null) = FaIcon("arrow-left", modifier, IconCategory.SOLID, size)
 
 @Composable fun FaArrowRight(modifier: Modifier = Modifier, size: IconSize? = null) = FaIcon("arrow-right", modifier, IconCategory.SOLID, size)
+
+@Composable fun FaGithub(modifier: Modifier = Modifier, size: IconSize? = null) = FaIcon("github", modifier, IconCategory.BRAND, size)

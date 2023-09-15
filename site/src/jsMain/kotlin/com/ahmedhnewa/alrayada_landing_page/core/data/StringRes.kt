@@ -376,5 +376,9 @@ enum class StringRes(
     NonGovernmentalOrganization(
         "Non-governmental organizations",
         "المنظمات الغير حكومية"
+    ),
+    ThisProjectIsOpenSource(
+        "This project is open source.",
+        "هذا المشروع مفتوح المصدر."
     )
 }

@@ -3,6 +3,7 @@ package com.ahmedhnewa.alrayada_landing_page.sections.contact.components
 import androidx.compose.runtime.*
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
+import com.ahmedhnewa.alrayada_landing_page.utils.constants.SectionsConstants
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -17,7 +18,7 @@ import org.jetbrains.compose.web.dom.Form
 
 @Composable
 fun ContactForm() = Form(
-    action = "https://formspree.io/f/xjvqwrjq",
+    action = SectionsConstants.About.FORM_URL,
     attrs = Modifier
         .attrsModifier {
             attr("method", "POST")

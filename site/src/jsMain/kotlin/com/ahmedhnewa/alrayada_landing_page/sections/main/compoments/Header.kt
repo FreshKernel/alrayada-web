@@ -5,6 +5,7 @@ import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
 import com.ahmedhnewa.alrayada_landing_page.components.fa.FaIcon
 import com.ahmedhnewa.alrayada_landing_page.components.fa.IconCategory
 import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
+import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
 import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
@@ -112,7 +113,7 @@ private fun StartSide(modifier: Modifier = Modifier) {
         MyImage(
             modifier = BrandingLogoStyle.toModifier(),
             src = PublicRes.Assets.Svg.LOGO,
-            contentDescription = "Logo",
+            contentDescription = stringResource(StringRes.AlrayadaAlarabiah),
             lazyLoading = false
         )
     }

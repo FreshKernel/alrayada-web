@@ -33,8 +33,8 @@ kobweb {
                     href = "/favicon-16x16.png"
                 }
                 link(
-                    "/site.webmanifest",
-                    "manifest"
+                    href = "/site.webmanifest",
+                    rel = "manifest"
                 )
                 link(
                     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css",
@@ -61,7 +61,7 @@ kotlin {
                 implementation(compose.html.core)
                 implementation(libs.kobweb.core)
                 implementation(libs.kobweb.silk.core)
-                implementation(libs.kobweb.silk.icons.fa)
+//                implementation(libs.kobweb.silk.icons.fa)
 //                implementation(npm("@fortawesome/fontawesome-svg-core", "6.4.2"))
 //                implementation(npm("@fortawesome/free-brands-svg-icons", "6.4.2"))
 //                implementation(npm("@fortawesome/free-regular-svg-icons", "6.4.2"))
