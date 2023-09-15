@@ -25,7 +25,7 @@ Better live reload, markdown, the basics more similar to Compose Multiplatform
 6. Run `kobweb run` in the command line
 
 ![Website 1](images/img.png)
-![img.png](images/img2.png)
+![Website 2](images/img2.png)
 
 ## Export as static website
 Run
