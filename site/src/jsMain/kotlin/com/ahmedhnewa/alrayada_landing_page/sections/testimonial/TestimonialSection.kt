@@ -2,6 +2,7 @@ package com.ahmedhnewa.alrayada_landing_page.sections.testimonial
 
 import androidx.compose.runtime.*
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
+import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
 import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.sections.testimonial.componenets.NavigationIcon
 import com.ahmedhnewa.alrayada_landing_page.sections.testimonial.componenets.TestimonialCard
@@ -62,7 +63,7 @@ private fun TestimonialContent() {
             alignment = Alignment.CenterHorizontally
         )
         TestimonialCards(
-            modifier = Modifier.margin(bottom = 25.px),
+            modifier = Modifier.margin(bottom = 35.px),
             selectedPage = selectedPage,
             itemsPerPage = itemsPerPage,
             allTestimonials = testimonials,
@@ -132,7 +133,8 @@ private fun TestimonialNavigation(
                 modifier = Modifier
                     .margin(right = if (isLastNavigationItem) 0.px else 5.px)
                     .onClick { onCurrentPageChanged(currentPage) },
-                selected = isSelectedItem
+                selected = isSelectedItem,
+                size = IconSize.LG
             )
         }
     }

@@ -77,7 +77,7 @@ private fun QualityPolicyCards(modifier: Modifier = Modifier, breakpoint: Breakp
                 qualityPolicy = qualityPolicy,
                 isFirst = values.first() == qualityPolicy,
                 isLast = values.last() == qualityPolicy,
-                shouldUseBorderRadius = breakpoint > Breakpoint.MD,
+                shouldUseBorderRadius = breakpoint > responsiveBreakpoint,
                 responsiveBreakpoint = responsiveBreakpoint
             )
         }

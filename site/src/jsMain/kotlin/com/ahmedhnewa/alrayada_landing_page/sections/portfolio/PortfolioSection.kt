@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
 import com.ahmedhnewa.alrayada_landing_page.components.fa.FaArrowLeft
 import com.ahmedhnewa.alrayada_landing_page.components.fa.FaArrowRight
+import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
 import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.sections.portfolio.components.PORTFOLIO_CARD_HEIGHT
 import com.ahmedhnewa.alrayada_landing_page.sections.portfolio.components.PortfolioCard
@@ -54,7 +55,7 @@ private fun PortfolioContent() {
                 appSection = AppSection.Portfolio,
             )
             PortfolioCards(
-                modifier = Modifier.margin(bottom = 25.px),
+                modifier = Modifier.margin(bottom = 35.px),
                 breakpoint = breakpoint
             )
             PortfolioNavigation()
@@ -62,11 +63,13 @@ private fun PortfolioContent() {
     }
 }
 
+private const val scrollableContainerId = "scrollablePortfolioCards"
+
 @Composable
 private fun PortfolioCards(modifier: Modifier = Modifier, breakpoint: Breakpoint) {
     Row(
         modifier = Modifier
-            .id("scrollablePortfolioCards")
+            .id(scrollableContainerId)
             .fillMaxWidth()
             .maxWidth(
                 if (breakpoint > Breakpoint.MD) (PORTFOLIO_CARD_HEIGHT * 3 + 50).px // for three cards with margins
@@ -92,11 +95,11 @@ private fun PortfolioCards(modifier: Modifier = Modifier, breakpoint: Breakpoint
 @Composable
 private fun PortfolioNavigation() {
     Row(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth(),
         horizontalArrangement = Arrangement.Center
     ) {
         fun getScrollableContainer(): Element {
-            val scrollableContainerId = "scrollablePortfolioCards"
             return document.getElementById(scrollableContainerId)
                 ?: throw NullPointerException("Can't find element with id = $scrollableContainerId")
         }
@@ -104,12 +107,14 @@ private fun PortfolioNavigation() {
             modifier = PortfolioArrowIconStyle.toModifier()
                 .margin(right = 40.px)
                 .cursor(Cursor.Pointer)
-                .onClick { getScrollableContainer().scrollBy(x = (-325.0), y = 0.0) }
+                .onClick { getScrollableContainer().scrollBy(x = (-325.0), y = 0.0) },
+            size = IconSize.LG
         )
         FaArrowRight(
             modifier = PortfolioArrowIconStyle.toModifier()
                 .cursor(Cursor.Pointer)
-                .onClick { getScrollableContainer().scrollBy(x = 325.0, y = 0.0) }
+                .onClick { getScrollableContainer().scrollBy(x = 325.0, y = 0.0) },
+            size = IconSize.LG
         )
     }
 }

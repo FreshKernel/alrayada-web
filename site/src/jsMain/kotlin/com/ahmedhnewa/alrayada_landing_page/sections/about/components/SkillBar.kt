@@ -41,16 +41,19 @@ fun SkillBar(
             )
         }
         Box(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
         ) {
             Box(
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
                     .height(progressBarHeight)
                     .backgroundColor(ThemeColors.LightGray.colorValue)
             )
             Box(
                 modifier = Modifier.fillMaxWidth(percentageValueBar.value.percent)
                     .height(progressBarHeight)
+                    .borderRadius(r = 12.px)
                     .backgroundColor(ThemeColors.Primary.colorValue)
                     .transition(
                         CSSTransition(

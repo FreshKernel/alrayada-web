@@ -41,10 +41,10 @@ fun QualityPolicyCard(
             .minHeight(350.px) // make sure we used SimpleGrid instead of Row to make the height the same for all items
             .backgroundColor(ThemeColors.Primary.colorValue)
             .borderRadius(
-                topLeft = if (isFirst && shouldUseBorderRadius) 20.px else 0.px,
+                topLeft = if (isFirst) 20.px else 0.px,
                 bottomLeft = if (isFirst && shouldUseBorderRadius) 20.px else 0.px,
                 topRight = if (isLast && shouldUseBorderRadius) 20.px else 0.px,
-                bottomRight = if (isLast && shouldUseBorderRadius) 20.px else 0.px
+                bottomRight = if (isLast) 20.px else 0.px
             )
             .then(modifier)
     ) {
