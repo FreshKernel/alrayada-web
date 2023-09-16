@@ -10,6 +10,8 @@ import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
+import com.varabyte.kobweb.silk.components.style.ComponentStyle
+import com.varabyte.kobweb.silk.components.style.hover
 import com.varabyte.kobweb.silk.components.text.SpanText
 import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.px
@@ -24,7 +26,6 @@ fun OurValueItem(modifier: Modifier = Modifier, ourValueModel: OurValueModel) {
             .then(modifier),
     ) {
         CheckIndicator(
-            borderColor = Color("#7F7F7F"),
             modifier = Modifier
                 .margin(right = 12.px)
         )

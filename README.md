@@ -39,4 +39,5 @@ in the command line and you will get the output in
 * Thanks to [Jetbrains](https://www.jetbrains.com/) for Kotlin, IntelliJ IDEA Community Edition, and Compose for Web
 * Thanks to the welcoming community
 * Thanks to [FontAwesome](https://fontawesome.com/) for crafting the Awesome Icons
+* Thanks to [Alrayada Alarabiah](https://alrayada.net/) to actually use the website to provide the services, I often create toy projects and push them on GitHub with no use
 * The base design is inspired by [Tanbir Ahmed](https://www.behance.net/gallery/90079519/Resume-Landing-page/modules/520796495), thanks to his time

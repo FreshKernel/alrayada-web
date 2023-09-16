@@ -73,9 +73,97 @@ enum class StringRes(
         "It was established in 1948. It is one of the internationally leading companies in China. The company provides laboratory and medical equipment in the fields of urine test strips, hematology units, biochemical coagulation, ELISA, and veterinary diagnostic electrolytes.",
         "تأسست عام 1948. وهي واحدة من الشركات الرائدة عالميًا في الصين. توفر الشركة المعدات المخبرية والطبية في مجالات شرائط اختبار البول، وحدات أمراض الدم، التخثر الكيميائي الحيوي، ELISA، والكهارل التشخيصية البيطرية."
     ),
+    ThroughputUpTo180TestHour(
+        "Throughput: up to 180 test/hour.",
+        "الأداء: يصل إلى 180 اختبار في الساعة."
+    ),
+    TwentyFourHoursReadyToUse(
+        "24 hours ready to use.",
+        "24 ساعة جاهزة للاستخدام."
+    ),
+    TimeToFirstResult17Minutes(
+        "Time to first result: 17 minutes.",
+        "وقت الحصول على أول نتيجة: 17 دقيقة."
+    ),
+    UpTo40SampleTubes(
+        "Up to 40 sample tubes.",
+        "تصل إلى 40 أنبوبة عينة."
+    ),
+    NineReagentsOnBoard(
+        "9 reagents on board.",
+        "9 مواد كيميائية على اللوحة."
+    ),
+    ReadyToUseNoPretreatmentRequired(
+        "Ready-to-use, no pretreatment required.",
+        "جاهزة للاستخدام، لا يتطلب معالجة مسبقة."
+    ),
+    CompactSizeWithRobustFunction(
+        "Compact Size with Robust Function.",
+        "حجم صغير مع وظائف قوية."
+    ),
+    ReliableRefrigeratedSystemForReagentsAndSamplePositions(
+        "Reliable refrigerated system for reagents and sample positions.",
+        "نظام تبريد موثوق للمواد الكيميائية ومواقع العينات."
+    ),
+    BiDirectionalLISHISSystemToRealizeRemoteOperationAndMinimalMaintenance(
+        "Bi-directional LIS/HIS system to realize remote operation, and minimal maintenance.",
+        "نظام LIS/HIS ثنائي الاتجاه لتحقيق التشغيل عن بعد والحد الأدنى من الصيانة."
+    ),
+    AutoDilutionAndAutoRerunFunction(
+        "Auto-dilution and Auto-rerun function.",
+        "وظيفة التخفيف التلقائي وإعادة التشغيل التلقائي."
+    ),
+    ThirtyFourParametersIncludingRETICABSRETICIRF(
+        "34 Parameters including RETIC-ABS, RETIC%, IRF.",
+        "34 معلمة بما في ذلك RETIC-ABS، RETIC%، IRF."
+    ),
+    HourlyThroughputUpTo60Samples(
+        "Hourly throughput up to 60 samples.",
+        "الإنتاج الساعي يصل إلى 60 عينة."
+    ),
+    ResistantRBCMode(
+        "Resistant RBC mode.",
+        "وضع كريات الدم الحمراء المقاومة."
+    ),
+    GivesResultsWithinOneMinute(
+        "Gives results within one minute.",
+        "يعطي النتائج في غضون دقيقة واحدة."
+    ),
+    TenSamplePosition(
+        "10 Sample Position.",
+        "10 موقع للعينات."
+    ),
+    SeventyTwoSecondsPerTest(
+        "72 Seconds / Test.",
+        "72 ثانية / اختبار."
+    ),
+    TestItemHbA1abLA1cHbFA1cAOHbVariant(
+        "Test Item: HbA1a/b, LA1c, HbF, A1c, AO, Hb Variant.",
+        "عنصر الاختبار: HbA1a/b، LA1c، HbF، A1c، AO، Hb Variant."
+    ),
+    OneHundredTenSamplePositions(
+        "110 Sample Positions.",
+        "110 موقع للعينات."
+    ),
+    VariantModeThalassemiaMode(
+        "Variant Mode, Thalassemia Mode.",
+        "وضع الطفرة، وضع فقر الدم المنجلي."
+    ),
+    VariantModeTestItemsHbA1abLA1cHbFA1cAOHbVariant(
+        "Variant Mode Test Items: HbA1a/b, LA1c, HbF, A1c, AO, Hb Variant.",
+        "عناصر الاختبار في وضع الطفرة: HbA1a/b، LA1c، HbF، A1c، AO، Hb Variant."
+    ),
+    ThalassemiaModeTestItemsHbA1abLA1cHbFA1cAOHbVariantHbA2(
+        "Thalassemia Mode Test Items: HbA1a/b, LA1c, HbF, A1c, AO, Hb Variant, HbA2.",
+        "عناصر الاختبار في وضع فقر الدم المنجلي: HbA1a/b، LA1c، HbF، A1c، AO، Hb Variant، HbA2."
+    ),
     OurCustomers(
         "Our Customers",
         "عملائنا"
+    ),
+    Devices(
+        "Devices",
+        "الأجهزة"
     ),
     Portfolio(
         "Portfolio",
@@ -380,5 +468,9 @@ enum class StringRes(
     ThisProjectIsOpenSource(
         "This project is open source.",
         "هذا المشروع مفتوح المصدر."
-    )
+    ),
+    Features(
+        "Features:",
+        "المميزات:"
+    ),
 }

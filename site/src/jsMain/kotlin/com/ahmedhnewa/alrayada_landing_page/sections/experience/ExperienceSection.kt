@@ -57,7 +57,7 @@ private fun ExperienceContent() {
                     if (breakpoint >= Breakpoint.MD) 60.percent
                     else 90.percent
                 ),
-            appSection = AppSection.Experience,
+            section = AppSection.Experience,
         )
         val experiences = Experience.entries
         experiences.forEach { experience ->

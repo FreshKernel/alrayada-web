@@ -48,6 +48,7 @@ fun SkillBar(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(progressBarHeight)
+                    .borderRadius(r = 12.px)
                     .backgroundColor(ThemeColors.LightGray.colorValue)
             )
             Box(

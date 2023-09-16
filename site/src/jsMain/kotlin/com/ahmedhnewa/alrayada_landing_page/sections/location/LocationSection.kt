@@ -5,6 +5,7 @@ import com.ahmedhnewa.alrayada_landing_page.components.core.Center
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
 import com.ahmedhnewa.alrayada_landing_page.models.AppSection
+import com.ahmedhnewa.alrayada_landing_page.sections.location.components.ContactUsInformation
 import com.ahmedhnewa.alrayada_landing_page.sections.location.components.IframeMap
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.PublicRes
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -46,7 +47,7 @@ private fun LocationContent() {
                     else 100.percent
                 )
                 .margin(bottom = 40.px),
-            appSection = AppSection.Location,
+            section = AppSection.Location,
             alignment = Alignment.Start
         )
         Box(
@@ -57,12 +58,16 @@ private fun LocationContent() {
                 src = PublicRes.Assets.Svg.Waves.WAVE_1,
                 contentDescription = "Wave Image",
                 modifier = Modifier
-                    .displayIfAtLeast(Breakpoint.SM)
+                    .displayIfAtLeast(Breakpoint.MD)
                     .fillMaxWidth()
             )
             Center {
                 IframeMap(breakpoint = breakpoint)
             }
         }
+        ContactUsInformation(
+            modifier = Modifier
+                .margin(top = 40.px)
+        )
     }
 }

@@ -2,20 +2,16 @@ package com.ahmedhnewa.alrayada_landing_page.sections.location.components
 
 import androidx.compose.runtime.*
 import com.ahmedhnewa.alrayada_landing_page.components.CircularProgressIndicator
-import com.ahmedhnewa.alrayada_landing_page.sections.contact.components.MyButton
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.SectionsConstants
-import com.ahmedhnewa.alrayada_landing_page.utils.extensions.getElementByThisId
 import com.ahmedhnewa.alrayada_landing_page.utils.extensions.requireElementByThisId
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import kotlinx.browser.document
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Iframe
-import org.jetbrains.compose.web.dom.Text
 
 @Composable
 fun IframeMap(modifier: Modifier = Modifier, breakpoint: Breakpoint) {

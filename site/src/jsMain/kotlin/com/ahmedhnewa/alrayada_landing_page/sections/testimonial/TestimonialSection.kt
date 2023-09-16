@@ -4,7 +4,7 @@ import androidx.compose.runtime.*
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
 import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
 import com.ahmedhnewa.alrayada_landing_page.models.AppSection
-import com.ahmedhnewa.alrayada_landing_page.sections.testimonial.componenets.NavigationIcon
+import com.ahmedhnewa.alrayada_landing_page.components.NavigationIcon
 import com.ahmedhnewa.alrayada_landing_page.sections.testimonial.componenets.TestimonialCard
 import com.ahmedhnewa.alrayada_landing_page.sections.testimonial.models.Testimonial
 import com.varabyte.kobweb.compose.css.Overflow
@@ -59,7 +59,7 @@ private fun TestimonialContent() {
             modifier = Modifier
                 .fillMaxWidth()
                 .margin(bottom = 30.px),
-            appSection = AppSection.Testimonial,
+            section = AppSection.Testimonial,
             alignment = Alignment.CenterHorizontally
         )
         TestimonialCards(

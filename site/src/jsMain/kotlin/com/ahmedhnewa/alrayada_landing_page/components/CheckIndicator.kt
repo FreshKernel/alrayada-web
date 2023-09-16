@@ -4,31 +4,57 @@ import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.fa.FaCheck
 import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
+import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.border
-import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
-import com.varabyte.kobweb.compose.ui.modifiers.color
-import com.varabyte.kobweb.compose.ui.modifiers.padding
-import org.jetbrains.compose.web.css.CSSColorValue
-import org.jetbrains.compose.web.css.LineStyle
-import org.jetbrains.compose.web.css.px
+import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.silk.components.style.ComponentStyle
+import com.varabyte.kobweb.silk.components.style.hover
+import com.varabyte.kobweb.silk.components.style.toModifier
+import org.jetbrains.compose.web.css.*
+
+val CheckIndicatorStyle by ComponentStyle {
+    val borderColor = Color("#7F7F7F")
+    base {
+        Modifier
+            .color(ThemeColors.Primary.colorValue)
+            .border(width = 2.px, style = LineStyle.Solid, color = borderColor)
+            .transition(
+                CSSTransition(
+                    property = "color",
+                    duration = 200.ms
+                ),
+                CSSTransition(
+                    property = "border-color",
+                    duration = 200.ms
+                ),
+                CSSTransition(
+                    property = "border-width",
+                    duration = 200.ms
+                ),
+            )
+    }
+    hover {
+        Modifier
+            .color(borderColor)
+            .borderRadius(r = 50.px)
+            .border(width = 4.px, style = LineStyle.Solid, color = ThemeColors.Primary.colorValue)
+    }
+}
 
 @Composable
 fun CheckIndicator(
     modifier: Modifier = Modifier,
     iconSize: IconSize = IconSize.X1,
-    borderColor: CSSColorValue = ThemeColors.Gray.colorValue
 ) {
     Box(
-        modifier = Modifier
+        modifier = CheckIndicatorStyle
+            .toModifier()
             .padding(3.px)
-            .border(width = 2.px, style = LineStyle.Solid, color = borderColor)
             .borderRadius(r = 2.px)
             .then(modifier)
     ) {
         FaCheck(
-            modifier = Modifier.color(ThemeColors.Primary.colorValue),
             size = iconSize
         )
     }

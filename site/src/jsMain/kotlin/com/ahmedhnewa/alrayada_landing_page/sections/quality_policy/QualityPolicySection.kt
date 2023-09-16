@@ -40,7 +40,7 @@ private fun QualityPolicyContent() {
     ) {
         CenterHorizontally {
             SectionTitle(
-                appSection = AppSection.QualityPolicy,
+                section = AppSection.QualityPolicy,
                 alignment = Alignment.CenterHorizontally
             )
         }

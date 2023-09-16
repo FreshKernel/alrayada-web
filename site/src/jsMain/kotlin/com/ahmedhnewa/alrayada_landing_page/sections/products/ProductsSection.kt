@@ -41,7 +41,7 @@ private fun ProductsContent() {
     ) {
         SectionTitle(
             modifier = Modifier.margin(bottom = 25.px),
-            appSection = AppSection.Products,
+            section = AppSection.Products,
             alignment = Alignment.CenterHorizontally
         )
         SimpleGrid(numColumns = numColumns(base = 1, md = 2, lg = 3, xl = 4)) {

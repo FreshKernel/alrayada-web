@@ -1,35 +1,37 @@
-package com.ahmedhnewa.alrayada_landing_page.sections.our_customers
+package com.ahmedhnewa.alrayada_landing_page.sections.devices
 
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
 import com.ahmedhnewa.alrayada_landing_page.models.AppSection
-import com.ahmedhnewa.alrayada_landing_page.sections.our_customers.componenets.OurCustomerItem
-import com.ahmedhnewa.alrayada_landing_page.sections.our_customers.models.OurCustomer
+import com.ahmedhnewa.alrayada_landing_page.sections.devices.componenets.DeviceItem
+import com.ahmedhnewa.alrayada_landing_page.sections.devices.models.Device
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
+import com.varabyte.kobweb.compose.ui.modifiers.margin
+import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
-import org.jetbrains.compose.web.css.AlignContent
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun OurCustomersSection() = Box(
+fun DevicesSection() = Box(
     modifier = Modifier
         .padding(topBottom = 100.px),
     contentAlignment = Alignment.Center
 ) {
-    OurCustomersContent()
+    DevicesContent()
 }
 
 @Composable
-private fun OurCustomersContent() {
+private fun DevicesContent() {
     val breakpoint = rememberBreakpoint()
+
     Column(
         modifier = Modifier
             .fillMaxWidth(
@@ -39,35 +41,24 @@ private fun OurCustomersContent() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         SectionTitle(
-            section = AppSection.OurCustomers,
-            modifier = Modifier.fillMaxWidth(
-                if (breakpoint >= Breakpoint.MD) 60.percent
-                else 90.percent
-            )
-        )
-        OurCustomersItems(
+            section = AppSection.Devices,
             modifier = Modifier
-                .margin(top = 20.px)
-                .fillMaxWidth(
-                    if (breakpoint >= Breakpoint.MD) 60.percent
-                    else 90.percent
-                )
+                .margin(bottom = 40.px)
         )
+        DevicesCards()
     }
 }
 
 @Composable
-private fun OurCustomersItems(modifier: Modifier = Modifier) {
+private fun DevicesCards(modifier: Modifier = Modifier) {
     SimpleGrid(
-        numColumns = numColumns(base = 1, md = 2, lg = 3),
-        modifier = Modifier
-            .padding(16.px)
-            .then(modifier)
-            .alignContent(AlignContent.Center)
+        modifier = modifier,
+        numColumns = numColumns(base = 1, xl = 2)
     ) {
-        OurCustomer.entries.forEach {
-            OurCustomerItem(
-                ourCustomer = it
+        Device.entries.forEach {
+            DeviceItem(
+                device = it,
+                modifier = Modifier.padding(12.px)
             )
         }
     }

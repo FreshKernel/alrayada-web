@@ -5,6 +5,7 @@ import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.sections.assistance.componenets.AssistanceHeaderContent
+import com.ahmedhnewa.alrayada_landing_page.styles.ReadableTextStyleOnWhiteBackground
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.PublicRes
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.ObjectFit
@@ -19,6 +20,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.percent
@@ -50,7 +52,8 @@ private fun AssistanceContent() {
 @Composable
 private fun AssistanceDescText() {
     P(
-        attrs = Modifier
+        attrs = ReadableTextStyleOnWhiteBackground
+            .toModifier()
             .textAlign(TextAlign.Center)
             .margin(topBottom = 0.px)
             .fillMaxWidth(60.percent)

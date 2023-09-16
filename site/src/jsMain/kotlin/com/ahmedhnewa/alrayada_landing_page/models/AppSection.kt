@@ -6,6 +6,7 @@ import com.ahmedhnewa.alrayada_landing_page.sections.about.AboutSection
 import com.ahmedhnewa.alrayada_landing_page.sections.achievement.AchievementSection
 import com.ahmedhnewa.alrayada_landing_page.sections.assistance.AssistanceSection
 import com.ahmedhnewa.alrayada_landing_page.sections.contact.ContactSection
+import com.ahmedhnewa.alrayada_landing_page.sections.devices.DevicesSection
 import com.ahmedhnewa.alrayada_landing_page.sections.experience.ExperienceSection
 import com.ahmedhnewa.alrayada_landing_page.sections.location.LocationSection
 import com.ahmedhnewa.alrayada_landing_page.sections.main.MainSection
@@ -79,6 +80,12 @@ enum class AppSection(
         titleRes = StringRes.OurCustomers,
         subtitleRes = StringRes.EmptyString,
         content = { OurCustomersSection() }
+    ),
+    Devices(
+        id = "devices",
+        titleRes = StringRes.Devices,
+        subtitleRes = StringRes.EmptyString,
+        content = { DevicesSection() }
     ),
     Portfolio(
         id = "portfolio",

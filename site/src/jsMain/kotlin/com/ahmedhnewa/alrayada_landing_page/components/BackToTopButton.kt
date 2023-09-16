@@ -6,6 +6,7 @@ import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Cursor
+import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.Visibility
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -15,6 +16,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.styleModifier
+import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.hover
@@ -23,6 +25,9 @@ import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.document
 import kotlinx.browser.window
 import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.dom.Span
+import org.jetbrains.compose.web.dom.Text
+import org.w3c.dom.HTMLElement
 import org.w3c.dom.SMOOTH
 import org.w3c.dom.ScrollBehavior
 import org.w3c.dom.ScrollToOptions
@@ -44,7 +49,6 @@ val BackToTopButtonStyle by ComponentStyle {
 
 @Composable
 fun BackToTopButton() {
-    val breakpoint = rememberBreakpoint()
     var scrollTop: Double? by remember { mutableStateOf(null) }
 
     LaunchedEffect(Unit) {
@@ -53,50 +57,36 @@ fun BackToTopButton() {
         })
     }
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
+    val shouldVisible = (scrollTop ?: 0.0) > 500
+
+    Span(
+        attrs = BackToTopButtonStyle
+            .toModifier()
             .position(Position.Fixed)
-            .zIndex(1)
             .styleModifier {
-                property("pointer-events", "none")
-            },
-        verticalArrangement = Arrangement.Bottom,
-        horizontalAlignment = Alignment.End
-    ) {
-        scrollTop?.let { scrollTop ->
-            Box(
-                modifier = BackToTopButtonStyle
-                    .toModifier()
-                    .size(50.px)
-                    .visibility(
-                        if (scrollTop > 400) Visibility.Visible
-                        else Visibility.Hidden
+                property("transition", "0.1s")
+            }
+            .bottom(15.px)
+            .right(if (shouldVisible) 20.px else (-55).px)
+            .fontWeight(FontWeight.Bold)
+            .fontSize(14.px)
+            .padding(20.px)
+            .cursor(Cursor.Pointer)
+            .borderRadius(20.percent)
+            .onClick {
+                window.scrollTo(
+                    options = ScrollToOptions(
+                        top = 0.0,
+                        behavior = ScrollBehavior.SMOOTH
                     )
-                    .margin(
-                        right = if (breakpoint <= Breakpoint.SM) 30.px else 40.px,
-                        bottom = if (breakpoint <= Breakpoint.SM) 30.px else 40.px
-                    )
-                    .borderRadius(20.percent)
-                    .cursor(Cursor.Pointer)
-                    .onClick {
-                        window.scrollTo(
-                            options = ScrollToOptions(
-                                top = 0.0,
-                                behavior = ScrollBehavior.SMOOTH
-                            )
-                        )
-                    }
-                    .styleModifier {
-                        property("pointer-events", "auto")
-                    },
-                contentAlignment = Alignment.Center
-            ) {
-                FaArrowUp(
-                    modifier = Modifier.color(Colors.White),
-                    size = IconSize.LG
                 )
             }
-        }
+            .toAttrs()
+    ) {
+        FaArrowUp(
+            modifier = Modifier.color(Colors.White),
+            size = IconSize.LG
+        )
     }
+
 }

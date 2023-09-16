@@ -2,4 +2,6 @@
 .kobweb/*
 !.kobweb/conf.yaml
 # Generated static website for production
+# Not the best solution but some web hosting
+# Don't have java installed
 !.kobweb/site

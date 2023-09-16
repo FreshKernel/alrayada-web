@@ -120,9 +120,9 @@ private fun MainText() {
     var helloText by remember { mutableStateOf("Hello, We are") }
     @Composable
     fun AnimateHelloText() {
-        if (!isLastDayOfTheYear()) {
-            return
-        }
+//        if (!isLastDayOfTheYear()) {
+//            return
+//        }
         if (window.matchMedia("(max-width: 768px").matches) {
             return
         }

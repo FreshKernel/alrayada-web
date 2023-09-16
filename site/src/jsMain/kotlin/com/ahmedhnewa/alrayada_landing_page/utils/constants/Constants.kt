@@ -12,5 +12,6 @@ object Constants {
         const val TWITTER = "https://twitter.com"
         const val INSTAGRAM = "https://instagram.com"
         const val LINKEDIN = "https://linkedin.com"
+        const val WEBSITE = "https://alrayada.net/"
     }
 }

@@ -7,8 +7,8 @@ import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
 import com.ahmedhnewa.alrayada_landing_page.models.AppSection
-import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.sections.about.models.Skill
+import com.ahmedhnewa.alrayada_landing_page.styles.DescTextStyle1
 import com.ahmedhnewa.alrayada_landing_page.utils.ObserveViewportEntered
 import com.ahmedhnewa.alrayada_landing_page.utils.animateNumber
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.Constants
@@ -86,18 +86,18 @@ private fun AboutMe() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         SectionTitle(
-            appSection = AppSection.About,
+            section = AppSection.About,
             alignment = Alignment.CenterHorizontally
         )
         P(
-            attrs = AboutTextStyle.toModifier()
+            attrs = DescTextStyle1.toModifier()
                 .margin(topBottom = 25.px)
                 .maxWidth(500.px)
                 .fontSize(15.px)
                 .fontWeight(FontWeight.Normal)
                 .lineHeight(1.4)
                 .fontStyle(FontStyle.Italic)
-                .color(ThemeColors.Secondary.colorValue)
+//                .color(ThemeColors.Secondary.colorValue)
                 .toAttrs()
         ) {
             Text(stringResource(StringRes.AboutText))
@@ -116,7 +116,7 @@ private fun AboutMeSkills() {
     if (Constants.ANIMATION_ENABLED) {
         ObserveViewportEntered(
             sectionId = AppSection.About.id,
-            distanceFromTop = 600.0,
+            distanceFromTop = 120.0,
             onViewportEntered = {
                 Skill.entries.forEach { skill ->
                     scope.launch {

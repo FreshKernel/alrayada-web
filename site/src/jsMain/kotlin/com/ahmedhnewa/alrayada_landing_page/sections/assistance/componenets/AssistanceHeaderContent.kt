@@ -71,7 +71,7 @@ fun AssistanceHeaderContent() {
     }
 
     SectionTitle(
-        appSection = AppSection.Assistance,
+        section = AppSection.Assistance,
         alignment = Alignment.CenterHorizontally
     )
 }

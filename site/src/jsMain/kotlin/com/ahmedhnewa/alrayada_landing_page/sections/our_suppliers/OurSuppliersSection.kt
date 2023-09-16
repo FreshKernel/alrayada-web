@@ -3,7 +3,7 @@ package com.ahmedhnewa.alrayada_landing_page.sections.our_suppliers
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
 import com.ahmedhnewa.alrayada_landing_page.models.AppSection
-import com.ahmedhnewa.alrayada_landing_page.sections.our_suppliers.componenets.SupplierItem
+import com.ahmedhnewa.alrayada_landing_page.sections.our_suppliers.componenets.OurSupplierItem
 import com.ahmedhnewa.alrayada_landing_page.sections.our_suppliers.models.Supplier
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -39,7 +39,7 @@ private fun OurSuppliersContent() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         SectionTitle(
-            appSection = AppSection.OurSuppliers
+            section = AppSection.OurSuppliers
         )
         OurSuppliersItems(
             modifier = Modifier
@@ -59,7 +59,7 @@ private fun OurSuppliersItems(modifier: Modifier = Modifier) {
     ) {
         val responsiveBreakpoint = Breakpoint.MD
         Supplier.entries.forEach {
-            SupplierItem(
+            OurSupplierItem(
                 supplier = it,
                 responsiveBreakpoint = responsiveBreakpoint,
                 breakpoint = breakpoint

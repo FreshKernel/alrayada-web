@@ -52,7 +52,7 @@ private fun PortfolioContent() {
             SectionTitle(
                 modifier = Modifier.fillMaxWidth()
                     .margin(bottom = 25.px),
-                appSection = AppSection.Portfolio,
+                section = AppSection.Portfolio,
             )
             PortfolioCards(
                 modifier = Modifier.margin(bottom = 35.px),

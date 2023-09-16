@@ -7,6 +7,7 @@ import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringRes
 import com.ahmedhnewa.alrayada_landing_page.models.AppSection
 import com.ahmedhnewa.alrayada_landing_page.sections.service.components.ServiceCard
 import com.ahmedhnewa.alrayada_landing_page.sections.service.models.Service
+import com.ahmedhnewa.alrayada_landing_page.styles.ReadableTextStyleOnWhiteBackground
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -17,6 +18,7 @@ import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -43,12 +45,14 @@ private fun ServiceContent() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         SectionTitle(
-            modifier = Modifier.fillMaxWidth().margin(bottom = 20.px),
-            appSection = AppSection.Service,
+            modifier = Modifier.fillMaxWidth().margin(bottom = 25.px),
+            section = AppSection.Service,
             alignment = Alignment.CenterHorizontally
         )
         ServiceSectionText(
-            modifier = Modifier.fillMaxWidth(55.percent)
+            modifier = Modifier
+                .margin(bottom = 20.px)
+                .fillMaxWidth(55.percent)
         )
         ServiceCards()
     }
@@ -64,7 +68,8 @@ private fun ServiceCards() {
 @Composable
 private fun ServiceSectionText(modifier: Modifier = Modifier) {
     P(
-        attrs = Modifier
+        attrs = ReadableTextStyleOnWhiteBackground
+            .toModifier()
             .margin(topBottom = 0.px)
             .fontSize(16.px)
             .fontWeight(FontWeight.Normal)
