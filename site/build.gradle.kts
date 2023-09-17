@@ -13,7 +13,7 @@ group = "com.ahmedhnewa.alrayada_landing_page"
 version = "1.0-SNAPSHOT"
 
 val webDesc =
-    "Landing page for Alrayada Alarabiah company developed by Ahmed Hnewa and powered with kotlin and kobweb"
+    "Discover the Alrayada Alarabiah landing page – your gateway to the latest offerings and information from our company. Developed by Ahmed Hnewa, our page is your source for valuable insights and powered by the innovation of Kotlin and Kobweb. Explore, engage, and stay connected with us today!"
 val image = "https://alrayada.net/assets/images/logo.webp"
 val baseUrl = "https://alrayada.net"
 
@@ -72,6 +72,10 @@ kobweb {
                 meta(
                     name = "copyright",
                     content = "© 2023 Alrayada"
+                )
+                meta(
+                    name = "robots",
+                    content = "index, follow"
                 )
                 link(
                     rel = "canonical",
