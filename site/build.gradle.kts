@@ -14,7 +14,7 @@ version = "1.0-SNAPSHOT"
 
 val webDesc =
     "Landing page for Alrayada Alarabiah company developed by Ahmed Hnewa and powered with kotlin and kobweb"
-val image = ""
+val image = "https://alrayada.net/assets/images/logo.webp"
 
 kobweb {
     app {
