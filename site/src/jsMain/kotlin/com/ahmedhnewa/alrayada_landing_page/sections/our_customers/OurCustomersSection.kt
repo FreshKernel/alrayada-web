@@ -2,6 +2,7 @@ package com.ahmedhnewa.alrayada_landing_page.sections.our_customers
 
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
+import com.ahmedhnewa.alrayada_landing_page.components.core.CenterHorizontally
 import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.sections.our_customers.componenets.OurCustomerItem
 import com.ahmedhnewa.alrayada_landing_page.sections.our_customers.models.OurCustomer
@@ -59,16 +60,18 @@ private fun OurCustomersContent() {
 @Composable
 private fun OurCustomersItems(modifier: Modifier = Modifier) {
     SimpleGrid(
-        numColumns = numColumns(base = 1, md = 2, xl = 3),
+        numColumns = numColumns(base = 1, lg = 2, xl = 3),
         modifier = Modifier
             .padding(16.px)
             .then(modifier)
             .alignContent(AlignContent.Center)
     ) {
         OurCustomer.entries.forEach {
-            OurCustomerItem(
-                ourCustomer = it
-            )
+            CenterHorizontally {
+                OurCustomerItem(
+                    ourCustomer = it
+                )
+            }
         }
     }
 }
