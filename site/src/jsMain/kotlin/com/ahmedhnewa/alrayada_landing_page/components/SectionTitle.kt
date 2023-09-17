@@ -89,12 +89,7 @@ fun SectionTitle(
                 .fontWeight(FontWeight.Bold),
             fontSize = 35.px,
         )
-        Box(
-            modifier = Modifier.height(2.px)
-                .width(80.px)
-                .backgroundColor(ThemeColors.Primary.colorValue)
-                .borderRadius(r = 50.px)
-        )
+        LineStroke()
     }
 }
 

@@ -53,18 +53,17 @@ val NavigationItemStyle by ComponentStyle {
     }
 }
 
-@OptIn(ExperimentalComposeWebApi::class)
 val BrandingLogoStyle by ComponentStyle {
     base {
-        Modifier.transition(CSSTransition(property = "transform", duration = 200.ms))
+        Modifier.transition(CSSTransition(property = "rotate", duration = 200.ms))
     }
     onlyChild {
-        Modifier.transform {
-            rotate(0.deg)
-        }
+        Modifier
+            .rotate(0.deg)
     }
     hover {
-        Modifier.transform { rotate((-10).deg) }
+        Modifier
+            .rotate((-10).deg)
     }
 }
 

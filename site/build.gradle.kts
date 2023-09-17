@@ -15,6 +15,7 @@ version = "1.0-SNAPSHOT"
 val webDesc =
     "Landing page for Alrayada Alarabiah company developed by Ahmed Hnewa and powered with kotlin and kobweb"
 val image = "https://alrayada.net/assets/images/logo.webp"
+val baseUrl = "https://alrayada.net"
 
 kobweb {
     app {
@@ -48,6 +49,10 @@ kobweb {
                     attributes["property"] = "og:image"
                     content = image
                 }
+                meta {
+                    attributes["property"] = "og:url"
+                    content = baseUrl
+                }
                 meta(
                     name = "twitter:card",
                     content = "summary"
@@ -70,7 +75,7 @@ kobweb {
                 )
                 link(
                     rel = "canonical",
-                    href = "https://alrayada.net/"
+                    href = baseUrl
                 )
                 link {
                     rel = "apple-touch-icon"

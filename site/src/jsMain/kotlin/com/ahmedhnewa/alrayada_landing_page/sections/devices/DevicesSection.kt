@@ -55,10 +55,13 @@ private fun DevicesCards(modifier: Modifier = Modifier) {
         modifier = modifier,
         numColumns = numColumns(base = 1, xl = 2)
     ) {
-        Device.entries.forEach {
+        val devices = Device.entries
+        devices.forEach {
+            val isLast = devices.last() == it
             DeviceItem(
                 device = it,
-                modifier = Modifier.padding(12.px)
+                modifier = Modifier.padding(12.px),
+                isLast = isLast
             )
         }
     }

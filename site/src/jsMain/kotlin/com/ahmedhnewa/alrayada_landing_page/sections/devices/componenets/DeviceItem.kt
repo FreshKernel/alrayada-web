@@ -1,10 +1,12 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.devices.componenets
 
 import androidx.compose.runtime.Composable
+import com.ahmedhnewa.alrayada_landing_page.components.LineStroke
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
 import com.ahmedhnewa.alrayada_landing_page.sections.devices.models.Device
 import com.ahmedhnewa.alrayada_landing_page.components.NavigationIcon
+import com.ahmedhnewa.alrayada_landing_page.components.core.CenterHorizontally
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.varabyte.kobweb.compose.css.FontWeight
@@ -23,7 +25,11 @@ import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 
 @Composable
-fun DeviceItem(modifier: Modifier = Modifier, device: Device) {
+fun DeviceItem(
+    modifier: Modifier = Modifier,
+    device: Device,
+    isLast: Boolean
+) {
     Column(
         modifier = Modifier
             .minHeight(300.px)
@@ -95,10 +101,10 @@ fun DeviceItem(modifier: Modifier = Modifier, device: Device) {
                 modifier = Modifier
                     .fillMaxWidth(70.percent)
                     .border(
-                    width = 2.px,
-                    style = LineStyle.Solid,
-                    color = ThemeColors.Primary.colorValue,
-                )
+                        width = 2.px,
+                        style = LineStyle.Solid,
+                        color = ThemeColors.Primary.colorValue,
+                    )
                     .padding(12.px)
                     .borderRadius(
                         topLeft = 16.px,
@@ -118,14 +124,23 @@ fun DeviceItem(modifier: Modifier = Modifier, device: Device) {
 
         }
         Features(
-            modifier = Modifier,
+            modifier = Modifier
+                .margin(bottom = 24.px),
             device = device
         )
+        if (!isLast) {
+            CenterHorizontally {
+                LineStroke(
+                    modifier = Modifier
+                        .margin(bottom = 24.px)
+                )
+            }
+        }
     }
 }
 
 @Composable
-fun Features(modifier: Modifier = Modifier, device: Device) {
+private fun Features(modifier: Modifier = Modifier, device: Device) {
     Column(
         modifier = Modifier
             .then(modifier)
