@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
-import com.ahmedhnewa.alrayada_landing_page.models.AppSection
+import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.sections.our_values.components.OurValueItem
 import com.ahmedhnewa.alrayada_landing_page.sections.our_values.models.OurValueModel
 import com.ahmedhnewa.alrayada_landing_page.styles.ReadableTextStyleOnWhiteBackground
@@ -14,7 +14,6 @@ import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.compose.ui.styleModifier
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
@@ -55,7 +54,7 @@ private fun OurValuesContent() {
             SectionTitle(
                 modifier = Modifier
                     .margin(bottom = 40.px),
-                section = AppSection.OurValues,
+                section = HomePageSections.OurValues,
                 alignment = Alignment.Start
             )
             OurValuesDesc()

@@ -2,7 +2,7 @@ package com.ahmedhnewa.alrayada_landing_page.sections.devices
 
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
-import com.ahmedhnewa.alrayada_landing_page.models.AppSection
+import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.sections.devices.componenets.DeviceItem
 import com.ahmedhnewa.alrayada_landing_page.sections.devices.models.Device
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -41,7 +41,7 @@ private fun DevicesContent() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         SectionTitle(
-            section = AppSection.Devices,
+            section = HomePageSections.Devices,
             modifier = Modifier
                 .margin(bottom = 40.px)
         )

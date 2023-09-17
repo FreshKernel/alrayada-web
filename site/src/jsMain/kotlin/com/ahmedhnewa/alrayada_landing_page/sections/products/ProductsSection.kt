@@ -2,7 +2,7 @@ package com.ahmedhnewa.alrayada_landing_page.sections.products
 
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
-import com.ahmedhnewa.alrayada_landing_page.models.AppSection
+import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.sections.products.components.ProductCard
 import com.ahmedhnewa.alrayada_landing_page.sections.products.models.Product
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -41,7 +41,7 @@ private fun ProductsContent() {
     ) {
         SectionTitle(
             modifier = Modifier.margin(bottom = 25.px),
-            section = AppSection.Products,
+            section = HomePageSections.Products,
             alignment = Alignment.CenterHorizontally
         )
         SimpleGrid(numColumns = numColumns(base = 1, md = 2, lg = 3, xl = 4)) {

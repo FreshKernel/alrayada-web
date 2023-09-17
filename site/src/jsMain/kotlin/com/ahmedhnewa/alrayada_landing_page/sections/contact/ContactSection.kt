@@ -2,12 +2,10 @@ package com.ahmedhnewa.alrayada_landing_page.sections.contact
 
 import androidx.compose.runtime.*
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
-import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
-import com.ahmedhnewa.alrayada_landing_page.models.AppSection
+import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.sections.contact.components.ContactForm
 import com.ahmedhnewa.alrayada_landing_page.utils.ObserveViewportEntered
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.Constants
-import com.ahmedhnewa.alrayada_landing_page.utils.constants.PublicRes
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -42,7 +40,7 @@ private fun ContactContent() {
 
     if (Constants.ANIMATION_ENABLED) {
         ObserveViewportEntered(
-            sectionId = AppSection.Contact.id,
+            sectionId = HomePageSections.Contact.id,
             distanceFromTop = 500.0
         ) {
             animatedRotation = 10.0
@@ -69,7 +67,7 @@ private fun ContactContent() {
                     rotate(animatedRotation.deg)
                 }
                 .transition(CSSTransition(property = "transform", duration = 500.ms)),
-            section = AppSection.Contact,
+            section = HomePageSections.Contact,
             alignment = Alignment.CenterHorizontally
         )
         ContactForm()

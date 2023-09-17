@@ -5,7 +5,7 @@ import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
 import com.ahmedhnewa.alrayada_landing_page.components.fa.FaArrowLeft
 import com.ahmedhnewa.alrayada_landing_page.components.fa.FaArrowRight
 import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
-import com.ahmedhnewa.alrayada_landing_page.models.AppSection
+import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.sections.portfolio.components.PORTFOLIO_CARD_HEIGHT
 import com.ahmedhnewa.alrayada_landing_page.sections.portfolio.components.PortfolioCard
 import com.ahmedhnewa.alrayada_landing_page.sections.portfolio.models.Portfolio
@@ -52,7 +52,7 @@ private fun PortfolioContent() {
             SectionTitle(
                 modifier = Modifier.fillMaxWidth()
                     .margin(bottom = 25.px),
-                section = AppSection.Portfolio,
+                section = HomePageSections.Portfolio,
             )
             PortfolioCards(
                 modifier = Modifier.margin(bottom = 35.px),

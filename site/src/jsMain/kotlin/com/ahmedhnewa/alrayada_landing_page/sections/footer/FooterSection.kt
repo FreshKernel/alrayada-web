@@ -1,6 +1,7 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.footer
 
 import androidx.compose.runtime.Composable
+import com.ahmedhnewa.alrayada_landing_page.components.AppLogo
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
 import com.ahmedhnewa.alrayada_landing_page.components.fa.FaGithub
 import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
@@ -57,11 +58,7 @@ private fun FooterContent() {
             ),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        MyImage(
-            modifier = Modifier.size(100.px),
-            src = PublicRes.Assets.Svg.LOGO,
-            contentDescription = stringResource(StringRes.AlrayadaAlarabiah),
-        )
+        AppLogo()
         Box(
             modifier = Modifier.fillMaxWidth()
                 .backgroundColor(ThemeColors.LighterGray.colorValue)

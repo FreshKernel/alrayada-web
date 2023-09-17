@@ -1,4 +1,4 @@
-package com.ahmedhnewa.alrayada_landing_page.components
+package com.ahmedhnewa.alrayada_landing_page.components.core
 
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.styles.MainButtonStyle

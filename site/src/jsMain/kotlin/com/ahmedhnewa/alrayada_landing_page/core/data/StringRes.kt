@@ -21,6 +21,10 @@ enum class StringRes(
         "Our Services",
         "خدماتنا"
     ),
+    Services(
+        "Services",
+        "الخدمات"
+    ),
     TechnicalServicesAndAfterSalesSupport(
         "Technical services & after-sales support",
         "خدمات الدعم الفني ومابعد البيع"
@@ -473,4 +477,27 @@ enum class StringRes(
         "Features:",
         "المميزات:"
     ),
+    PrivacyPolicy(
+        "Privacy Policy",
+        "سياسة الخصوصية"
+    ),
+    Privacy(
+        "Privacy",
+        "الخصوصية"
+    ),
+    PrivacyPolicyText(
+        "We respect your privacy and don't collect personal data through our app. We don't require you to create an account, provide any personal information, or share any data with us. We don't track your location or use cookies to monitor your activity. We don't sell, trade, or share any information with third parties. We only use the information necessary to operate the app and provide you with the best user experience possible. We prioritize the security and confidentiality of your personal information. In our app, we utilize Firebase Crashlytics, a tool provided by Google, to help us identify and fix any technical issues or errors that may occur while you're using our app. It's important to note that Firebase Crashlytics is designed to collect information related to app crashes and errors, specifically focusing on technical data about the performance and stability of the app itself. This includes details such as the line of code where the crash occurred, the device model, the operating system version, and other similar technical information. Please be assured that we do not collect or have access to any of your sensitive or personally identifiable information through Firebase Crashlytics. The data we gather is strictly limited to technical aspects of the app's performance and is used solely to improve the app's stability and provide you with a better user experience, We respect your privacy and understand the importance of protecting your data. Rest assured that we do not share this technical data with any third parties or use it for any other purposes apart from app improvement and bug fixing. Your trust is of utmost importance to us, and we are committed to being transparent about our data collection practices. If you have any questions about our privacy policy or how we handle your data, please get in touch with us at support@alrayada.net.",
+        "نحن نحترم خصوصيتك ولا نجمع بيانات شخصية من خلال تطبيقنا. لا نطلب منك إنشاء حساب أو تقديم أي معلومات شخصية أو مشاركة أي بيانات معنا. نحن لا نتتبع موقعك ولا نستخدم ملفات تعريف الارتباط لمراقبة نشاطك. نحن لا نبيع أو نتاجر أو نشارك أي معلومات مع أطراف ثالثة. نحن نستخدم فقط المعلومات اللازمة لتشغيل التطبيق وتزويدك بأفضل تجربة مستخدم ممكنة. نحن نعطي الأولوية لأمن وسرية معلوماتك الشخصية. في تطبيقنا، نستخدم Firebase Crashlytics، وهي أداة تقدمها Google، لمساعدتنا في تحديد وإصلاح أي مشكلات فنية أو أخطاء قد تحدث أثناء استخدام تطبيقنا. من المهم ملاحظة أن Firebase Crashlytics مصمم لجمع المعلومات المتعلقة بأعطال التطبيق وأخطاءه، مع التركيز بشكل خاص على البيانات الفنية حول أداء التطبيق نفسه واستقراره. يتضمن ذلك تفاصيل مثل سطر التعليمات البرمجية الذي حدث فيه العطل، وطراز الجهاز، وإصدار نظام التشغيل، والمعلومات الفنية المماثلة الأخرى. يرجى التأكد من أننا لا نجمع أو نصل إلى أي من معلوماتك الحساسة أو معلومات التعريف الشخصية من خلال Firebase Crashlytics. تقتصر البيانات التي نجمعها بشكل صارم على الجوانب الفنية لأداء التطبيق وتستخدم فقط لتحسين استقرار التطبيق وتزويدك بتجربة مستخدم أفضل، نحن نحترم خصوصيتك ونفهم أهمية حماية بياناتك. كن مطمئنًا إلى أننا لا نشارك هذه البيانات الفنية مع أي طرف ثالث أو نستخدمها لأي أغراض أخرى باستثناء تحسين التطبيق وإصلاح الأخطاء. إن ثقتك ذات أهمية قصوى بالنسبة لنا، ونحن ملتزمون بالشفافية بشأن ممارسات جمع البيانات لدينا. إذا كانت لديك أي أسئلة حول سياسة الخصوصية الخاصة بنا أو كيفية تعاملنا مع بياناتك، فيرجى الاتصال بنا على support@alrayada.net."
+    ),
+    DownloadTheApp(
+        "Download The App"
+    ),
+    MobileApp(
+        "Mobile App",
+        "تطبيق الهاتف المحمول"
+    ),
+    MobileAppDesc(
+        "Discover the future of medical supply shopping with our innovative mobile app. Your one-stop destination for essential lab supplies—browse, shop, and order directly from us. By downloading the app, you're taking the first step to experience the convenience of quality medical products delivered to your doorstep, effortlessly and securely. Rest assured, your use of the app signifies your agreement with our privacy policy, ensuring your data is protected in the best possible way.",
+        "اكتشف مستقبل تسوق المستلزمات الطبية من خلال تطبيقنا المبتكر للهاتف المحمول. وجهتك الشاملة للحصول على مستلزمات المختبرات الأساسية - تصفح وتسوق واطلب منا مباشرة. من خلال تنزيل التطبيق، فإنك تتخذ الخطوة الأولى لتجربة راحة المنتجات الطبية عالية الجودة التي يتم توصيلها إلى باب منزلك، دون عناء وأمان. كن مطمئنًا، استخدامك للتطبيق يعني موافقتك على سياسة الخصوصية الخاصة بنا، مما يضمن حماية بياناتك بأفضل طريقة ممكنة.§"
+    )
 }

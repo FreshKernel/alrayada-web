@@ -2,7 +2,7 @@ package com.ahmedhnewa.alrayada_landing_page.sections.our_customers
 
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
-import com.ahmedhnewa.alrayada_landing_page.models.AppSection
+import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.sections.our_customers.componenets.OurCustomerItem
 import com.ahmedhnewa.alrayada_landing_page.sections.our_customers.models.OurCustomer
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -39,7 +39,7 @@ private fun OurCustomersContent() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         SectionTitle(
-            section = AppSection.OurCustomers,
+            section = HomePageSections.OurCustomers,
             modifier = Modifier.fillMaxWidth(
                 if (breakpoint >= Breakpoint.MD) 60.percent
                 else 90.percent
@@ -59,7 +59,7 @@ private fun OurCustomersContent() {
 @Composable
 private fun OurCustomersItems(modifier: Modifier = Modifier) {
     SimpleGrid(
-        numColumns = numColumns(base = 1, md = 2, lg = 3),
+        numColumns = numColumns(base = 1, md = 2, xl = 3),
         modifier = Modifier
             .padding(16.px)
             .then(modifier)

@@ -1,11 +1,11 @@
 package com.ahmedhnewa.alrayada_landing_page.pages
 
 import androidx.compose.runtime.Composable
+import com.ahmedhnewa.alrayada_landing_page.core.router.AppRouter
 import com.varabyte.kobweb.core.Page
-import org.jetbrains.compose.web.dom.Text
 
-@Page(routeOverride = "/privacy-policy")
 @Composable
-fun PrivacyPolicy() {
-    Text("Hi")
+@Page("/download-mobile-app")
+fun DownloadMobileAppPage() {
+
 }

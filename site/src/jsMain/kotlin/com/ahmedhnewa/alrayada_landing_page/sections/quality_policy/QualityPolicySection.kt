@@ -3,7 +3,7 @@ package com.ahmedhnewa.alrayada_landing_page.sections.quality_policy
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
 import com.ahmedhnewa.alrayada_landing_page.components.core.CenterHorizontally
-import com.ahmedhnewa.alrayada_landing_page.models.AppSection
+import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.sections.quality_policy.componenets.QualityPolicyCard
 import com.ahmedhnewa.alrayada_landing_page.sections.quality_policy.models.QualityPolicy
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -40,7 +40,7 @@ private fun QualityPolicyContent() {
     ) {
         CenterHorizontally {
             SectionTitle(
-                section = AppSection.QualityPolicy,
+                section = HomePageSections.QualityPolicy,
                 alignment = Alignment.CenterHorizontally
             )
         }

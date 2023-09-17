@@ -6,7 +6,7 @@ import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
-import com.ahmedhnewa.alrayada_landing_page.models.AppSection
+import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.sections.about.models.Skill
 import com.ahmedhnewa.alrayada_landing_page.styles.DescTextStyle1
 import com.ahmedhnewa.alrayada_landing_page.utils.ObserveViewportEntered
@@ -86,7 +86,7 @@ private fun AboutMe() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         SectionTitle(
-            section = AppSection.About,
+            section = HomePageSections.About,
             alignment = Alignment.CenterHorizontally
         )
         P(
@@ -115,7 +115,7 @@ private fun AboutMeSkills() {
 
     if (Constants.ANIMATION_ENABLED) {
         ObserveViewportEntered(
-            sectionId = AppSection.About.id,
+            sectionId = HomePageSections.About.id,
             distanceFromTop = 120.0,
             onViewportEntered = {
                 Skill.entries.forEach { skill ->

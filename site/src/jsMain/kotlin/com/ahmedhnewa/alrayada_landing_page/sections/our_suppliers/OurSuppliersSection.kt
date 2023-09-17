@@ -2,7 +2,7 @@ package com.ahmedhnewa.alrayada_landing_page.sections.our_suppliers
 
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
-import com.ahmedhnewa.alrayada_landing_page.models.AppSection
+import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.sections.our_suppliers.componenets.OurSupplierItem
 import com.ahmedhnewa.alrayada_landing_page.sections.our_suppliers.models.Supplier
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -39,7 +39,7 @@ private fun OurSuppliersContent() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         SectionTitle(
-            section = AppSection.OurSuppliers
+            section = HomePageSections.OurSuppliers
         )
         OurSuppliersItems(
             modifier = Modifier

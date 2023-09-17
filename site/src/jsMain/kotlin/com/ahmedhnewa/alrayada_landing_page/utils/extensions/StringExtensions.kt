@@ -18,7 +18,7 @@ fun String.maximumAtFirst(n: Int): String {
     return this.take(n)
 }
 
-fun String.asWebPath(): String = "#${this}"
+fun String.asFragmentIdentifier(): String = "#${this}"
 
 fun String.getElementByThisId(): Element? {
     return document.getElementById(this)

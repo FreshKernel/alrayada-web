@@ -1,7 +1,7 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.achievement
 
 import androidx.compose.runtime.*
-import com.ahmedhnewa.alrayada_landing_page.models.AppSection
+import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.sections.achievement.componenets.AchievementCard
 import com.ahmedhnewa.alrayada_landing_page.sections.achievement.models.Achievement
@@ -42,7 +42,7 @@ private fun AchievementContent() {
     val achievements = Achievement.entries
     if (Constants.ANIMATION_ENABLED) {
         ObserveViewportEntered(
-            sectionId = AppSection.Achievements.id,
+            sectionId = HomePageSections.Achievements.id,
             distanceFromTop = 700.0,
         ) {
             viewportEntered = true

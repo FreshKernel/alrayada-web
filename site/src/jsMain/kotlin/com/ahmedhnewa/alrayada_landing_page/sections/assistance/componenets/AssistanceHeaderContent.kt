@@ -5,7 +5,7 @@ import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
-import com.ahmedhnewa.alrayada_landing_page.models.AppSection
+import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.PublicRes
 import com.varabyte.kobweb.compose.css.FontWeight
@@ -71,7 +71,7 @@ fun AssistanceHeaderContent() {
     }
 
     SectionTitle(
-        section = AppSection.Assistance,
+        section = HomePageSections.Assistance,
         alignment = Alignment.CenterHorizontally
     )
 }

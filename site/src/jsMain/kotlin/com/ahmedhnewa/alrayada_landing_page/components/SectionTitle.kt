@@ -2,7 +2,7 @@ package com.ahmedhnewa.alrayada_landing_page.components
 
 import androidx.compose.runtime.*
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
-import com.ahmedhnewa.alrayada_landing_page.models.AppSection
+import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.utils.ObserveViewportEntered
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.Constants
@@ -25,7 +25,7 @@ import org.jetbrains.compose.web.dom.Text
 @Composable
 fun SectionTitle(
     modifier: Modifier = Modifier,
-    section: AppSection,
+    section: HomePageSections,
     alignment: Alignment.Horizontal = Alignment.Start
 ) {
     val scope = rememberCoroutineScope()

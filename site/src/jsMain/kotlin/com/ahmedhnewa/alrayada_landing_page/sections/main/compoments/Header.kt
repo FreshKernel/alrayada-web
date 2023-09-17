@@ -1,16 +1,13 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.main.compoments
 
 import androidx.compose.runtime.*
-import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
+import com.ahmedhnewa.alrayada_landing_page.components.AppLogo
 import com.ahmedhnewa.alrayada_landing_page.components.fa.FaIcon
 import com.ahmedhnewa.alrayada_landing_page.components.fa.IconCategory
 import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
-import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
-import com.ahmedhnewa.alrayada_landing_page.models.AppSection
+import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
-import com.ahmedhnewa.alrayada_landing_page.utils.constants.PublicRes
-import com.ahmedhnewa.alrayada_landing_page.utils.extensions.asWebPath
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextDecorationLine
@@ -110,10 +107,8 @@ private fun StartSide(modifier: Modifier = Modifier) {
         modifier = Modifier.then(modifier),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        MyImage(
+        AppLogo(
             modifier = BrandingLogoStyle.toModifier(),
-            src = PublicRes.Assets.Svg.LOGO,
-            contentDescription = stringResource(StringRes.AlrayadaAlarabiah),
             lazyLoading = false
         )
     }
@@ -132,9 +127,9 @@ private fun EndSide(
             .onClick {
                 isMenuOpened = !isMenuOpened
 
-                val homeAppSection = document.getElementById(AppSection.Home.id)
-                    ?: throw NullPointerException("Can't find ${AppSection.Home.name}")
-                val mobileNavigation = homeAppSection.querySelector("#mobileNavigationItems")
+                val homeSectionInTheHomePage = document.getElementById(HomePageSections.Home.id)
+                    ?: throw NullPointerException("Can't find ${HomePageSections.Home.name}")
+                val mobileNavigation = homeSectionInTheHomePage.querySelector("#mobileNavigationItems")
                     ?: throw NullPointerException("Can't find mobileNavigationItems")
                 mobileNavigation.classList.toggle("hidden")
                 mobileNavigation.classList.toggle("visible")
@@ -158,10 +153,10 @@ private fun EndSide(
 
 @Composable
 fun NavigationLinks(eachItemModifier: Modifier = Modifier) {
-    AppSection.navigationItems.forEach { section ->
+    HomePageSections.navigationItems.forEach { section ->
         val text = stringResource(section.titleRes)
         Link(
-            path = section.id.asWebPath(),
+            path = section.path,
             text = text,
             modifier = NavigationItemStyle
                 .toModifier()

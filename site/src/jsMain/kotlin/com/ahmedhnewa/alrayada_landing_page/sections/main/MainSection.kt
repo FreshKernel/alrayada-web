@@ -5,16 +5,15 @@ import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
 import com.ahmedhnewa.alrayada_landing_page.sections.main.compoments.MyHeader
-import com.ahmedhnewa.alrayada_landing_page.models.AppSection
+import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.sections.main.compoments.MobileNavigation
 import com.ahmedhnewa.alrayada_landing_page.sections.main.compoments.SocialBar
 import com.ahmedhnewa.alrayada_landing_page.styles.MainButtonStyle
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.Constants
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.PublicRes
-import com.ahmedhnewa.alrayada_landing_page.utils.extensions.asWebPath
+import com.ahmedhnewa.alrayada_landing_page.utils.extensions.asFragmentIdentifier
 import com.ahmedhnewa.alrayada_landing_page.utils.extensions.removeCharAtIndex
-import com.ahmedhnewa.alrayada_landing_page.utils.isLastDayOfTheYear
 import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.css.functions.grayscale
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -35,13 +34,16 @@ import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.hover
 import com.varabyte.kobweb.silk.components.style.toModifier
+import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.coroutines.delay
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Button
-import org.jetbrains.compose.web.dom.I
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
+import org.w3c.dom.SMOOTH
+import org.w3c.dom.ScrollBehavior
+import org.w3c.dom.ScrollToOptions
 
 
 @Composable
@@ -217,6 +219,15 @@ private fun MainText() {
             Button(
                 attrs = MainButtonStyle.toModifier()
                     .margin(bottom = 20.px, top = 10.px)
+                    .onClick {
+                        // A workaround to fix bug when click inside the button but not on the link
+                        val contactUsSection = document.getElementById(HomePageSections.Contact.id)
+                        contactUsSection?.scrollIntoView(
+                            ScrollToOptions(
+                                behavior = ScrollBehavior.SMOOTH
+                            )
+                        )
+                    }
                     .toAttrs()
             ) {
                 val text = stringResource(StringRes.ContactUs)
@@ -224,8 +235,9 @@ private fun MainText() {
                     modifier = Modifier
                         .color(Colors.White)
                         .textDecorationLine(TextDecorationLine.None)
+                        .fillMaxSize()
                         .title(text),
-                    path = AppSection.Contact.id.asWebPath(),
+                    path = HomePageSections.Contact.id.asFragmentIdentifier(),
                     openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB,
                     text = text,
                 )

@@ -2,6 +2,7 @@ package com.ahmedhnewa.alrayada_landing_page.models
 
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
+import com.ahmedhnewa.alrayada_landing_page.core.router.AppRouter
 import com.ahmedhnewa.alrayada_landing_page.sections.about.AboutSection
 import com.ahmedhnewa.alrayada_landing_page.sections.achievement.AchievementSection
 import com.ahmedhnewa.alrayada_landing_page.sections.assistance.AssistanceSection
@@ -10,6 +11,7 @@ import com.ahmedhnewa.alrayada_landing_page.sections.devices.DevicesSection
 import com.ahmedhnewa.alrayada_landing_page.sections.experience.ExperienceSection
 import com.ahmedhnewa.alrayada_landing_page.sections.location.LocationSection
 import com.ahmedhnewa.alrayada_landing_page.sections.main.MainSection
+import com.ahmedhnewa.alrayada_landing_page.sections.mobile_app.MobileAppSection
 import com.ahmedhnewa.alrayada_landing_page.sections.objective.ObjectiveSection
 import com.ahmedhnewa.alrayada_landing_page.sections.our_customers.OurCustomersSection
 import com.ahmedhnewa.alrayada_landing_page.sections.our_suppliers.OurSuppliersSection
@@ -21,7 +23,7 @@ import com.ahmedhnewa.alrayada_landing_page.sections.service.ServiceSection
 import com.ahmedhnewa.alrayada_landing_page.sections.testimonial.TestimonialSection
 import org.jetbrains.compose.web.dom.Text
 
-enum class AppSection(
+enum class HomePageSections(
     val id: String,
     val titleRes: StringRes,
     val subtitleRes: StringRes,
@@ -123,6 +125,12 @@ enum class AppSection(
         subtitleRes = StringRes.OurLocation,
         content = { LocationSection() }
     ),
+    MobileApp(
+        id = "mobileApp",
+        titleRes = StringRes.MobileApp,
+        subtitleRes = StringRes.DownloadTheApp,
+        content = { MobileAppSection() }
+    ),
     Contact(
         id = "contact",
         titleRes = StringRes.Contact,
@@ -133,6 +141,17 @@ enum class AppSection(
     companion object {
 
         // In header
-        val navigationItems: List<AppSection> = listOf(Home, About, Service, Portfolio, Experience, Products)
+        val navigationItems: List<NavigationLink> = listOf(
+            NavigationLink.HomePageSection(Home),
+            NavigationLink.HomePageSection(About),
+            NavigationLink.HomePageSectionWithAlternativeTitle(Service, StringRes.Services),
+            NavigationLink.HomePageSection(Portfolio),
+            NavigationLink.HomePageSection(Experience),
+            NavigationLink.HomePageSection(Products),
+            NavigationLink.Page(
+                StringRes.Privacy,
+                AppRouter.PRIVACY_POLICY
+            )
+        )
     }
 }
