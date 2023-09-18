@@ -499,5 +499,25 @@ enum class StringRes(
     MobileAppDesc(
         "Discover the future of medical supply shopping with our innovative mobile app. Your one-stop destination for essential lab supplies—browse, shop, and order directly from us. By downloading the app, you're taking the first step to experience the convenience of quality medical products delivered to your doorstep, effortlessly and securely. Rest assured, your use of the app signifies your agreement with our privacy policy, ensuring your data is protected in the best possible way.",
         "اكتشف مستقبل تسوق المستلزمات الطبية من خلال تطبيقنا المبتكر للهاتف المحمول. وجهتك الشاملة للحصول على مستلزمات المختبرات الأساسية - تصفح وتسوق واطلب منا مباشرة. من خلال تنزيل التطبيق، فإنك تتخذ الخطوة الأولى لتجربة راحة المنتجات الطبية عالية الجودة التي يتم توصيلها إلى باب منزلك، دون عناء وأمان. كن مطمئنًا، استخدامك للتطبيق يعني موافقتك على سياسة الخصوصية الخاصة بنا، مما يضمن حماية بياناتك بأفضل طريقة ممكنة.§"
+    ),
+    Whatsapp(
+        "Whatsapp",
+        "واتساب"
+    ),
+    Hi(
+        "Hi!",
+        "أهلاً!"
+    ),
+    MyNameIs(
+        "My name is",
+        "اسمي هو"
+    ),
+    MyEmailAddressIs(
+        "My email address is",
+        "بريدي الإلكتروني هو"
+    ),
+    MyMessageIs(
+        "My message is",
+        "رسالتي هي"
     )
 }

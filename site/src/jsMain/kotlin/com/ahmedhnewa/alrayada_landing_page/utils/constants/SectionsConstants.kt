@@ -11,6 +11,9 @@ object SectionsConstants {
     }
     object About {
         const val FORM_URL = "https://formspree.io/f/xjvqwrjq"
+        private const val WHATSAPP_URL = "https://wa.me/+9647809640685"
+
+        fun whatsappUrlWithText(text: String) = "${WHATSAPP_URL}?text=${js("encodeURIComponent")(text) as String}"
     }
     object MobileApp {
         // Don't add / in the link

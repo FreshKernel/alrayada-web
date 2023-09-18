@@ -24,10 +24,10 @@ fun MyImage(
     modifier: Modifier = Modifier,
     autoPrefix: Boolean = true,
     variant: ComponentVariant? = null,
-    lazyLoading: Boolean = true
+    lazyLoading: Boolean = true,
 ) {
 //    var isLoading by remember { mutableStateOf(true) }
-    val imageId = "imageId${contentDescription}"
+//    val imageId = "imageId${contentDescription}"
 
 //    LaunchedEffect(Unit) {
 //        document.getElementById(imageId)!!
@@ -50,7 +50,7 @@ fun MyImage(
 //                if (isLoading) Visibility.Hidden
 //                else Visibility.Visible
 //            )
-            .id(imageId)
+//            .id(imageId)
             .attrsModifier {
                 if (lazyLoading) {
                     attr("loading", "lazy")

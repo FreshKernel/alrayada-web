@@ -65,6 +65,7 @@ fun MyTextInput(
     id: String,
     required: Boolean = true,
     value: String = "",
+    formInputName: String ? = null,
     textArea: Boolean = false,
 ) {
     Column {
@@ -87,8 +88,13 @@ fun MyTextInput(
             .id(id)
             .attrsModifier {
                 attr("placeholder", hintText)
-                attr("required", required.toString())
+                if (required) {
+                    attr("required", "true")
+                }
                 attr("value", value) // doesn't work for TextArea
+                if (formInputName != null) {
+                    attr("name", formInputName)
+                }
             }
             .then(modifier)
         if (textArea) {

@@ -1,6 +1,7 @@
 package com.ahmedhnewa.alrayada_landing_page.core.services.localization
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.Local.*
 import kotlinx.browser.document
@@ -24,6 +25,16 @@ private val defaultLocal: Local by lazy {
 
 @Composable
 fun stringResource(stringRes: StringRes): String {
+    LaunchedEffect(stringRes) {}
+    return LocalizationService
+        .getInstance()
+        .getLocalizedString(stringRes, defaultLocal)
+}
+
+/**
+ * For composable events or non composable functions
+ */
+fun getStringResource(stringRes: StringRes): String {
     return LocalizationService
         .getInstance()
         .getLocalizedString(stringRes, defaultLocal)
