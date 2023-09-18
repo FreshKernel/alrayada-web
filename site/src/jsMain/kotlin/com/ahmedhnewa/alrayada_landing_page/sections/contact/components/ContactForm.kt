@@ -3,6 +3,7 @@ package com.ahmedhnewa.alrayada_landing_page.sections.contact.components
 import androidx.compose.runtime.*
 import com.ahmedhnewa.alrayada_landing_page.components.core.CenterHorizontally
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyButton
+import com.ahmedhnewa.alrayada_landing_page.components.core.MyButtonWithText
 import com.ahmedhnewa.alrayada_landing_page.components.fa.FaWhatsapp
 import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
@@ -81,11 +82,10 @@ fun ContactForm() = Form(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            MyButton(
-                type = ButtonType.Submit
-            ) {
-                Text(stringResource(StringRes.Submit))
-            }
+            MyButtonWithText(
+                type = ButtonType.Submit,
+                text = stringResource(StringRes.Submit)
+            )
             MyButton(
                 type = ButtonType.Button,
                 modifier = Modifier
