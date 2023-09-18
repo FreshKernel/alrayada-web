@@ -119,17 +119,17 @@ enum class HomePageSections(
         subtitleRes = StringRes.BestSellingProducts,
         content = { ProductsSection() }
     ),
-    Location(
-        id = "location",
-        titleRes = StringRes.Location,
-        subtitleRes = StringRes.OurLocation,
-        content = { LocationSection() }
-    ),
     MobileApp(
         id = "mobileApp",
         titleRes = StringRes.MobileApp,
         subtitleRes = StringRes.DownloadTheApp,
         content = { MobileAppSection() }
+    ),
+    Location(
+        id = "location",
+        titleRes = StringRes.Location,
+        subtitleRes = StringRes.OurLocation,
+        content = { LocationSection() }
     ),
     Contact(
         id = "contact",
