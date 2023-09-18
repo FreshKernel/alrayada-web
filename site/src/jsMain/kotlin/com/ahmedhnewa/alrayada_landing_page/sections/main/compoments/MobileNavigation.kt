@@ -12,17 +12,11 @@ import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
 import org.jetbrains.compose.web.css.*
 
-val MobileNavigation by ComponentStyle {
-    base {
-        Modifier
-    }
-}
 
 @Composable
 fun MobileNavigation(modifier: Modifier = Modifier) {
     Box(
-        modifier = MobileNavigation
-            .toModifier()
+        modifier = Modifier
             .id("mobileNavigationItems")
 //            .minHeight(300.px)
 //            .backgroundColor(rgba(128, 128, 128, 0.5))

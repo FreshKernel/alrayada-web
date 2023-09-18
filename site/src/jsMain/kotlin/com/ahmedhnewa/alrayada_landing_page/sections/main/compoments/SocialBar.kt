@@ -19,6 +19,8 @@ import com.varabyte.kobweb.silk.components.style.hover
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.varabyte.kobweb.compose.foundation.layout.Row
+import org.jetbrains.compose.web.css.Color
+import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.px
 
@@ -61,11 +63,13 @@ fun SocialBar(modifier: Modifier = Modifier, isRow: Boolean = false) {
 
 val SocialLinkItemStyle by ComponentStyle {
     base {
-        Modifier.color(ThemeColors.Gray.colorValue)
+        Modifier
+            .color(Color("#999999"))
+//            .fontSize(25.px)
             .transition(
                 CSSTransition(
                     property = "color",
-                    duration = 200.ms
+                    duration = 100.ms
                 )
             )
     }
@@ -84,7 +88,8 @@ private fun SocialLink(socialMediaLink: SocialMediaLink, row: Boolean) {
     ) {
         val isLastOne = socialMediaLink == SocialMediaLink.entries.last()
         FaIcon(
-            modifier = SocialLinkItemStyle.toModifier()
+            modifier = SocialLinkItemStyle
+                .toModifier()
                 .margin(
                     bottom = if (isLastOne) 0.px else if (row) 0.px else 40.px,
                     right = if (isLastOne) 0.px else if (row) 40.px else 0.px

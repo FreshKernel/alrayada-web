@@ -33,37 +33,40 @@ import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Header
 import org.jetbrains.compose.web.dom.Nav
 
-@OptIn(ExperimentalComposeWebApi::class)
 val NavigationItemStyle by ComponentStyle {
     base {
         Modifier.color(ThemeColors.Secondary.colorValue)
-            .transition(CSSTransition(property = "color", duration = 200.ms))
-            .transition(CSSTransition(property = "transform", duration = 200.ms))
-            .transition(CSSTransition(property = "scale", duration = 300.ms))
+            .transition(
+                CSSTransition(property = "color", duration = 150.ms),
+                CSSTransition(property = "scale", duration = 200.ms),
+//                CSSTransition(property = "rotate", duration = 200.ms)
+            )
     }
     anyLink {
         Modifier.color(ThemeColors.Secondary.colorValue)
             .scale(1)
-            .transform { rotate(0.deg) }
+//            .rotate(0.deg)
     }
     hover {
         Modifier.color(ThemeColors.Primary.colorValue)
             .scale(1.2)
-            .transform { rotate((3).deg) }
+//            .rotate((3).deg)
     }
 }
 
 val BrandingLogoStyle by ComponentStyle {
     base {
-        Modifier.transition(CSSTransition(property = "rotate", duration = 200.ms))
+        Modifier.transition(
+            CSSTransition(property = "scale", duration = 200.ms)
+        )
     }
     onlyChild {
         Modifier
-            .rotate(0.deg)
+            .scale(1)
     }
     hover {
         Modifier
-            .rotate((-10).deg)
+            .scale(1.2)
     }
 }
 

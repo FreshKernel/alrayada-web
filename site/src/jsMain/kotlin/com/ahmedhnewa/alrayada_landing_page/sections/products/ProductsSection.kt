@@ -1,12 +1,16 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.products
 
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
+import com.ahmedhnewa.alrayada_landing_page.components.core.CenterHorizontally
 import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.sections.products.components.ProductCard
+import com.ahmedhnewa.alrayada_landing_page.sections.products.components.ProductsCategory
 import com.ahmedhnewa.alrayada_landing_page.sections.products.models.Product
+import com.ahmedhnewa.alrayada_landing_page.sections.products.models.ProductCategory
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
+import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
@@ -44,10 +48,37 @@ private fun ProductsContent() {
             section = HomePageSections.Products,
             alignment = Alignment.CenterHorizontally
         )
-        SimpleGrid(numColumns = numColumns(base = 1, md = 2, lg = 3, xl = 4)) {
-            Product.entries.forEach { product ->
-                ProductCard(product = product)
+
+        ProductsWithCategoryFilter()
+
+    }
+}
+
+@Composable
+fun ProductsWithCategoryFilter() {
+    val categories = ProductCategory.entries
+    var selectedItem by remember { mutableStateOf(categories.first()) }
+    CenterHorizontally {
+        ProductsCategory(
+            onSelectedItemChanged = { newItem ->
+                selectedItem = newItem
             }
+        )
+    }
+    ProductsCards(
+        selectedCategory = selectedItem
+    )
+}
+
+@Composable
+private fun ProductsCards(
+    modifier: Modifier = Modifier,
+    selectedCategory: ProductCategory
+) {
+    SimpleGrid(numColumns = numColumns(base = 1, md = 2, lg = 3, xl = 4), modifier = modifier) {
+        val filteredProducts = Product.entries.filter { selectedCategory.categoryName == it.category.categoryName }
+        filteredProducts.forEach { product ->
+            ProductCard(product = product)
         }
     }
 }

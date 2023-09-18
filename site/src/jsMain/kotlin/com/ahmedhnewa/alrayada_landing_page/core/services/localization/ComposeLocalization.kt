@@ -5,10 +5,9 @@ import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.Local.*
 import kotlinx.browser.document
 import kotlinx.browser.window
-import org.jetbrains.compose.web.attributes.DirType
 import org.w3c.dom.HTMLElement
 
-private val local: Local by lazy {
+private val defaultLocal: Local by lazy {
     val language = window.navigator.language
 
     val local = when {
@@ -27,5 +26,5 @@ private val local: Local by lazy {
 fun stringResource(stringRes: StringRes): String {
     return LocalizationService
         .getInstance()
-        .getLocalizedString(stringRes, local)
+        .getLocalizedString(stringRes, defaultLocal)
 }

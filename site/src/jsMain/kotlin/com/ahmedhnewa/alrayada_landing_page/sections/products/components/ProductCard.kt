@@ -20,6 +20,7 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.hover
 import com.varabyte.kobweb.silk.components.style.toModifier
+import kotlinx.browser.window
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -49,6 +50,9 @@ fun ProductCard(
             .margin(all = 6.px)
             .padding(leftRight = 12.px, topBottom = 16.px)
             .width(300.px)
+            .onClick {
+                window.alert("More details here: ${product.productDesc}")
+            }
             .then(modifier)
     ) {
         MyImage(
@@ -59,7 +63,7 @@ fun ProductCard(
                 .borderRadius(r = 8.px)
                 .objectFit(ObjectFit.Cover),
             src = product.image,
-            contentDescription = "${product.productName} image",
+            contentDescription = "${product.productName} Image",
         )
         P(
             attrs = Modifier

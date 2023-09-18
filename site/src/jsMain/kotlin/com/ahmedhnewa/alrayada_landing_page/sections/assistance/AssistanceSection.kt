@@ -58,8 +58,7 @@ private fun AssistanceDescText() {
             .margin(topBottom = 0.px)
             .fillMaxWidth(60.percent)
             .lineHeight(1.6)
-            .margin(top = 60.px)
-            .fontWeight(FontWeight.Normal)
+            .margin(top = 100.px)
             .toAttrs()
     ) {
         Text(stringResource(StringRes.AssistanceSectionDesc))

@@ -13,7 +13,7 @@ import org.jetbrains.compose.web.css.px
 fun AppLogo(modifier: Modifier = Modifier, lazyLoading: Boolean = true) {
     MyImage(
         modifier = Modifier
-            .maxSize(200.px)
+            .maxSize(250.px)
             .then(modifier),
         src = PublicRes.Assets.Images.LOGO,
         contentDescription = stringResource(StringRes.AlrayadaAlarabiah),

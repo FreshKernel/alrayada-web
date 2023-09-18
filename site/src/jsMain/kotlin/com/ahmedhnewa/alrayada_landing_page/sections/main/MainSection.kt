@@ -14,6 +14,7 @@ import com.ahmedhnewa.alrayada_landing_page.utils.constants.Constants
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.PublicRes
 import com.ahmedhnewa.alrayada_landing_page.utils.extensions.asFragmentIdentifier
 import com.ahmedhnewa.alrayada_landing_page.utils.extensions.removeCharAtIndex
+import com.ahmedhnewa.alrayada_landing_page.utils.isLastDayOfTheYear
 import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.css.functions.grayscale
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -104,27 +105,29 @@ val helloTextStyle by ComponentStyle {
             .scale(1.0)
             .margin(topBottom = 0.px)
             .fontSize(45.px)
-            .fontWeight(FontWeight.Normal)
             .color(ThemeColors.PreviousPrimary.colorValue)
-            .transition(CSSTransition(property = "scale", duration = 300.ms))
-            .transition(CSSTransition(property = "transform", duration = 200.ms))
-            .rotate(0.deg)
+            .transition(
+                CSSTransition(property = "scale", duration = 200.ms),
+//                CSSTransition(property = "rotate", duration = 200.ms)
+            )
+//            .rotate(0.deg)
     }
     hover {
-        Modifier.scale(1.2)
-            .rotate(3.deg)
+        Modifier
+            .scale(1.1)
+//            .rotate(3.deg)
     }
 }
 
 @Composable
 private fun MainText() {
-    val firstChar = 'H'
-    var helloText by remember { mutableStateOf("Hello, We are") }
+    val firstChar = 'H' // Should always change when the text changed
+    var mainText by remember { mutableStateOf("Hello, We are") }
     @Composable
     fun AnimateHelloText() {
-//        if (!isLastDayOfTheYear()) {
-//            return
-//        }
+        if (isLastDayOfTheYear()) {
+            return
+        }
         if (window.matchMedia("(max-width: 768px").matches) {
             return
         }
@@ -133,22 +136,22 @@ private fun MainText() {
 
         LaunchedEffect(Unit) {
             delay(2000L)
-            val value = helloText
-            helloText = ""
+            val value = mainText
+            mainText = ""
 
             while (true) {
 
                 for (charIndex in value.indices) {
                     if (isPlusOperator) {
-                        helloText += value[charIndex]
+                        mainText += value[charIndex]
                         delay(200L)
                         continue
                     }
-                    if (helloText[helloText.lastIndex] == firstChar) {
+                    if (mainText[mainText.lastIndex] == firstChar) {
                         isPlusOperator = !isPlusOperator
                         continue
                     }
-                    helloText = helloText.removeCharAtIndex(helloText.lastIndex)
+                    mainText = mainText.removeCharAtIndex(mainText.lastIndex)
                     delay(100L)
                 }
                 isPlusOperator = !isPlusOperator
@@ -170,7 +173,7 @@ private fun MainText() {
                     .displayIfAtLeast(Breakpoint.MD)
                     .toAttrs()
             ) {
-                Text(helloText)
+                Text(mainText)
             }
             P(
                 attrs = Modifier

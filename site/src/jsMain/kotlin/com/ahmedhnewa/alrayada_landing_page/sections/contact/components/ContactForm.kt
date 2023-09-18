@@ -1,6 +1,7 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.contact.components
 
 import androidx.compose.runtime.*
+import com.ahmedhnewa.alrayada_landing_page.components.core.CenterHorizontally
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyButton
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
@@ -63,10 +64,7 @@ fun ContactForm() = Form(
                     attr("name", "Message")
                 }
         )
-        Box(
-            modifier = Modifier.fillMaxWidth(),
-            contentAlignment = Alignment.Center
-        ) {
+        CenterHorizontally {
             MyButton(
                 labelText = stringResource(StringRes.Submit)
             )
