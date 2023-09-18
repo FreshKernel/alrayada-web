@@ -30,11 +30,13 @@ val MyTextInputStyle by ComponentStyle {
     base {
         Modifier
             .border(width = 2.px, style = LineStyle.Solid, color = ThemeColors.LightGray.colorValue)
+            .backgroundColor(ThemeColors.LighterGray.colorValue)
             .borderRadius(r = 6.px)
             .fontSize(18.px)
             .padding(12.px)
             .transition(
                 CSSTransition(property = "border-color", duration = 150.ms),
+//                CSSTransition(property = "border-width", duration = 150.ms),
                 CSSTransition(property = "border-shadow", duration = 200.ms),
             )
     }
@@ -84,7 +86,6 @@ fun MyTextInput(
                 else 300.px
             )
             .height(35.px)
-            .backgroundColor(ThemeColors.LighterGray.colorValue)
             .id(id)
             .attrsModifier {
                 attr("placeholder", hintText)
