@@ -26,10 +26,7 @@ import com.varabyte.kobweb.silk.components.style.*
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import kotlinx.browser.document
 import org.jetbrains.compose.web.ExperimentalComposeWebApi
-import org.jetbrains.compose.web.css.deg
-import org.jetbrains.compose.web.css.ms
-import org.jetbrains.compose.web.css.percent
-import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Header
 import org.jetbrains.compose.web.dom.Nav
 
@@ -37,7 +34,7 @@ val NavigationItemStyle by ComponentStyle {
     base {
         Modifier.color(ThemeColors.Secondary.colorValue)
             .transition(
-                CSSTransition(property = "color", duration = 150.ms),
+                CSSTransition(property = "color", duration = 200.ms),
                 CSSTransition(property = "scale", duration = 200.ms),
 //                CSSTransition(property = "rotate", duration = 200.ms)
             )
@@ -146,6 +143,7 @@ private fun EndSide(
             .borderRadius(r = 50.px)
             .backgroundColor(ThemeColors.LighterGray.colorValue)
             .padding(16.px)
+//            .border(width = 2.px, style = LineStyle.Solid, color = ThemeColors.LighterGray.colorValue)
             .then(modifier),
         horizontalArrangement = Arrangement.End
     ) {
@@ -155,10 +153,10 @@ private fun EndSide(
 
 @Composable
 fun NavigationLinks(eachItemModifier: Modifier = Modifier) {
-    HomePageSections.navigationItems.forEach { section ->
-        val text = stringResource(section.titleRes)
+    HomePageSections.navigationItems.forEach { navigationLink ->
+        val text = stringResource(navigationLink.titleRes)
         Link(
-            path = section.path,
+            path = navigationLink.path,
             text = text,
             modifier = NavigationItemStyle
                 .toModifier()

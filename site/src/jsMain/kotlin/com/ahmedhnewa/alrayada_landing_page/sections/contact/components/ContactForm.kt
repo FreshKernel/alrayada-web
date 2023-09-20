@@ -1,7 +1,6 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.contact.components
 
-import androidx.compose.runtime.*
-import com.ahmedhnewa.alrayada_landing_page.components.core.CenterHorizontally
+import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyButton
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyButtonWithText
 import com.ahmedhnewa.alrayada_landing_page.components.fa.FaWhatsapp
@@ -12,25 +11,20 @@ import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringRes
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.SectionsConstants
 import com.ahmedhnewa.alrayada_landing_page.utils.getInputValueById
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
-import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
-import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.attrsModifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
 import com.varabyte.kobweb.navigation.open
-import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
-import kotlinx.browser.document
 import kotlinx.browser.window
 import org.jetbrains.compose.web.attributes.ButtonType
 import org.jetbrains.compose.web.attributes.InputType
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Form
-import org.jetbrains.compose.web.dom.Text
 
 @Composable
 fun ContactForm() = Form(
@@ -94,6 +88,7 @@ fun ContactForm() = Form(
                         val nameInputValue = getInputValueById(nameInputId)
                         val emailInputValue = getInputValueById(emailInputId)
                         val messageInputValue = getInputValueById(messageInputId)
+//                        FormData().get(nameInputId) // This approach require refactor the whole form with new way to handle it
 
                         val text = buildString {
                             append(getStringResource(StringRes.Hi))
