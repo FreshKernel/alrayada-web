@@ -67,7 +67,7 @@ fun MyTextInput(
     id: String,
     required: Boolean = true,
     value: String = "",
-    formInputName: String ? = null,
+    formInputName: String? = null,
     textArea: Boolean = false,
 ) {
     Column {

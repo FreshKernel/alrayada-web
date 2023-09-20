@@ -1,7 +1,6 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.location.components
 
 import androidx.compose.runtime.Composable
-import com.ahmedhnewa.alrayada_landing_page.components.core.CenterVertically
 import com.ahmedhnewa.alrayada_landing_page.components.fa.FaIcon
 import com.ahmedhnewa.alrayada_landing_page.components.fa.IconCategory
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors

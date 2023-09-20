@@ -1,7 +1,6 @@
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
 import kotlinx.html.link
 import kotlinx.html.meta
-import org.jetbrains.kotlin.psi.propertyVisitor
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)

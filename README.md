@@ -1,13 +1,13 @@
 # License
 This project is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. You are free to use this code for educational purposes but not for commercial use or the creation of derivative works that compete with the original website. please don't use any of the assets that related to the branding or the naming. The license can be changed
 
-## AlrayadaLandingPage
+## About
 
 A productive open source project developed for [Alrayada Alarabiah](https://alrayada.net/)
 using kotlin js
 
 The project is built using [Kobweb](https://kobweb.varabyte.com/) framework which is
-built on top of Compose for Web, both are not ready and I don't recommend them for now unless you
+built on top of Compose for Web, both are not ready and I don't recommend them for production at least for now unless you
 plan to play with it or build simple websites like this one
 
 Compose for Web is experimental

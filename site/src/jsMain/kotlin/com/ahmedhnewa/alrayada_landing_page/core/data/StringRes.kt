@@ -313,7 +313,8 @@ enum class StringRes(
         "Our Vision",
         "رؤيتنا"
     ),
-//    OurVisionText(
+
+    //    OurVisionText(
 //        "Our vision is represented in our desire to be the first regional distributor of healthcare products in the market sectors we deal with.",
 //        "تتمثل رؤيتنا في رغبتنا في أن نكون الموزع الإقليمي الأول لمنتجات الرعاية الصحية في قطاعات السوق التي نتعامل معها."
 //    ),
@@ -325,7 +326,8 @@ enum class StringRes(
         "Our Mission",
         "مهمتنا"
     ),
-//    OurMissionText(
+
+    //    OurMissionText(
 //        "Our mission is represented in serving all the Specialized and diverse requirements of the medical community effectively, In addition to that, we devote ourselves to serving our customers and suppliers, and at the same time, we keep in mind a common objective, which is represented in providing the best quality services and products in the industry while committing to innovation and preserving the culture and the values of the company.",
 //        "تتمثل رسالتنا في خدمة كافة المتطلبات المتخصصة والمتنوعة للمجتمع الطبي بشكل فعال، بالإضافة إلى ذلك، فإننا نكرس أنفسنا لخدمة عملائنا وموردينا، وفي الوقت نفسه، نضع نصب أعيننا هدفًا مشتركًا يتمثل في في تقديم أفضل الخدمات والمنتجات عالية الجودة في الصناعة مع الالتزام بالابتكار والحفاظ على ثقافة وقيم الشركة."
 //    ),

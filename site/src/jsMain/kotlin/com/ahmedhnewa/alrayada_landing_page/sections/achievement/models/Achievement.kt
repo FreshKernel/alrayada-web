@@ -28,6 +28,7 @@ enum class Achievement(
         number = 1,
         descriptionRes = StringRes.TeamMembers
     );
+
     companion object {
         // should match the length of enum items
         val animationDefaultValues = mutableStateListOf(0, 0, 0, 0)

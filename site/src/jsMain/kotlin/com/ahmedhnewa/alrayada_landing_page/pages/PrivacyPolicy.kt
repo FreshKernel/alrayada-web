@@ -3,7 +3,6 @@ package com.ahmedhnewa.alrayada_landing_page.pages
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.core.Center
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
-import com.ahmedhnewa.alrayada_landing_page.core.router.AppRouter
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
 import com.ahmedhnewa.alrayada_landing_page.styles.ReadableTextStyleOnWhiteBackground
 import com.varabyte.kobweb.compose.css.TextAlign

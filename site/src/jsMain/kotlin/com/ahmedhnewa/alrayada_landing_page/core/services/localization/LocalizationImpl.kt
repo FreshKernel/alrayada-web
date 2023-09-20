@@ -6,7 +6,7 @@ import com.ahmedhnewa.alrayada_landing_page.core.services.localization.Local.Eng
 
 class LocalizationImpl : Localization {
     override fun getLocalizedString(resValue: StringRes, locale: Local): String {
-        return when(locale) {
+        return when (locale) {
             English -> resValue.en
             Arabic -> resValue.ar
             else -> resValue.en

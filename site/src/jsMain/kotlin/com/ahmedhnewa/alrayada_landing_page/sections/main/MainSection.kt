@@ -4,10 +4,10 @@ import androidx.compose.runtime.*
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
-import com.ahmedhnewa.alrayada_landing_page.sections.main.compoments.MyHeader
 import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.sections.main.compoments.MobileNavigation
+import com.ahmedhnewa.alrayada_landing_page.sections.main.compoments.MyHeader
 import com.ahmedhnewa.alrayada_landing_page.sections.main.compoments.SocialBar
 import com.ahmedhnewa.alrayada_landing_page.styles.MainButtonStyle
 import com.ahmedhnewa.alrayada_landing_page.utils.constants.Constants
@@ -21,9 +21,11 @@ import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
-import com.varabyte.kobweb.compose.ui.*
+import com.varabyte.kobweb.compose.ui.Alignment
+import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.breakpoint.displayBetween
@@ -38,7 +40,9 @@ import com.varabyte.kobweb.silk.components.style.toModifier
 import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.coroutines.delay
-import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.css.ms
+import org.jetbrains.compose.web.css.percent
+import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
@@ -123,6 +127,7 @@ val helloTextStyle by ComponentStyle {
 private fun MainText() {
     val firstChar = 'H' // Should always change when the text changed
     var mainText by remember { mutableStateOf("Hello, We are") }
+
     @Composable
     fun AnimateHelloText() {
         if (isLastDayOfTheYear()) {

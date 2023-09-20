@@ -1,7 +1,6 @@
 package com.ahmedhnewa.alrayada_landing_page.utils
 
 import androidx.compose.runtime.*
-import com.ahmedhnewa.alrayada_landing_page.utils.constants.Constants
 import kotlinx.browser.document
 import kotlinx.browser.window
 import org.w3c.dom.events.EventListener

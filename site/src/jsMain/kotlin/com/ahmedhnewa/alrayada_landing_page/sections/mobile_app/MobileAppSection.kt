@@ -83,7 +83,7 @@ private fun MobileAppData(modifier: Modifier = Modifier) {
         ) {
             DownloadButtons(
                 modifier = Modifier
-                    .margin(top = 20.px,)
+                    .margin(top = 20.px)
             )
             DownloadQrCode(
                 modifier = Modifier.margin(left = 20.px)

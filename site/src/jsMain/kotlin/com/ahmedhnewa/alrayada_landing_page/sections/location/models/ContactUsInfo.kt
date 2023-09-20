@@ -6,16 +6,19 @@ sealed class ContactUsData {
     data class PlainText(
         val text: String
     ) : ContactUsData()
+
     data class EmailsText(
         val emails: List<String> = emptyList(),
-    ): ContactUsData()
+    ) : ContactUsData()
+
     data class PhoneNumbersText(
         val phoneNumbers: List<String> = emptyList(),
-    ): ContactUsData()
+    ) : ContactUsData()
+
     data class TextLink(
         val label: String,
         val link: String
-    ): ContactUsData()
+    ) : ContactUsData()
 }
 
 enum class ContactUsInfo(

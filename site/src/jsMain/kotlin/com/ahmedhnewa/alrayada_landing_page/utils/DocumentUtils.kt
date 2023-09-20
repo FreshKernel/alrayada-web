@@ -5,7 +5,8 @@ import org.w3c.dom.HTMLInputElement
 import org.w3c.dom.HTMLTextAreaElement
 
 fun getInputValueById(inputId: String): String {
-    val element = document.getElementById(inputId) ?: throw NullPointerException("Can't find input element with id = $inputId")
+    val element =
+        document.getElementById(inputId) ?: throw NullPointerException("Can't find input element with id = $inputId")
     return try {
         val inputElement = element as HTMLInputElement
         inputElement.value
@@ -15,8 +16,7 @@ fun getInputValueById(inputId: String): String {
         textAreaElement.value
     } catch (e: ClassCastException) {
         throw Exception("Can't cast this element to $HTMLInputElement")
-    }
-    catch (e: Exception) {
+    } catch (e: Exception) {
         throw e
     }
 }

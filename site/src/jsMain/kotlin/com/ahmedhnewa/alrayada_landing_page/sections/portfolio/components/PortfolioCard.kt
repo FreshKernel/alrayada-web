@@ -1,6 +1,6 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.portfolio.components
 
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
 import com.ahmedhnewa.alrayada_landing_page.components.fa.FaArrowUpRightFromSquare
 import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
@@ -14,10 +14,13 @@ import com.varabyte.kobweb.compose.css.TextDecorationLine
 import com.varabyte.kobweb.compose.css.UserSelect
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
-import com.varabyte.kobweb.compose.ui.*
+import com.varabyte.kobweb.compose.ui.Alignment
+import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.attrsModifier
 import com.varabyte.kobweb.compose.ui.graphics.Color
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.toModifier

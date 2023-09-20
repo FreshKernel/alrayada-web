@@ -29,6 +29,7 @@ enum class Skill(
         StringRes.Creative,
         69.percent
     );
+
     companion object {
         // Should match the length of enum items
         val animationDefaultValues = mutableStateListOf(0, 0, 0, 0, 0)

@@ -1,10 +1,10 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.testimonial
 
 import androidx.compose.runtime.*
+import com.ahmedhnewa.alrayada_landing_page.components.NavigationIcon
 import com.ahmedhnewa.alrayada_landing_page.components.SectionTitle
 import com.ahmedhnewa.alrayada_landing_page.components.fa.IconSize
 import com.ahmedhnewa.alrayada_landing_page.models.HomePageSections
-import com.ahmedhnewa.alrayada_landing_page.components.NavigationIcon
 import com.ahmedhnewa.alrayada_landing_page.sections.testimonial.componenets.TestimonialCard
 import com.ahmedhnewa.alrayada_landing_page.sections.testimonial.models.Testimonial
 import com.varabyte.kobweb.compose.css.Overflow
@@ -39,7 +39,7 @@ private fun TestimonialContent() {
 
     // To be a little bit readable and customizable I will not use if-else here
     // even though it's less code
-    val itemsPerPage = when(breakpoint) {
+    val itemsPerPage = when (breakpoint) {
         Breakpoint.SM -> 1
         Breakpoint.MD -> 1
         Breakpoint.LG -> 2

@@ -2,12 +2,9 @@ package com.ahmedhnewa.alrayada_landing_page.sections.products.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import com.ahmedhnewa.alrayada_landing_page.sections.products.models.Product
 import com.ahmedhnewa.alrayada_landing_page.sections.products.models.ProductCategory
 import com.ahmedhnewa.alrayada_landing_page.styles.MySelectStyle
-import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.id
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.toAttrs

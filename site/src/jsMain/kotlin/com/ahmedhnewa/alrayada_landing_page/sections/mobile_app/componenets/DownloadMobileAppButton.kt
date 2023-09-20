@@ -20,7 +20,6 @@ import com.varabyte.kobweb.navigation.OpenLinkStrategy
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.hover
-import com.varabyte.kobweb.silk.components.style.link
 import com.varabyte.kobweb.silk.components.style.toModifier
 import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.LineStyle
@@ -62,7 +61,7 @@ fun DownloadMobileAppButton(
             .height(65.px)
             .textDecorationLine(TextDecorationLine.None)
             .title(mobileApp.title)
-            then(modifier),
+                then (modifier),
         path = mobileApp.downloadLink,
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {

@@ -3,7 +3,8 @@ package com.ahmedhnewa.alrayada_landing_page.core.services.localization
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
-import com.ahmedhnewa.alrayada_landing_page.core.services.localization.Local.*
+import com.ahmedhnewa.alrayada_landing_page.core.services.localization.Local.Arabic
+import com.ahmedhnewa.alrayada_landing_page.core.services.localization.Local.English
 import kotlinx.browser.document
 import kotlinx.browser.window
 import org.w3c.dom.HTMLElement

@@ -10,7 +10,6 @@ import com.ahmedhnewa.alrayada_landing_page.sections.products.models.Product
 import com.ahmedhnewa.alrayada_landing_page.sections.products.models.ProductCategory
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
-import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth

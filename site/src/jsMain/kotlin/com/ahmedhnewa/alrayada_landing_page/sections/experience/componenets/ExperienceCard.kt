@@ -116,8 +116,8 @@ private fun ExperienceSecondPart(
         modifier = Modifier
             .margin(
                 left = if (breakpoint >= Breakpoint.MD)
-                if (Constants.ANIMATION_ENABLED) animatedMargin
-                else 50.px
+                    if (Constants.ANIMATION_ENABLED) animatedMargin
+                    else 50.px
                 else 0.px
             )
             .transition(

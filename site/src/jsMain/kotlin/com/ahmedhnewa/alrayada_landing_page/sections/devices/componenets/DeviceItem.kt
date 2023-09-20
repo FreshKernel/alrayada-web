@@ -2,16 +2,18 @@ package com.ahmedhnewa.alrayada_landing_page.sections.devices.componenets
 
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.LineStroke
-import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
-import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
-import com.ahmedhnewa.alrayada_landing_page.sections.devices.models.Device
 import com.ahmedhnewa.alrayada_landing_page.components.NavigationIcon
 import com.ahmedhnewa.alrayada_landing_page.components.core.CenterHorizontally
 import com.ahmedhnewa.alrayada_landing_page.components.core.MyImage
+import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
+import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
+import com.ahmedhnewa.alrayada_landing_page.sections.devices.models.Device
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.ObjectFit
-import com.varabyte.kobweb.compose.foundation.layout.*
+import com.varabyte.kobweb.compose.foundation.layout.Box
+import com.varabyte.kobweb.compose.foundation.layout.Column
+import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*

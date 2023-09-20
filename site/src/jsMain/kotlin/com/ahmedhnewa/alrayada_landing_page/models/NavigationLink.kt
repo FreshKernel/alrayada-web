@@ -9,7 +9,7 @@ sealed class NavigationLink(
 ) {
     data class HomePageSection(
         val section: HomePageSections
-    ): NavigationLink(
+    ) : NavigationLink(
         path = section.id.asFragmentIdentifier(),
         titleRes = section.titleRes
     )
@@ -17,14 +17,15 @@ sealed class NavigationLink(
     data class HomePageSectionWithAlternativeTitle(
         val section: HomePageSections,
         val alternativeTitleRes: StringRes
-    ): NavigationLink(
+    ) : NavigationLink(
         path = section.id.asFragmentIdentifier(),
         titleRes = alternativeTitleRes
     )
+
     data class Page(
         val pageTitle: StringRes,
         val pagePath: String
-    ): NavigationLink(
+    ) : NavigationLink(
         path = pagePath,
         titleRes = pageTitle
     )

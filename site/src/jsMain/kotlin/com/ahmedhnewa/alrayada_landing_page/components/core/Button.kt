@@ -14,7 +14,7 @@ import org.jetbrains.compose.web.dom.Text
 fun MyButton(
     modifier: Modifier = Modifier,
     type: ButtonType = ButtonType.Button,
-    content:  @Composable () -> Unit,
+    content: @Composable () -> Unit,
 ) {
     Button(
         attrs = MainButtonStyle

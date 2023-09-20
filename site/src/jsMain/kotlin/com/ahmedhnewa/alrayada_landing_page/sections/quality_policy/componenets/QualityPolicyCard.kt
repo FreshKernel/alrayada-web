@@ -1,14 +1,10 @@
 package com.ahmedhnewa.alrayada_landing_page.sections.quality_policy.componenets
 
 import androidx.compose.runtime.Composable
-import com.ahmedhnewa.alrayada_landing_page.components.core.Center
 import com.ahmedhnewa.alrayada_landing_page.components.core.CenterHorizontally
-import com.ahmedhnewa.alrayada_landing_page.components.core.CenterVertically
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
 import com.ahmedhnewa.alrayada_landing_page.models.ThemeColors
 import com.ahmedhnewa.alrayada_landing_page.sections.quality_policy.models.QualityPolicy
-import com.varabyte.kobweb.compose.css.AlignContent
-import com.varabyte.kobweb.compose.css.AlignSelf
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -22,7 +18,10 @@ import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.layout.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.components.layout.breakpoint.displayUntil
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.css.Color
+import org.jetbrains.compose.web.css.LineStyle
+import org.jetbrains.compose.web.css.percent
+import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 

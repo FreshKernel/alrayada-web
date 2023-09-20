@@ -74,7 +74,7 @@ private fun AchievementContent() {
                 ),
                 animatedNumber = if (Constants.ANIMATION_ENABLED) (
                         if (viewportEntered) animatedNumbers[achievement.ordinal] else 0
-                ) else achievement.number,
+                        ) else achievement.number,
                 achievement = achievement
             )
         }

@@ -1,22 +1,23 @@
 package com.ahmedhnewa.alrayada_landing_page
 
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.Overflow
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.App
-import com.varabyte.kobweb.silk.init.InitSilk
-import com.varabyte.kobweb.silk.init.InitSilkContext
 import com.varabyte.kobweb.silk.SilkApp
 import com.varabyte.kobweb.silk.components.animation.Keyframes
 import com.varabyte.kobweb.silk.components.animation.registerKeyframes
 import com.varabyte.kobweb.silk.components.layout.Surface
 import com.varabyte.kobweb.silk.components.style.common.SmoothColorStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
-import com.varabyte.kobweb.silk.theme.colors.ColorMode
+import com.varabyte.kobweb.silk.init.InitSilk
+import com.varabyte.kobweb.silk.init.InitSilkContext
 import com.varabyte.kobweb.silk.init.registerBaseStyle
-import kotlinx.browser.localStorage
-import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.css.deg
+import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.css.rgba
+import org.jetbrains.compose.web.css.vh
 
 //private const val COLOR_MODE_KEY = "alrayada_landing_page:colorMode"
 
