@@ -1,7 +1,6 @@
 package com.ahmedhnewa.alrayada_landing_page.core.services.localization
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.Local.Arabic
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.Local.English
@@ -16,7 +15,10 @@ private val defaultLocal: Local by lazy {
     val urlParams = URLSearchParams(window.location.search)
     val urlLang = urlParams.get("lang")
     urlLang?.let {
-        language = it
+        val lang = it.trim()
+        if (lang.isNotBlank()) {
+            language = lang
+        }
     }
 
     val local = when {
@@ -33,7 +35,6 @@ private val defaultLocal: Local by lazy {
 
 @Composable
 fun stringResource(stringRes: StringRes): String {
-    LaunchedEffect(stringRes) {}
     return LocalizationService
         .getInstance()
         .getLocalizedString(stringRes, defaultLocal)
