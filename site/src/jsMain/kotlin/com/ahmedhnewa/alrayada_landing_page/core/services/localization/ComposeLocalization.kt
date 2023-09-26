@@ -8,9 +8,16 @@ import com.ahmedhnewa.alrayada_landing_page.core.services.localization.Local.Eng
 import kotlinx.browser.document
 import kotlinx.browser.window
 import org.w3c.dom.HTMLElement
+import org.w3c.dom.url.URLSearchParams
 
 private val defaultLocal: Local by lazy {
-    val language = window.navigator.language
+    var language = window.navigator.language
+
+    val urlParams = URLSearchParams(window.location.search)
+    val urlLang = urlParams.get("lang")
+    urlLang?.let {
+        language = it
+    }
 
     val local = when {
         language.startsWith("en") -> English

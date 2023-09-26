@@ -274,7 +274,9 @@ fun MainImage() = Column(
     verticalArrangement = Arrangement.Bottom
 ) {
     MyImage(
-        modifier = Modifier.fillMaxWidth().objectFit(ObjectFit.Cover),
+        modifier = Modifier
+            .fillMaxWidth()
+            .objectFit(ObjectFit.Cover),
         src = PublicRes.Assets.Images.MAIN,
         contentDescription = "Person Photo",
         lazyLoading = false

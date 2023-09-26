@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://alrayada.net/</loc>
         <lastmod>2023-09-17T05:22:53+00:00</lastmod>
         <priority>1.00</priority>
+        <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="https://alrayada.net/"/>
+        <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://alrayada.net/?lang=en"/>
+        <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://alrayada.net/?lang=ar"/>
     </url>
     <url>
         <loc>https://alrayada.net/privacy-policy</loc>
         <lastmod>2023-09-17T05:22:53+00:00</lastmod>
         <priority>0.80</priority>
+        <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="https://alrayada.net/privacy-policy"/>
+        <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://alrayada.net/privacy-policy?lang=en"/>
+        <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://alrayada.net/privacy-policy?lang=ar"/>
     </url>
     <url>
         <loc>https://alrayada.net/download-mobile-app</loc>
         <lastmod>2023-09-18T19:30:57+00:00</lastmod>
         <priority>0.80</priority>
+        <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="https://alrayada.net/download-mobile-app"/>
+        <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://alrayada.net/download-mobile-app?lang=en"/>
+        <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://alrayada.net/download-mobile-app?lang=ar"/>
     </url>
 </urlset>

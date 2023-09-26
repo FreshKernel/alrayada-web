@@ -80,6 +80,24 @@ kobweb {
                     rel = "canonical",
                     href = baseUrl
                 )
+                link(
+                    rel = "alternate",
+                    href = baseUrl,
+                ) {
+                    attributes["hreflang"] = "x-default"
+                }
+                link(
+                    rel = "alternate",
+                    href = "$baseUrl/?lang=ar",
+                ) {
+                    attributes["hreflang"] = "ar"
+                }
+                link(
+                    rel = "alternate",
+                    href = "$baseUrl/?lang=en",
+                ) {
+                    attributes["hreflang"] = "en"
+                }
                 link {
                     rel = "apple-touch-icon"
                     sizes = "180x180"
