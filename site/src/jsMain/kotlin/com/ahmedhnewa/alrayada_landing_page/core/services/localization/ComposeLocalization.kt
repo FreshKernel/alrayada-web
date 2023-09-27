@@ -35,6 +35,7 @@ private val defaultLocal: Local by lazy {
 
 @Composable
 fun stringResource(stringRes: StringRes): String {
+    // No need for recomposition when update the language, the browser will handle that
     return LocalizationService
         .getInstance()
         .getLocalizedString(stringRes, defaultLocal)

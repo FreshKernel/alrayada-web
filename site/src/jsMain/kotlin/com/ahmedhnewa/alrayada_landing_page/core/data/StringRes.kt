@@ -225,6 +225,10 @@ enum class StringRes(
         "Alrayada Alarabiah",
         "الريادة العربية"
     ),
+    WebsiteDesc(
+        "Discover the Alrayada Alarabiah landing page – your gateway to the latest offerings and information from our company.  our page is your source for valuable insights and staying connected with us today!",
+        "اكتشف صفحة الريادة العربية - بوابتك إلى أحدث العروض والمعلومات من شركتنا. صفحتنا هي مصدرك للحصول على رؤى قيمة والبقاء على اتصال معنا اليوم!",
+    ),
     CompanyProfile(
         "Company Profile: Where the Sky Knows No Limits.",
         "ملف الشركة: حيث لا تعرف السماء حدودًا."
@@ -471,9 +475,9 @@ enum class StringRes(
         "Non-governmental organizations",
         "المنظمات الغير حكومية"
     ),
-    ThisProjectIsOpenSource(
-        "This project is open source.",
-        "هذا المشروع مفتوح المصدر."
+    ThisProjectIsPublicRepository(
+        "This project is public repository.",
+        "هـذا المشروع متوفر في مستودع عام"
     ),
     Features(
         "Features:",

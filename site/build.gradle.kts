@@ -12,9 +12,9 @@ group = "com.ahmedhnewa.alrayada_landing_page"
 version = "1.0-SNAPSHOT"
 
 val webDesc =
-    "Discover the Alrayada Alarabiah landing page – your gateway to the latest offerings and information from our company. Developed by Ahmed Hnewa, our page is your source for valuable insights and powered by the innovation of Kotlin and Kobweb. Explore, engage, and stay connected with us today!"
-val image = "https://alrayada.net/assets/images/logo.webp"
+    "Discover the Alrayada Alarabiah landing page – your gateway to the latest offerings and information from our company.  our page is your source for valuable insights and staying connected with us today!"
 val baseUrl = "https://alrayada.net"
+val image = "$baseUrl/assets/images/logo.webp"
 
 kobweb {
     app {
