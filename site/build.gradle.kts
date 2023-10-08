@@ -25,6 +25,10 @@ kobweb {
                     content = "yes"
                 )
                 meta(
+                    name = "apple-mobile-web-app-status-bar-style",
+                    content = "black"
+                )
+                meta(
                     name = "author",
                     content = "Ahmed Hnewa"
                 )
@@ -147,8 +151,8 @@ kotlin {
         val jsMain by getting {
             dependencies {
                 implementation(compose.html.core)
-                implementation(libs.kobweb.core)
-                implementation(libs.kobweb.silk.core)
+                implementation(libs.kobweb.silk)
+//                implementation(libs.silk.icons.fa)
 //                implementation(libs.kobweb.silk.icons.fa)
             }
         }

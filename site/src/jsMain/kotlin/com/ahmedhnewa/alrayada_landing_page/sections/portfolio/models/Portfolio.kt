@@ -36,6 +36,6 @@ enum class Portfolio(
         image = PublicRes.Assets.Images.LOGO,
         title = "Other projects on github",
         description = "This is just some of the projects I made, I have some other projects that I didn't publish on github like some games or old java projects since I was little, you can check my repositories on github = ahmedhnewa, and of course this is just the start for me like any other person",
-        link = "https://github.com/ahmedhnewa?tab=repositories"
+        link = "https://github.com/freshtechtips?tab=repositories"
     )
 }

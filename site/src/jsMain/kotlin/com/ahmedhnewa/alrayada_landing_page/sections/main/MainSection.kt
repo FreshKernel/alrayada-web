@@ -37,6 +37,7 @@ import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.hover
 import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.coroutines.delay
@@ -80,26 +81,27 @@ private fun MainContent() = Column(
         verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // same content on all screens
-        val content: @Composable () -> Unit = {
+        val numColumns = numColumns(base = 1, md = 2)
+        val breakpoint = rememberBreakpoint()
+        println(if(breakpoint >= Breakpoint.LG) 80.percent else 90.percent)
+        SimpleGrid(
+            modifier = Modifier
+                .displayIfAtLeast(Breakpoint.LG)
+                .fillMaxWidth(
+                    if(breakpoint >= Breakpoint.LG) 80.percent else 90.percent
+                ),
+            numColumns = numColumns
+        ) {
             MainText()
             MainImage()
         }
-        val numColumns = numColumns(base = 1, md = 2)
-        // For large screens and above
-        SimpleGrid(
-            modifier = Modifier.displayIfAtLeast(Breakpoint.LG).fillMaxWidth(80.percent),
-            numColumns = numColumns
-        ) {
-            content()
-        }
         // For small - medium screens
-        SimpleGrid(
-            modifier = Modifier.displayBetween(Breakpoint.SM, Breakpoint.LG).fillMaxWidth(90.percent),
-            numColumns = numColumns
-        ) {
-            content()
-        }
+//        SimpleGrid(
+//            modifier = Modifier.displayBetween(Breakpoint.SM, Breakpoint.LG).fillMaxWidth(90.percent),
+//            numColumns = numColumns
+//        ) {
+//            content()
+//        }
     }
 }
 

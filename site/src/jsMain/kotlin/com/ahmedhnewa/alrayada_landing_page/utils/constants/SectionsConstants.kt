@@ -8,7 +8,7 @@ object SectionsConstants {
     }
 
     object Footer {
-        const val REPOSITORY_URL = "https://github.com/ahmedhnewa/AlrayadaLandingPage"
+        const val REPOSITORY_URL = "https://github.com/freshtechtips/AlrayadaLandingPage"
     }
 
     object About {
@@ -20,7 +20,7 @@ object SectionsConstants {
 
     object MobileApp {
         // Don't add / in the link
-//        private const val DYNAMIC_DOWNLOAD_LINK = "${Constants.BASE_URL}${AppRouter.DOWNLOAD_MOBILE_APP}" // because this could be on the backend and it might be different urls
+//        private const val DYNAMIC_DOWNLOAD_LINK = "${Constants.BASE_URL}${AppRouter.DOWNLOAD_MOBILE_APP}" // because this could be on the backend, and it might be different urls
         private const val DYNAMIC_DOWNLOAD_LINK = AppRouter.DOWNLOAD_MOBILE_APP
         const val GOOGLE_PLAY = "https://play.google.com/store/apps/details?id=com.ahmedhnewa.alrayada"
         const val APPLE_APP_STORE = DYNAMIC_DOWNLOAD_LINK
