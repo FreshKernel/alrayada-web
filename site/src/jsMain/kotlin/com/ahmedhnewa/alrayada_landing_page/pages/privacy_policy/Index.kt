@@ -1,4 +1,4 @@
-package com.ahmedhnewa.alrayada_landing_page.pages
+package com.ahmedhnewa.alrayada_landing_page.pages.privacy_policy
 
 import androidx.compose.runtime.Composable
 import com.ahmedhnewa.alrayada_landing_page.components.core.Center
@@ -22,7 +22,7 @@ import org.jetbrains.compose.web.dom.H1
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 
-@Page("/privacy-policy")
+@Page
 @Composable
 fun PrivacyPolicyPage() {
     Box(

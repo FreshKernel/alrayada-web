@@ -92,13 +92,13 @@ kobweb {
                 }
                 link(
                     rel = "alternate",
-                    href = "$baseUrl/?lang=ar",
+                    href = "$baseUrl/ar/",
                 ) {
                     attributes["hreflang"] = "ar"
                 }
                 link(
                     rel = "alternate",
-                    href = "$baseUrl/?lang=en",
+                    href = "$baseUrl",
                 ) {
                     attributes["hreflang"] = "en"
                 }

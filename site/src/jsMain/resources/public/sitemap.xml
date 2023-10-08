@@ -11,44 +11,44 @@
         <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://alrayada.net/?lang=en"/>
+                href="https://alrayada.net/"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://alrayada.net/?lang=ar"/>
+                href="https://alrayada.net/ar/"/>
     </url>
     <url>
-        <loc>https://alrayada.net/privacy-policy</loc>
+        <loc>https://alrayada.net/privacy_policy</loc>
         <lastmod>2023-09-26T21:28:00+00:00</lastmod>
         <priority>0.80</priority>
         <xhtml:link
                 rel="alternate"
                 hreflang="x-default"
-                href="https://alrayada.net/privacy-policy"/>
+                href="https://alrayada.net/privacy_policy/"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://alrayada.net/privacy-policy?lang=en"/>
+                href="https://alrayada.net/privacy_policy/"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://alrayada.net/privacy-policy?lang=ar"/>
+                href="https://alrayada.net/ar/privacy_policy/"/>
     </url>
     <url>
-        <loc>https://alrayada.net/download-mobile-app</loc>
+        <loc>https://alrayada.net/download_mobile_app</loc>
         <lastmod>2023-09-26T21:28:00+00:00</lastmod>
         <priority>0.80</priority>
         <xhtml:link
                 rel="alternate"
                 hreflang="x-default"
-                href="https://alrayada.net/download-mobile-app"/>
+                href="https://alrayada.net/download_mobile_app/"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://alrayada.net/download-mobile-app?lang=en"/>
+                href="https://alrayada.net/download_mobile_app/"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://alrayada.net/download-mobile-app?lang=ar"/>
+                href="https://alrayada.net/ar/download_mobile_app/"/>
     </url>
 </urlset>
