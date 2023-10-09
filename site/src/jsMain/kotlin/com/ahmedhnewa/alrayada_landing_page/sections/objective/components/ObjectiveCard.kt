@@ -65,8 +65,9 @@ fun ObjectiveCard(modifier: Modifier = Modifier, objective: Objective, breakpoin
             .minHeight(50.px)
             .padding(16.px)
             .fillMaxWidth(
-                if (breakpoint >= Breakpoint.MD) 30.percent
-                else 50.percent
+                if (breakpoint > Breakpoint.MD) 30.percent
+                else if (breakpoint >= Breakpoint.MD) 40.percent
+                else 90.percent
             )
             .borderRadius(r = 8.px)
             .then(modifier)

@@ -98,7 +98,7 @@ kobweb {
                 }
                 link(
                     rel = "alternate",
-                    href = "$baseUrl",
+                    href = baseUrl,
                 ) {
                     attributes["hreflang"] = "en"
                 }

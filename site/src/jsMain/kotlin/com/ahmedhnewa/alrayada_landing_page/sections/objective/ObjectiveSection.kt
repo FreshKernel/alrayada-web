@@ -18,7 +18,6 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.layout.Divider
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
-import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 @Composable
@@ -70,10 +69,7 @@ private fun ObjectivesContainer(modifier: Modifier = Modifier, breakpoint: Break
         Box(
             modifier = Modifier
                 .fillMaxHeight()
-                .fillMaxWidth(
-                    if (breakpoint >= Breakpoint.MD) 100.percent
-                    else 90.percent
-                ),
+                .fillMaxWidth(),
         ) {
             Box(
                 modifier = Modifier
@@ -85,7 +81,10 @@ private fun ObjectivesContainer(modifier: Modifier = Modifier, breakpoint: Break
                         .fillMaxWidth()
                         .minHeight(650.px)
                         .padding(32.px)
-                        .borderRadius(180.px)
+                        .borderRadius(
+                            if (breakpoint >= Breakpoint.MD) 180.px
+                            else 50.px
+                        )
                         .backgroundColor(Colors.White),
                     contentAlignment = Alignment.Center
                 ) {
