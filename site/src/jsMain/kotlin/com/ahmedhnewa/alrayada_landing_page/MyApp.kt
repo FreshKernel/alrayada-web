@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.getStringResource
+import com.ahmedhnewa.alrayada_landing_page.utils.updateDocument
 import com.varabyte.kobweb.compose.css.Overflow
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
@@ -17,7 +18,6 @@ import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.init.InitSilk
 import com.varabyte.kobweb.silk.init.InitSilkContext
 import com.varabyte.kobweb.silk.init.registerBaseStyle
-import kotlinx.browser.document
 import org.jetbrains.compose.web.css.deg
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.rgba
@@ -68,9 +68,10 @@ fun MyApp(content: @Composable () -> Unit) {
 //        }
 
         LaunchedEffect(Unit) {
-            document.title = getStringResource(StringRes.AlrayadaAlarabiah)
-            document.querySelector("meta[name=\"description\"]")
-                ?.setAttribute("content", getStringResource(StringRes.WebsiteDesc))
+            updateDocument {
+                title = getStringResource(StringRes.AlrayadaAlarabiah)
+                description = getStringResource(StringRes.WebsiteDesc)
+            }
         }
 
         Surface(SmoothColorStyle.toModifier().minHeight(100.vh)) {

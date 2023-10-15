@@ -20,3 +20,24 @@ fun getInputValueById(inputId: String): String {
         throw e
     }
 }
+
+data class DocumentConfig(
+    var title: String? = null,
+    var description: String? = null
+)
+
+fun updateDocument(
+    block: DocumentConfig.() -> Unit
+) {
+    val documentConfig = DocumentConfig()
+    documentConfig.block()
+    documentConfig.apply {
+        title?.let {
+            document.title = it
+        }
+        description?.let {
+            document.querySelector("meta[name=\"description\"]")
+                ?.setAttribute("content", it)
+        }
+    }
+}

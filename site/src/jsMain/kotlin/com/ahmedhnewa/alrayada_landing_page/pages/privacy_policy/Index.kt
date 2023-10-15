@@ -1,10 +1,13 @@
 package com.ahmedhnewa.alrayada_landing_page.pages.privacy_policy
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import com.ahmedhnewa.alrayada_landing_page.components.core.Center
 import com.ahmedhnewa.alrayada_landing_page.core.data.StringRes
+import com.ahmedhnewa.alrayada_landing_page.core.services.localization.getStringResource
 import com.ahmedhnewa.alrayada_landing_page.core.services.localization.stringResource
 import com.ahmedhnewa.alrayada_landing_page.styles.ReadableTextStyleOnWhiteBackground
+import com.ahmedhnewa.alrayada_landing_page.utils.updateDocument
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -25,6 +28,12 @@ import org.jetbrains.compose.web.dom.Text
 @Page
 @Composable
 fun PrivacyPolicyPage() {
+    LaunchedEffect(Unit) {
+        updateDocument {
+            title = "${getStringResource(StringRes.PrivacyPolicy)} - ${getStringResource(StringRes.AlrayadaAlarabiah)}"
+            description = getStringResource(StringRes.PrivacyPolicyText)
+        }
+    }
     Box(
         modifier = Modifier
             .fillMaxSize()
