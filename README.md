@@ -1,14 +1,22 @@
-# License
-This project is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. You are free to use this code for educational purposes but not for commercial use or the creation of derivative works that compete with the original website. please don't use any of the assets that related to the branding or the naming. The license can be changed
+# Alrayada Landing Page
+
+## Table of Contents
+- [Alrayada Landing Page](#alrayada-landing-page)
+  - [Table of Contents](#table-of-contents)
+  - [About](#about)
+  - [How to run](#how-to-run)
+  - [Export as static website](#export-as-static-website)
+  - [Known issues](#known-issues)
+  - [License](#license)
+  - [Credits](#credits)
 
 ## About
 
-A productive open source project developed for [Alrayada Alarabiah](https://alrayada.net/)
-using kotlin js
+A productive project developed for [Alrayada Alarabiah](https://alrayada.net/)
+using Kotlin JS
 
 The project is built using [Kobweb](https://kobweb.varabyte.com/) framework which is
-built on top of Compose for Web, both are not ready and I don't recommend them for production at least for now unless you
-plan to play with it or build simple websites like this one
+built on top of Compose for Web
 
 Compose for Web is experimental
 and Kobweb is built on top of it, and
@@ -39,10 +47,17 @@ To try it out, run `kobweb run --layout static --env prod`
 or you can run it in development mode directly
 `kobweb run`
 
-# Known issues
+## Known issues
 * When navigate to the policy page in the menu and scroll to the very end, you will get error messages about the sections of previous page if the Animations is enabled, by `ObserveViewportEntered()` function, the error messages are in the log are NullPointerException, it doesn't cause any issues, but it shouldn't happen, when we navigate to different page, all the listeners and things registered should be disposed or paused automatically by the framework to save some memory.
 * Rtl direction is not supported yet, but it's not needed for now.
-* When you open the localized page url and navigate to different url, then refresh it will revert the language to the default device language, but as I said 95% of the users of this landing page are english users, I will wait while kobweb is getting improved to the next level then I plan on improve the website to the next level, the multi-language support is still experimental 
+* When you open the localized page url and navigate to different url, then refresh it will revert the language to the default device language, but as I said 95% of the users of this landing page are english users, I will wait while kobweb is getting improved to the next level then I plan on improve the website to the next level, the multi-language support is still experimental
+
+## License
+This project is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+You are free to use this code for educational purposes but not for commercial use or the creation of derivative works
+that compete with the original website.
+Please don't use any of the assets that related to the branding or the naming.
+The license can be changed
 
 ## Credits
 * Thanks to [Kobweb](https://kobweb.varabyte.com/) to make the core UI elements from Compose Multiplatform like Row, Column, Box, Modifier as well as some other features
