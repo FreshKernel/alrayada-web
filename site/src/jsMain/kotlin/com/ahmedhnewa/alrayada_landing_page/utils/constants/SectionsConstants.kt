@@ -8,7 +8,7 @@ object SectionsConstants {
     }
 
     object Footer {
-        const val REPOSITORY_URL = "https://github.com/freshtechtips/AlrayadaLandingPage"
+        const val REPOSITORY_URL = "https://github.com/freshtechtips/alrayada-landing-page"
     }
 
     object About {

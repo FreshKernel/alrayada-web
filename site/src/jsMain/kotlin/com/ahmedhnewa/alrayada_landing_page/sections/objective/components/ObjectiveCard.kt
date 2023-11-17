@@ -13,7 +13,7 @@ import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.styleModifier
 import com.varabyte.kobweb.compose.ui.toAttrs
-import com.varabyte.kobweb.silk.components.layout.Divider
+import com.varabyte.kobweb.silk.components.layout.HorizontalDivider
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.hover
@@ -85,7 +85,7 @@ fun ObjectiveCard(modifier: Modifier = Modifier, objective: Objective, breakpoin
             Text(stringResource(objective.titleRes))
         }
 
-        Divider(
+        HorizontalDivider(
             modifier = Modifier
                 .height(4.px)
                 .width(120.px)

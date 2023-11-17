@@ -33,7 +33,7 @@ fun MyImage(
 
     Image(
         src = src,
-        desc = contentDescription,
+        alt = contentDescription,
         modifier = modifier
 //            .visibility(
 //                if (isLoading) Visibility.Hidden

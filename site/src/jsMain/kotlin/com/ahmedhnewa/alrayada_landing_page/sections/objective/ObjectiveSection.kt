@@ -15,7 +15,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Color
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.layout.Divider
+import com.varabyte.kobweb.silk.components.layout.HorizontalDivider
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.px
@@ -110,7 +110,7 @@ private fun Objectives(modifier: Modifier = Modifier, breakpoint: Breakpoint) {
                 breakpoint = breakpoint
             )
             if (!isLast) {
-                Divider(
+                HorizontalDivider(
                     modifier = Modifier
                         .height(4.px)
                         .width(100.px)
