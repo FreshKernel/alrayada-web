@@ -8,7 +8,7 @@ plugins {
     alias(libs.plugins.kobweb.application)
 }
 
-group = "com.ahmedhnewa.alrayada_landing_page"
+group = "net.freshplatform.alrayada_landing_page"
 version = "1.0-SNAPSHOT"
 
 val webDesc =
@@ -158,3 +158,5 @@ kotlin {
         }
     }
 }
+
+
