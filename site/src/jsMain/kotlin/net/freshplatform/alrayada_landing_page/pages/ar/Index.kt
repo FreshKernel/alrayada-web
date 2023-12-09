@@ -6,6 +6,6 @@ import com.varabyte.kobweb.core.rememberPageContext
 
 @Composable
 @Page
-fun HomePage_Arabic() {
+fun PrivacyPolicyPage_ar() {
     rememberPageContext().router.navigateTo("/?lang=ar")
 }

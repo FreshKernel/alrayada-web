@@ -159,4 +159,55 @@ kotlin {
     }
 }
 
+// For SEO we will have to use unique urls for each page
+// Here we will use code generator to generate unique pages that redirect to the original pages
 
+val langs = listOf("ar")
+val pages = listOf("download_mobile_app", "privacy_policy")
+
+val generateLanguaguesPagesTask = tasks.register("generateLanguaguesPages") {
+    group = "net.freshplatform.alrayada_landing_page"
+
+    doLast {
+        val pagesDirectory = project.file("src/jsMain/kotlin/net/freshplatform/alrayada_landing_page")
+        langs.forEach { lang ->
+            pages.forEach { page ->
+
+                pagesDirectory.resolve("pages/$lang/${page}/Index.kt").apply {
+                    parentFile.mkdirs()
+                    writeText("""
+                        package ${group}.pages.ar.${page}
+
+                        import androidx.compose.runtime.Composable
+                        import com.varabyte.kobweb.core.Page
+                        import com.varabyte.kobweb.core.rememberPageContext
+
+                        @Composable
+                        @Page
+                        fun PrivacyPolicyPage_${lang}() {
+                            rememberPageContext().router.navigateTo("/${page}/?lang=${lang}")
+                        }
+                    """.trimIndent())
+                }
+            }
+
+            pagesDirectory.resolve("pages/$lang/Index.kt").apply {
+                parentFile.mkdirs()
+                writeText("""
+                        package ${group}.pages.ar
+
+                        import androidx.compose.runtime.Composable
+                        import com.varabyte.kobweb.core.Page
+                        import com.varabyte.kobweb.core.rememberPageContext
+
+                        @Composable
+                        @Page
+                        fun PrivacyPolicyPage_${lang}() {
+                            rememberPageContext().router.navigateTo("/?lang=${lang}")
+                        }
+                    """.trimIndent())
+            }
+
+        }
+    }
+}
