@@ -74,8 +74,8 @@ enum class StringRes(
         "تأسست عام 2008. ليفوترونيك هي شركة رائدة في صناعة أجهزة قياس السكر ومنتجات الثلاسيميا للأغراض التشخيصية والعلاجية."
     ),
     UritDesc(
-        "It was established in 1948. It is one of the internationally leading companies in China. The company provides laboratory and medical equipment in the fields of urine test strips, hematology units, biochemical coagulation, ELISA, and veterinary diagnostic electrolytes.",
-        "تأسست عام 1948. وهي واحدة من الشركات الرائدة عالميًا في الصين. توفر الشركة المعدات المخبرية والطبية في مجالات شرائط اختبار البول، وحدات أمراض الدم، التخثر الكيميائي الحيوي، ELISA، والكهارل التشخيصية البيطرية."
+        "It was established in 1984. It is one of the internationally leading companies in China. The company provides laboratory and medical equipment in the fields of urine test strips, hematology units, biochemical coagulation, ELISA, and veterinary diagnostic electrolytes.",
+        "تأسست عام 1984. وهي واحدة من الشركات الرائدة عالميًا في الصين. توفر الشركة المعدات المخبرية والطبية في مجالات شرائط اختبار البول، وحدات أمراض الدم، التخثر الكيميائي الحيوي، ELISA، والكهارل التشخيصية البيطرية."
     ),
     ThroughputUpTo180TestHour(
         "Throughput: up to 180 test/hour.",
@@ -201,9 +201,9 @@ enum class StringRes(
         "Products",
         "المنتجات"
     ),
-    BestSellingProducts(
-        "Best Selling Products",
-        "المنتجات الأكثر مبيعا"
+    CompanyProducts(
+        "Company Products",
+        "منتجات الشركات"
     ),
     Location(
         "Location",

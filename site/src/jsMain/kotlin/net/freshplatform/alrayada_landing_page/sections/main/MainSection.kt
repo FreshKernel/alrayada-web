@@ -1,20 +1,6 @@
 package net.freshplatform.alrayada_landing_page.sections.main
 
 import androidx.compose.runtime.*
-import net.freshplatform.alrayada_landing_page.components.core.MyImage
-import net.freshplatform.alrayada_landing_page.core.data.StringRes
-import net.freshplatform.alrayada_landing_page.core.services.localization.stringResource
-import net.freshplatform.alrayada_landing_page.models.HomePageSections
-import net.freshplatform.alrayada_landing_page.models.ThemeColors
-import net.freshplatform.alrayada_landing_page.sections.main.compoments.MobileNavigation
-import net.freshplatform.alrayada_landing_page.sections.main.compoments.MyHeader
-import net.freshplatform.alrayada_landing_page.sections.main.compoments.SocialBar
-import net.freshplatform.alrayada_landing_page.styles.MainButtonStyle
-import net.freshplatform.alrayada_landing_page.utils.constants.Constants
-import net.freshplatform.alrayada_landing_page.utils.constants.PublicRes
-import net.freshplatform.alrayada_landing_page.utils.extensions.asFragmentIdentifier
-import net.freshplatform.alrayada_landing_page.utils.extensions.removeCharAtIndex
-import net.freshplatform.alrayada_landing_page.utils.isLastDayOfTheYear
 import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.css.functions.grayscale
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -41,6 +27,20 @@ import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.coroutines.delay
+import net.freshplatform.alrayada_landing_page.components.core.MyImage
+import net.freshplatform.alrayada_landing_page.core.data.StringRes
+import net.freshplatform.alrayada_landing_page.core.services.localization.stringResource
+import net.freshplatform.alrayada_landing_page.models.HomePageSections
+import net.freshplatform.alrayada_landing_page.models.ThemeColors
+import net.freshplatform.alrayada_landing_page.sections.main.compoments.MobileNavigation
+import net.freshplatform.alrayada_landing_page.sections.main.compoments.MyHeader
+import net.freshplatform.alrayada_landing_page.sections.main.compoments.SocialBar
+import net.freshplatform.alrayada_landing_page.styles.MainButtonStyle
+import net.freshplatform.alrayada_landing_page.utils.constants.Constants
+import net.freshplatform.alrayada_landing_page.utils.constants.PublicRes
+import net.freshplatform.alrayada_landing_page.utils.extensions.asFragmentIdentifier
+import net.freshplatform.alrayada_landing_page.utils.extensions.removeCharAtIndex
+import net.freshplatform.alrayada_landing_page.utils.isLastDayOfTheYear
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -87,6 +87,7 @@ private fun MainContent() = Column(
         SimpleGrid(
             modifier = Modifier
                 .displayIfAtLeast(Breakpoint.LG)
+                .fillMaxHeight()
                 .fillMaxWidth(
                     if(breakpoint >= Breakpoint.LG) 80.percent else 90.percent
                 ),
@@ -114,20 +115,17 @@ val helloTextStyle by ComponentStyle {
             .color(ThemeColors.PreviousPrimary.colorValue)
             .transition(
                 CSSTransition(property = "scale", duration = 200.ms),
-//                CSSTransition(property = "rotate", duration = 200.ms)
             )
-//            .rotate(0.deg)
     }
     hover {
         Modifier
             .scale(1.1)
-//            .rotate(3.deg)
     }
 }
 
 @Composable
 private fun MainText() {
-    val firstChar = 'H' // Should always change when the text changed
+    val firstChar = 'H' // This should always be change when the text changed
     var mainText by remember { mutableStateOf("Hello, We are") }
 
     @Composable
@@ -270,17 +268,19 @@ val MainImageStyle by ComponentStyle {
 }
 
 @Composable
-fun MainImage() = Column(
-    modifier = MainImageStyle.toModifier()
-        .fillMaxSize(80.percent).fillMaxHeight(),
-    verticalArrangement = Arrangement.Bottom
+fun MainImage() = Box(
+    modifier = MainImageStyle
+        .toModifier()
+        .fillMaxSize(80.percent)
+        .fillMaxHeight(),
+    contentAlignment = Alignment.Center
 ) {
     MyImage(
         modifier = Modifier
             .fillMaxWidth()
             .objectFit(ObjectFit.Cover),
-        src = PublicRes.Assets.Images.MAIN,
-        contentDescription = "Person Photo",
+        src = PublicRes.Assets.Svg.MAIN,
+        contentDescription = "",
         lazyLoading = false
     )
 }

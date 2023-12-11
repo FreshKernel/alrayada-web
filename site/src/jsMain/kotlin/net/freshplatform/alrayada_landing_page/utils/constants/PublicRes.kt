@@ -6,7 +6,6 @@ object PublicRes {
 
         object Images {
             private const val PATH = "${Assets.PATH}/images"
-            const val MAIN = "$PATH/main_image.webp"
             const val ABOUT = "$PATH/about_image.webp"
 
             const val LOGO = "$PATH/logo.webp"
@@ -16,7 +15,9 @@ object PublicRes {
                 const val SNIBE_LOGO = "${PATH}/snibe_logo.webp"
                 const val DIRUI_LOGO = "${PATH}/dirui_logo.webp"
                 const val LIFOTRONIC_LOGO = "${PATH}/lifotronic_logo.webp"
-                const val URIT = "${PATH}/urit_logo.webp"
+                const val URIT_LOGO = "${PATH}/urit_logo.webp"
+                const val CARETIUM_LOGO = "${PATH}/caretium.webp"
+
             }
 
             object Labs {
@@ -39,8 +40,8 @@ object PublicRes {
 
         object Svg {
             private const val PATH = "${Assets.PATH}/svg"
-            const val LOGO = "$PATH/logo.svg"
             const val BACKGROUND = "$PATH/background.svg"
+            const val MAIN = "${PATH}/main_image.svg"
 
             const val MOBILE_DEVELOPMENT1 = "$PATH/mobile_development1.svg"
 

@@ -25,7 +25,7 @@ enum class Supplier(
     ),
     Urit(
         "Urit",
-        PublicRes.Assets.Images.Brands.URIT,
+        PublicRes.Assets.Images.Brands.URIT_LOGO,
         StringRes.UritDesc
     ),
 }

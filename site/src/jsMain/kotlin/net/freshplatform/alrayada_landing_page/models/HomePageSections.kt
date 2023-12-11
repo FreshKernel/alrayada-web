@@ -116,7 +116,7 @@ enum class HomePageSections(
     Products(
         id = "products",
         titleRes = StringRes.Products,
-        subtitleRes = StringRes.BestSellingProducts,
+        subtitleRes = StringRes.CompanyProducts,
         content = { ProductsSection() }
     ),
     MobileApp(

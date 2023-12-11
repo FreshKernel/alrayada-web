@@ -1,8 +1,8 @@
-package net.freshplatform.alrayada_landing_page.sections.products.components
+package net.freshplatform.alrayada_landing_page.sections.products_old.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import net.freshplatform.alrayada_landing_page.sections.products.models.ProductCategory
+import net.freshplatform.alrayada_landing_page.sections.products_old.models.ProductCategory
 import net.freshplatform.alrayada_landing_page.styles.MySelectStyle
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.id

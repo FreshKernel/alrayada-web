@@ -2,129 +2,34 @@ package net.freshplatform.alrayada_landing_page.sections.products.models
 
 import net.freshplatform.alrayada_landing_page.utils.constants.PublicRes
 
-enum class ProductCategory(
-    val categoryName: String
-) {
-    Apple(
-        "Apple"
-    ),
-    Samsung(
-        "Samsung"
-    ),
-    Huawei(
-        "Huawei"
-    ),
-    Sony(
-        "Sony"
-    )
-}
-
 enum class Product(
-    val productName: String,
-    val productDesc: String,
-    val image: String,
-    val originalPrice: Double,
-    val discountPrice: Double,
-    val company: String,
-    val category: ProductCategory = ProductCategory.Samsung
+    val companyName: String,
+    val link: String,
+    val image: String
 ) {
-    One(
-        productName = "Disposable Face Masks",
-        productDesc = "Protect yourself and others with these comfortable disposable face masks.",
-        image = PublicRes.Assets.Images.LOGO,
-        originalPrice = 15.99,
-        discountPrice = 12.99,
-        company = "MedicalCo",
-        category = ProductCategory.Apple
+    Snibe(
+        companyName = "Snibe",
+        link = "https://www.snibe.com/zh_en/en_products.aspx?id=65",
+        image = PublicRes.Assets.Images.Brands.SNIBE_LOGO
     ),
-    Two(
-        productName = "Nitrile Examination Gloves",
-        productDesc = "High-quality nitrile gloves for medical and laboratory use.",
-        image = PublicRes.Assets.Images.LOGO,
-        originalPrice = 29.99,
-        discountPrice = 24.99,
-        company = "GloveTech",
-        category = ProductCategory.Sony
+    Dirui(
+        companyName = "Dirui",
+        link = "http://en.dirui.com.cn/list-22-1.html",
+        image = PublicRes.Assets.Images.Brands.DIRUI_LOGO
     ),
-    Three(
-        productName = "Safety Goggles",
-        productDesc = "Protect your eyes with these impact-resistant safety goggles.",
-        image = PublicRes.Assets.Images.LOGO,
-        originalPrice = 9.99,
-        discountPrice = 7.49,
-        company = "EyeSafe",
-        category = ProductCategory.Huawei
+    Lifotronic(
+        companyName = "Lifotronic",
+        link = "http://en.lifotronic.com/products/",
+        image = PublicRes.Assets.Images.Brands.LIFOTRONIC_LOGO
     ),
-    Four(
-        productName = "Digital Thermometer",
-        productDesc = "Accurate digital thermometer for measuring body temperature.",
-        image = PublicRes.Assets.Images.LOGO,
-        originalPrice = 39.99,
-        discountPrice = 34.99,
-        company = "HealthSense",
-        category = ProductCategory.Huawei
+    Urit(
+        companyName = "Urit",
+        link = "http://www.urit.com/en2/cpjjfa/list.aspx?lcid=15",
+        image = PublicRes.Assets.Images.Brands.URIT_LOGO
     ),
-    Five(
-        productName = "Hand Sanitizer (500ml)",
-        productDesc = "Stay germ-free with our 500ml hand sanitizer gel.",
-        image = PublicRes.Assets.Images.LOGO,
-        originalPrice = 12.99,
-        discountPrice = 9.99,
-        company = "PureGuard",
-        category = ProductCategory.Huawei
-    ),
-    Six(
-        productName = "Medical Scrubs",
-        productDesc = "Comfortable and durable medical scrubs for healthcare professionals.",
-        image = PublicRes.Assets.Images.LOGO,
-        originalPrice = 34.99,
-        discountPrice = 29.99,
-        company = "UniformEssentials",
-        category = ProductCategory.Samsung
-    ),
-    Seven(
-        productName = "Infrared Forehead Thermometer",
-        productDesc = "Quick and accurate infrared thermometer for forehead temperature measurement.",
-        image = PublicRes.Assets.Images.LOGO,
-        originalPrice = 49.99,
-        discountPrice = 42.99,
-        company = "MediTemp",
-        category = ProductCategory.Samsung
-    ),
-    Eight(
-        productName = "Pulse Oximeter",
-        productDesc = "Measure your pulse rate and blood oxygen levels with this convenient oximeter.",
-        image = PublicRes.Assets.Images.LOGO,
-        originalPrice = 22.99,
-        discountPrice = 18.99,
-        company = "VitalCheck",
-        category = ProductCategory.Sony
-    ),
-    Nine(
-        productName = "Medical Face Shields",
-        productDesc = "Clear and protective face shields for medical professionals.",
-        image = PublicRes.Assets.Images.LOGO,
-        originalPrice = 8.49,
-        discountPrice = 6.99,
-        company = "ShieldPro",
-        category = ProductCategory.Apple
-    ),
-    Ten(
-        productName = "Disposable Isolation Gowns",
-        productDesc = "Single-use isolation gowns for healthcare settings.",
-        image = PublicRes.Assets.Images.LOGO,
-        originalPrice = 18.99,
-        discountPrice = 15.99,
-        company = "GuardianGear",
-        category = ProductCategory.Apple
-    ),
-    Eleven(
-        productName = "Isolation Gowns",
-        productDesc = "Reusable isolation gowns designed for safety and comfort.",
-        image = PublicRes.Assets.Images.LOGO,
-        originalPrice = 20.0,
-        discountPrice = 0.0,
-        company = "GuardianGear",
-        category = ProductCategory.Sony
+    Caretium(
+        companyName = "Caretium",
+        link = "https://en.caretium.com/Product/989558469800067072.html",
+        image = PublicRes.Assets.Images.Brands.CARETIUM_LOGO
     )
 }
