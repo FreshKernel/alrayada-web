@@ -58,8 +58,7 @@ fun ProductCard(
                     .toModifier()
                     .height(250.px)
                     .fillMaxWidth()
-                    .borderRadius(r = 8.px)
-                    .objectFit(ObjectFit.Cover),
+                    .borderRadius(r = 8.px),
                 src = product.image,
                 contentDescription = "${product.companyName} Image",
             )
