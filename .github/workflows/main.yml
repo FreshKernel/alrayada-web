@@ -2,9 +2,13 @@ name: CI
 
 on:
   push:
+    paths:
+      - "*/site"
     branches: [ main ]
   pull_request:
     branches: [ main ]
+    paths:
+      - "*/site"
 jobs:
   build:
     runs-on: ubuntu-latest
