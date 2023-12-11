@@ -1,7 +1,7 @@
-# Alrayada Landing Page
+# Alrayada Web
 
 ## Table of Contents
-- [Alrayada Landing Page](#alrayada-landing-page)
+- [Alrayada Landing Page](#alrayada-web)
   - [Table of Contents](#table-of-contents)
   - [About](#about)
   - [How to run](#how-to-run)
