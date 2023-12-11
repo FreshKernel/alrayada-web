@@ -32,13 +32,13 @@ enum class ContactUsInfo(
     Two(
         "phone",
         ContactUsData.PhoneNumbersText(
-            listOf("+9647704067116", "+9647714758432", "+9647809640685")
+            listOf("+9647901520604")
         )
     ),
     Three(
         "envelope",
         ContactUsData.EmailsText(
-            listOf("mohammad.alhadi@alrayada.net", "support@alrayada.net")
+            listOf("support@alrayada.net", "a.zeki@alrayada.com")
         )
     ),
     Four(

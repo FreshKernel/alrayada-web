@@ -6,23 +6,23 @@ enum class OurCustomer(
     val icon: String,
     val title: StringRes
 ) {
-    One(
-        "school",
-        StringRes.MinistryOfHigherEducationAndScientificResearch,
-    ),
-    Two(
-        "oil-well",
-        StringRes.OilMinistry,
-    ),
-    Three(
+    MinistryOfHealth(
         "tree",
         StringRes.MinistryOfHealth,
     ),
-    Four(
+    OilMinistry(
+        "oil-well",
+        StringRes.OilMinistry,
+    ),
+    MinistryOfHigherEducationAndScientificResearch(
+        "school",
+        StringRes.MinistryOfHigherEducationAndScientificResearch,
+    ),
+    PrivateSector(
         "handshake",
         StringRes.PrivateSector,
     ),
-    Five(
+    NonGovernmentalOrganization(
         "globe",
         StringRes.NonGovernmentalOrganization,
     ),
