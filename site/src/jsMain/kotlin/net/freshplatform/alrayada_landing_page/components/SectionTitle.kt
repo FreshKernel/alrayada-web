@@ -1,6 +1,7 @@
 package net.freshplatform.alrayada_landing_page.components
 
 import androidx.compose.runtime.*
+import com.varabyte.kobweb.compose.css.CSSLengthOrPercentageNumericValue
 import net.freshplatform.alrayada_landing_page.core.services.localization.stringResource
 import net.freshplatform.alrayada_landing_page.models.HomePageSections
 import net.freshplatform.alrayada_landing_page.models.ThemeColors
@@ -17,7 +18,6 @@ import com.varabyte.kobweb.compose.ui.toAttrs
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.CSSColorValue
-import org.jetbrains.compose.web.css.CSSNumeric
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
@@ -99,7 +99,7 @@ fun SectionTitle(
 fun ParagraphText(
     value: String,
     modifier: Modifier = Modifier,
-    fontSize: CSSNumeric = 18.px,
+    fontSize: CSSLengthOrPercentageNumericValue = 18.px,
     color: CSSColorValue = ThemeColors.Secondary.colorValue,
 ) {
     if (value.isBlank()) {
