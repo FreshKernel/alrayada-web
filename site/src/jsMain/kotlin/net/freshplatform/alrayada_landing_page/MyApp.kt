@@ -23,11 +23,8 @@ import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.rgba
 import org.jetbrains.compose.web.css.vh
 
-//private const val COLOR_MODE_KEY = "alrayada_landing_page:colorMode"
-
 @InitSilk
 fun initSilk(ctx: InitSilkContext) {
-//    ctx.config.initialColorMode = localStorage.getItem(COLOR_MODE_KEY)?.let { ColorMode.valueOf(it) } ?: ColorMode.LIGHT
 
     ctx.stylesheet.apply {
         registerKeyframes(
@@ -62,10 +59,6 @@ fun initSilk(ctx: InitSilkContext) {
 @Composable
 fun MyApp(content: @Composable () -> Unit) {
     SilkApp {
-//        val colorMode = ColorMode.current
-//        LaunchedEffect(colorMode) {
-//            localStorage.setItem(COLOR_MODE_KEY, colorMode.name)
-//        }
 
         LaunchedEffect(Unit) {
             updateDocument {

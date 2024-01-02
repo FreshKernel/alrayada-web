@@ -6,6 +6,6 @@ pluginManagement {
     }
 }
 
-rootProject.name = "AlrayadaLandingPage"
+rootProject.name = "AlrayadaWeb"
 
 include(":site")
