@@ -8,7 +8,7 @@ plugins {
     alias(libs.plugins.kobweb.application)
 }
 
-group = "net.freshplatform.alrayada_landing_page"
+group = "net.freshplatform.alrayada_web"
 version = "1.0-SNAPSHOT"
 
 val webDesc =
@@ -32,10 +32,6 @@ kobweb {
                     name = "author",
                     content = "Ahmed Hnewa"
                 )
-//                meta {
-//                    httpEquiv = "Content-Security-Policy"
-//                    content = "default-src 'self' cdnjs.cloudflare.com"
-//                }
                 meta(
                     name = "referrer",
                     content = "no-referrer"
@@ -74,7 +70,7 @@ kobweb {
                 )
                 meta(
                     name = "copyright",
-                    content = "© 2023 Alrayada"
+                    content = "© 2024 Alrayada"
                 )
                 meta(
                     name = "robots",
@@ -159,18 +155,18 @@ kotlin {
     }
 }
 
-// For SEO we will have to use unique urls for each page
+// For SEO, we will have to use unique urls for each page
 // Here we will use code generator to generate unique pages that redirect to the original pages
 
-val langs = listOf("ar")
-val pages = listOf("download_mobile_app", "privacy_policy")
+val languages = listOf("ar") // other than English
+val pages = listOf("download_mobile_app", "privacy_policy", "delete_account_instructions") // all the pages in the `page` package
 
-val generateLanguaguesPagesTask = tasks.register("generateLanguaguesPages") {
-    group = "net.freshplatform.alrayada_landing_page"
+val generateLanguagesPagesTask = tasks.register("generateLanguagesPages") {
+    group = "net.freshplatform.alrayada_web"
 
     doLast {
-        val pagesDirectory = project.file("src/jsMain/kotlin/net/freshplatform/alrayada_landing_page")
-        langs.forEach { lang ->
+        val pagesDirectory = project.file("src/jsMain/kotlin/net/freshplatform/alrayada_web")
+        languages.forEach { lang ->
             pages.forEach { page ->
 
                 pagesDirectory.resolve("pages/$lang/${page}/Index.kt").apply {
