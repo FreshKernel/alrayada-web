@@ -43,7 +43,7 @@ fun DeleteAccountInstructions() {
                     .backgroundColor(Colors.White)
                     .fillMaxWidth(95.percent)
                     .borderRadius(r = 20.px)
-                    .minHeight(300.px),
+                    .minHeight(200.px),
             ) {
                 Column(
                     modifier = Modifier
@@ -65,7 +65,7 @@ fun DeleteAccountInstructions() {
                             .lineHeight(1.4)
                             .toAttrs()
                     ) {
-                        Text(getStringResource(StringRes.DeleteAccountInstructionsDesc))
+                        Text(getStringResource(StringRes.DeleteAccountInstructionsSteps))
                     }
                 }
             }

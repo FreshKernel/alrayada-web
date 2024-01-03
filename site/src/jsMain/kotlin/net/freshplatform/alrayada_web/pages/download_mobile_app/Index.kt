@@ -53,7 +53,7 @@ fun DownloadMobileAppPage() {
                         .backgroundColor(Colors.White)
                         .fillMaxWidth(95.percent)
                         .borderRadius(r = 20.px)
-                        .minHeight(300.px),
+                        .minHeight(150.px),
                 ) {
                     Column(
                         modifier = Modifier

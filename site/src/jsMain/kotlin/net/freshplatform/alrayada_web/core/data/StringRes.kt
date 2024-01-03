@@ -514,6 +514,10 @@ enum class StringRes(
         "Discover step-by-step instructions for deleting your account securely and efficiently.",
         "اكتشف التعليمات خطوة بخطوة لحذف حسابك بشكل آمن وفعّال."
     ),
+    DeleteAccountInstructionsSteps(
+        "We respect your privacy, to remove your created account, open the mobile app that you used to create the account, it's available on Google Play and Apple Store, go to account tab, sign in if you didn't, click on account data, then click on delete account button and confirm the process, and your account will be completely should be deleted from our system.If you have any questions about our privacy policy or how we handle your data, please contact us at anytime.",
+        "نحن نحترم خصوصيتك، لإزالة حسابك الذي تم إنشاؤه، افتح تطبيق الهاتف المحمول الذي استخدمته لإنشاء الحساب، وهو متاح على Google Play وApple Store، انتقل إلى علامة تبويب الحساب، وقم بتسجيل الدخول إذا لم تقم بذلك، وانقر فوق بيانات الحساب، ثم انقر فوق زر حذف الحساب وقم بتأكيد العملية، وسيتم حذف حسابك بالكامل من نظامنا. إذا كانت لديك أي أسئلة حول سياسة الخصوصية الخاصة بنا أو كيفية تعاملنا مع بياناتك، فيرجى الاتصال بنا في أي وقت."
+    ),
     Whatsapp(
         "Whatsapp",
         "واتساب"
