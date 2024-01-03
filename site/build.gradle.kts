@@ -30,7 +30,7 @@ kobweb {
                 )
                 meta(
                     name = "author",
-                    content = "Ahmed Hnewa"
+                    content = "Fresh Platform"
                 )
                 meta(
                     name = "referrer",
