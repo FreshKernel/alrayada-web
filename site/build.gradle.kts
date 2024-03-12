@@ -1,3 +1,4 @@
+import com.varabyte.kobweb.gradle.application.extensions.AppBlock
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
 import kotlinx.html.link
 import kotlinx.html.meta
@@ -131,6 +132,10 @@ kobweb {
             }
             description.set(webDesc)
         }
+
+        // Only legacy sites need this set. Sites built after 0.16.0 should default to DISALLOW.
+        // See https://github.com/varabyte/kobweb#legacy-routes for more information.
+        legacyRouteRedirectStrategy.set(AppBlock.LegacyRouteRedirectStrategy.DISALLOW)
     }
 }
 
@@ -159,10 +164,20 @@ kotlin {
 // Here we will use code generator to generate unique pages that redirect to the original pages
 
 val languages = listOf("ar") // other than English
-val pages = listOf("download_mobile_app", "privacy_policy", "delete_account_instructions") // all the pages in the `page` package
+val pages = listOf("downloadMobileApp", "privacyPolicy", "deleteAccountInstructions") // all the pages in the `page` package
 
 val generateLanguagesPagesTask = tasks.register("generateLanguagesPages") {
     group = "net.freshplatform.alrayada_web"
+
+    fun toKebabCase(input: String): String {
+        var result = input.replace(Regex("([a-z])([A-Z])")) {
+            "${it.groupValues[1]}-${it.groupValues[2]}"
+        }
+
+        result = result.replace("_", "-")
+
+        return result.lowercase()
+    }
 
     doLast {
         val pagesDirectory = project.file("src/jsMain/kotlin/net/freshplatform/alrayada_web")
@@ -181,7 +196,7 @@ val generateLanguagesPagesTask = tasks.register("generateLanguagesPages") {
                         @Composable
                         @Page
                         fun PrivacyPolicyPage_${lang}() {
-                            rememberPageContext().router.navigateTo("/${page}/?lang=${lang}")
+                            rememberPageContext().router.navigateTo("/${toKebabCase(page)}/?lang=${lang}")
                         }
                     """.trimIndent())
                 }

@@ -1,4 +1,4 @@
-package net.freshplatform.alrayada_web.pages.download_mobile_app
+package net.freshplatform.alrayada_web.pages.downloadMobileApp
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect

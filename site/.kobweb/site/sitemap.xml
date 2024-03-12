@@ -18,37 +18,37 @@
                 href="https://alrayada.net/ar/"/>
     </url>
     <url>
-        <loc>https://alrayada.net/privacy_policy</loc>
+        <loc>https://alrayada.net/privacy-policy</loc>
         <lastmod>2023-10-15T12:57:20+00:00</lastmod>
         <priority>0.80</priority>
         <xhtml:link
                 rel="alternate"
                 hreflang="x-default"
-                href="https://alrayada.net/privacy_policy/"/>
+                href="https://alrayada.net/privacy-policy/"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://alrayada.net/privacy_policy/"/>
+                href="https://alrayada.net/privacy-policy/"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://alrayada.net/ar/privacy_policy/"/>
+                href="https://alrayada.net/ar/privacy-policy/"/>
     </url>
     <url>
-        <loc>https://alrayada.net/download_mobile_app</loc>
+        <loc>https://alrayada.net/download-mobile-app</loc>
         <lastmod>2023-10-15T12:57:20+00:00</lastmod>
         <priority>0.80</priority>
         <xhtml:link
                 rel="alternate"
                 hreflang="x-default"
-                href="https://alrayada.net/download_mobile_app/"/>
+                href="https://alrayada.net/download-mobile-app/"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://alrayada.net/download_mobile_app/"/>
+                href="https://alrayada.net/download-mobile-app/"/>
         <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://alrayada.net/ar/download_mobile_app/"/>
+                href="https://alrayada.net/ar/download-mobile-app/"/>
     </url>
 </urlset>

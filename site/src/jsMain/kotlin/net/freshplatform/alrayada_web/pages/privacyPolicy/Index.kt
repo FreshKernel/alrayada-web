@@ -1,7 +1,15 @@
-package net.freshplatform.alrayada_web.pages.delete_account_instructions
+package net.freshplatform.alrayada_web.pages.privacyPolicy
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import net.freshplatform.alrayada_web.components.core.Center
+import net.freshplatform.alrayada_web.core.data.StringRes
+import net.freshplatform.alrayada_web.core.services.localization.getStringResource
+import net.freshplatform.alrayada_web.core.services.localization.stringResource
+import net.freshplatform.alrayada_web.styles.ReadableTextStyleOnWhiteBackground
+import net.freshplatform.alrayada_web.utils.updateDocument
+import com.varabyte.kobweb.compose.css.TextAlign
+import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Modifier
@@ -10,12 +18,6 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.components.style.toModifier
-import net.freshplatform.alrayada_web.components.core.Center
-import net.freshplatform.alrayada_web.core.data.StringRes
-import net.freshplatform.alrayada_web.core.services.localization.getStringResource
-import net.freshplatform.alrayada_web.core.services.localization.stringResource
-import net.freshplatform.alrayada_web.styles.ReadableTextStyleOnWhiteBackground
-import net.freshplatform.alrayada_web.utils.updateDocument
 import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -23,13 +25,13 @@ import org.jetbrains.compose.web.dom.H1
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 
-@Composable
 @Page
-fun DeleteAccountInstructions() {
+@Composable
+fun PrivacyPolicyPage() {
     LaunchedEffect(Unit) {
         updateDocument {
-            title = "${getStringResource(StringRes.DeleteAccountInstructions)} - ${getStringResource(StringRes.AlrayadaAlarabiah)}"
-            description = getStringResource(StringRes.DeleteAccountInstructionsDesc)
+            title = "${getStringResource(StringRes.PrivacyPolicy)} - ${getStringResource(StringRes.AlrayadaAlarabiah)}"
+            description = getStringResource(StringRes.PrivacyPolicyText)
         }
     }
     Box(
@@ -43,18 +45,20 @@ fun DeleteAccountInstructions() {
                     .backgroundColor(Colors.White)
                     .fillMaxWidth(95.percent)
                     .borderRadius(r = 20.px)
-                    .minHeight(200.px),
+                    .minHeight(300.px),
             ) {
                 Column(
                     modifier = Modifier
                         .padding(25.px)
-                        .fillMaxSize()
+                        .fillMaxSize(),
+                    verticalArrangement = Arrangement.Center
                 ) {
                     H1(
-                        attrs = Modifier
+                        attrs = Modifier.fillMaxWidth()
+                            .textAlign(TextAlign.Center)
                             .toAttrs()
                     ) {
-                        Text(getStringResource(StringRes.DeleteAccountInstructions))
+                        Text(stringResource(StringRes.PrivacyPolicy))
                     }
                     P(
                         attrs = ReadableTextStyleOnWhiteBackground
@@ -65,7 +69,7 @@ fun DeleteAccountInstructions() {
                             .lineHeight(1.4)
                             .toAttrs()
                     ) {
-                        Text(getStringResource(StringRes.DeleteAccountInstructionsSteps))
+                        Text(stringResource(StringRes.PrivacyPolicyText))
                     }
                 }
             }

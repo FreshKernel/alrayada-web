@@ -1,4 +1,4 @@
-package net.freshplatform.alrayada_web.pages.ar.privacy_policy
+package net.freshplatform.alrayada_web.pages.ar.deleteAccountInstructions
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.core.Page
@@ -7,5 +7,5 @@ import com.varabyte.kobweb.core.rememberPageContext
 @Composable
 @Page
 fun PrivacyPolicyPage_ar() {
-    rememberPageContext().router.navigateTo("/privacy_policy/?lang=ar")
+    rememberPageContext().router.navigateTo("/delete-account-instructions/?lang=ar")
 }
