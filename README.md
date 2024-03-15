@@ -53,14 +53,11 @@ or you can run it in development mode directly
 * When you open the localized page url and navigate to different url, then refresh it will revert the language to the default device language, but as I said 95% of the users of this landing page are english users, I will wait while kobweb is getting improved to the next level then I plan on improve the website to the next level, the multi-language support is still experimental
 
 ## License
-This project is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
-You are free to use this code for educational purposes but not for commercial use or the creation of derivative works
-that compete with the original website.
-Please don't use any of the assets that related to the branding or the naming.
-The license can be changed
+This project is licensed under the MIT License.
+Just remember to change assets that related to the branding or the naming in your fork.
 
 ## Credits
-* Thanks to [Kobweb](https://kobweb.varabyte.com/) to make the core UI elements from Compose Multiplatform like Row, Column, Box, Modifier as well as some other features
+* Thanks to [Kobweb](https://kobweb.varabyte.com/) to make the core UI elements from Compose Multiplatform like Row, Column, Box, Modifier as well as other features
 * Thanks to [Jetbrains](https://www.jetbrains.com/) for Kotlin, IntelliJ IDEA Community Edition, and Compose for Web
 * Thanks to the welcoming community
 * Thanks to [FontAwesome](https://fontawesome.com/) for crafting the Awesome Icons
