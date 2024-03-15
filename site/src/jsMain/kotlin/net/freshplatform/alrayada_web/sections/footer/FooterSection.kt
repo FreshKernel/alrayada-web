@@ -109,10 +109,10 @@ fun FooterDetails() {
             FaGithub()
             Link(
                 path = SectionsConstants.Footer.REPOSITORY_URL,
-                text = stringResource(StringRes.ThisProjectIsPublicRepository),
+                text = stringResource(StringRes.ThisProjectIsOpenSource),
                 modifier = Modifier
                     .color(ThemeColors.Primary.colorValue)
-                    .title(stringResource(StringRes.ThisProjectIsPublicRepository))
+                    .title(stringResource(StringRes.ThisProjectIsOpenSource))
                     .textDecorationLine(TextDecorationLine.None)
                     .margin(left = 8.px)
                     .attrsModifier {

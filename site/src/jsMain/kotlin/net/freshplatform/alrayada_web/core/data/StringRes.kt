@@ -475,9 +475,9 @@ enum class StringRes(
         "Non-governmental organizations",
         "المنظمات الغير حكومية"
     ),
-    ThisProjectIsPublicRepository(
-        "This project is public repository.",
-        "هـذا المشروع متوفر في مستودع عام"
+    ThisProjectIsOpenSource(
+        "This project is open source.",
+        "هذا المشروع مفتوح المصدر"
     ),
     Features(
         "Features:",
