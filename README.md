@@ -16,9 +16,9 @@ A productive project developed for [Alrayada Alarabiah](https://alrayada.net/)
 using Kotlin JS
 
 The project is built using [Kobweb](https://kobweb.varabyte.com/) framework which is
-built on top of Compose for Web
+built on top of Compose for HTML
 
-Compose for Web is experimental
+Compose for HTML is under active development
 and Kobweb is built on top of it, and
 it adds some extra features, like static rendering for improved SEO
 

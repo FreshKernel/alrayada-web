@@ -166,8 +166,7 @@ kotlin {
 val languages = listOf("ar") // other than English
 val pages = listOf("downloadMobileApp", "privacyPolicy", "deleteAccountInstructions") // all the pages in the `page` package
 
-val generateLanguagesPagesTask = tasks.register("generateLanguagesPages") {
-    group = "net.freshplatform.alrayada_web"
+tasks.register("generateLanguagesPages") {
 
     fun toKebabCase(input: String): String {
         var result = input.replace(Regex("([a-z])([A-Z])")) {
@@ -187,7 +186,9 @@ val generateLanguagesPagesTask = tasks.register("generateLanguagesPages") {
                 pagesDirectory.resolve("pages/$lang/${page}/Index.kt").apply {
                     parentFile.mkdirs()
                     writeText("""
-                        package ${group}.pages.ar.${page}
+                        package ${project.group}.pages.ar.${page}
+                        
+                        // GENERATED FILE - DON'T MODIFY BY HAND
 
                         import androidx.compose.runtime.Composable
                         import com.varabyte.kobweb.core.Page
@@ -205,7 +206,9 @@ val generateLanguagesPagesTask = tasks.register("generateLanguagesPages") {
             pagesDirectory.resolve("pages/$lang/Index.kt").apply {
                 parentFile.mkdirs()
                 writeText("""
-                        package ${group}.pages.ar
+                        package ${project.group}.pages.ar
+                        
+                        // GENERATED FILE - DON'T MODIFY BY HAND
 
                         import androidx.compose.runtime.Composable
                         import com.varabyte.kobweb.core.Page
