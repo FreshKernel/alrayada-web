@@ -5,23 +5,23 @@ import net.freshplatform.alrayada_web.components.fa.FaCircle
 import net.freshplatform.alrayada_web.components.fa.IconSize
 import net.freshplatform.alrayada_web.components.fa.IconStyle
 import net.freshplatform.alrayada_web.models.ThemeColors
-import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Cursor
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.transition
-import com.varabyte.kobweb.silk.components.style.ComponentStyle
-import com.varabyte.kobweb.silk.components.style.hover
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.selectors.hover
+import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.ms
 
-val NavigationIconStyle by ComponentStyle {
+val NavigationIconStyle = CssStyle {
     base {
         Modifier
             .color(ThemeColors.Primary.colorValue)
             .transition(
-                CSSTransition(property = "color", duration = 50.ms)
+                Transition.of(property = "color", duration = 50.ms, timingFunction = null, delay = null)
             )
     }
     hover {

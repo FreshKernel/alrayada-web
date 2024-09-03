@@ -13,7 +13,7 @@ import net.freshplatform.alrayada_web.core.services.localization.getStringResour
 import net.freshplatform.alrayada_web.core.services.localization.stringResource
 import net.freshplatform.alrayada_web.utils.updateDocument
 import com.varabyte.kobweb.core.Page
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.toModifier
 import kotlinx.browser.window
 import net.freshplatform.alrayada_web.components.core.Center
 import net.freshplatform.alrayada_web.styles.ReadableTextStyleOnWhiteBackground

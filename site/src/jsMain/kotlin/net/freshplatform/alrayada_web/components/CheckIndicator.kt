@@ -4,36 +4,39 @@ import androidx.compose.runtime.Composable
 import net.freshplatform.alrayada_web.components.fa.FaCheck
 import net.freshplatform.alrayada_web.components.fa.IconSize
 import net.freshplatform.alrayada_web.models.ThemeColors
-import com.varabyte.kobweb.compose.css.CSSTransition
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.style.ComponentStyle
-import com.varabyte.kobweb.silk.components.style.hover
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.selectors.hover
+import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.px
 
-val CheckIndicatorStyle by ComponentStyle {
+val CheckIndicatorStyle = CssStyle {
     val borderColor = Color("#7F7F7F")
     base {
         Modifier
             .color(ThemeColors.Primary.colorValue)
             .border(width = 2.px, style = LineStyle.Solid, color = borderColor)
             .transition(
-                CSSTransition(
+                Transition.of(
                     property = "color",
-                    duration = 200.ms
+                    duration = 200.ms,
+                    timingFunction = null, delay = null
                 ),
-                CSSTransition(
+                Transition.of(
                     property = "border-color",
-                    duration = 200.ms
+                    duration = 200.ms,
+                    timingFunction = null, delay = null
                 ),
-                CSSTransition(
+                Transition.of(
                     property = "border-width",
-                    duration = 200.ms
+                    duration = 200.ms,
+                    timingFunction = null, delay = null
                 ),
             )
     }

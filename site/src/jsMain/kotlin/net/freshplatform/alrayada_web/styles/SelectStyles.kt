@@ -1,16 +1,16 @@
 package net.freshplatform.alrayada_web.styles
 
 import net.freshplatform.alrayada_web.models.ThemeColors
-import com.varabyte.kobweb.compose.css.CSSTransition
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.style.ComponentStyle
-import com.varabyte.kobweb.silk.components.style.focus
+import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.selectors.focus
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.px
 
-val MySelectStyle by ComponentStyle {
+val MySelectStyle = CssStyle {
     base {
         Modifier
             .minHeight(60.px)
@@ -21,8 +21,8 @@ val MySelectStyle by ComponentStyle {
             .fontSize(18.px)
             .padding(leftRight = 12.px)
             .transition(
-                CSSTransition(property = "border-color", duration = 150.ms),
-                CSSTransition(property = "border-shadow", duration = 200.ms),
+                Transition.of(property = "border-color", duration = 150.ms, timingFunction = null, delay = null),
+                Transition.of(property = "border-shadow", duration = 200.ms, timingFunction = null, delay = null),
             )
     }
     focus {

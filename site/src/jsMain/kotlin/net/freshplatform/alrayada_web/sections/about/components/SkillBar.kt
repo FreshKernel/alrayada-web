@@ -1,7 +1,7 @@
 import androidx.compose.runtime.Composable
 import net.freshplatform.alrayada_web.components.ParagraphText
 import net.freshplatform.alrayada_web.models.ThemeColors
-import com.varabyte.kobweb.compose.css.CSSTransition
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -57,10 +57,10 @@ fun SkillBar(
                     .borderRadius(r = 12.px)
                     .backgroundColor(ThemeColors.Primary.colorValue)
                     .transition(
-                        CSSTransition(
+                        Transition.of(
                             property = "width",
                             duration = 1000.ms,
-                            delay = (index + 1) * 100.ms
+                            timingFunction = null, delay = (index + 1) * 100.ms
                         )
                     )
             )

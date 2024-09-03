@@ -8,9 +8,9 @@ import net.freshplatform.alrayada_web.components.fa.IconSize
 import net.freshplatform.alrayada_web.core.services.localization.stringResource
 import net.freshplatform.alrayada_web.models.HomePageSections
 import net.freshplatform.alrayada_web.models.ThemeColors
-import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextDecorationLine
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.css.UserSelect
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Row
@@ -18,12 +18,13 @@ import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
-import com.varabyte.kobweb.silk.components.layout.breakpoint.displayBetween
-import com.varabyte.kobweb.silk.components.layout.breakpoint.displayIfAtLeast
-import com.varabyte.kobweb.silk.components.layout.breakpoint.displayUntil
+import com.varabyte.kobweb.silk.style.breakpoint.displayBetween
+import com.varabyte.kobweb.silk.style.breakpoint.displayIfAtLeast
+import com.varabyte.kobweb.silk.style.breakpoint.displayUntil
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.style.*
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.*
+import com.varabyte.kobweb.silk.style.selectors.*
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import kotlinx.browser.document
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.percent
@@ -31,12 +32,12 @@ import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Header
 import org.jetbrains.compose.web.dom.Nav
 
-val NavigationItemStyle by ComponentStyle {
+val NavigationItemStyle = CssStyle {
     base {
         Modifier.color(ThemeColors.Secondary.colorValue)
             .transition(
-                CSSTransition(property = "color", duration = 200.ms),
-                CSSTransition(property = "scale", duration = 200.ms),
+                Transition.of(property = "color", duration = 200.ms, timingFunction = null, delay = null),
+                Transition.of(property = "scale", duration = 200.ms, timingFunction = null, delay = null),
 //                CSSTransition(property = "rotate", duration = 200.ms)
             )
     }
@@ -52,10 +53,10 @@ val NavigationItemStyle by ComponentStyle {
     }
 }
 
-val BrandingLogoStyle by ComponentStyle {
+val BrandingLogoStyle = CssStyle {
     base {
         Modifier.transition(
-            CSSTransition(property = "scale", duration = 200.ms)
+            Transition.of(property = "scale", duration = 200.ms, timingFunction = null, delay = null)
         )
     }
     onlyChild {

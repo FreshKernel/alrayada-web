@@ -1,9 +1,9 @@
 package net.freshplatform.alrayada_web.components
 
 import androidx.compose.runtime.Composable
+import com.varabyte.kobweb.compose.css.Animation
 import net.freshplatform.alrayada_web.models.ThemeColors
 import com.varabyte.kobweb.compose.css.AnimationIterationCount
-import com.varabyte.kobweb.compose.css.CSSAnimation
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
@@ -28,7 +28,7 @@ fun CircularProgressIndicator(modifier: Modifier = Modifier) {
                 .borderTop(color = Color("#007bff"))
                 .borderRadius(50.percent)
                 .animation(
-                    CSSAnimation(
+                    Animation.of(
                         "spin",
                         1.1.s,
                         AnimationTimingFunction.Linear,

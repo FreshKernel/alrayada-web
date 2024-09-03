@@ -14,15 +14,15 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
-import com.varabyte.kobweb.silk.components.layout.breakpoint.displayBetween
-import com.varabyte.kobweb.silk.components.layout.breakpoint.displayIfAtLeast
-import com.varabyte.kobweb.silk.components.layout.breakpoint.displayUntil
+import com.varabyte.kobweb.silk.style.breakpoint.displayBetween
+import com.varabyte.kobweb.silk.style.breakpoint.displayIfAtLeast
+import com.varabyte.kobweb.silk.style.breakpoint.displayUntil
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.style.ComponentStyle
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.hover
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.selectors.hover
+import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.document
 import kotlinx.browser.window
@@ -106,7 +106,7 @@ private fun MainContent() = Column(
     }
 }
 
-val helloTextStyle by ComponentStyle {
+val helloTextStyle = CssStyle {
     base {
         Modifier
             .scale(1.0)
@@ -114,7 +114,7 @@ val helloTextStyle by ComponentStyle {
             .fontSize(45.px)
             .color(ThemeColors.PreviousPrimary.colorValue)
             .transition(
-                CSSTransition(property = "scale", duration = 200.ms),
+                Transition.of(property = "scale", duration = 200.ms, timingFunction = null, delay = null),
             )
     }
     hover {
@@ -254,11 +254,11 @@ private fun MainText() {
     }
 }
 
-val MainImageStyle by ComponentStyle {
+val MainImageStyle = CssStyle {
     base {
         Modifier
             .filter(grayscale(100.percent))
-            .transition(CSSTransition(property = "filter", duration = 240.ms))
+            .transition(Transition.of(property = "filter", duration = 240.ms, timingFunction = null, delay = null))
     }
     hover {
         Modifier

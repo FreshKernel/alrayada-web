@@ -4,8 +4,8 @@ import androidx.compose.runtime.Composable
 import net.freshplatform.alrayada_web.models.ThemeColors
 import net.freshplatform.alrayada_web.sections.experience.models.Experience
 import net.freshplatform.alrayada_web.utils.constants.Constants
-import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.FontWeight
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -16,9 +16,9 @@ import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
-import com.varabyte.kobweb.silk.components.layout.breakpoint.displayIfAtLeast
+import com.varabyte.kobweb.silk.style.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.components.layout.numColumns
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
@@ -121,10 +121,10 @@ private fun ExperienceSecondPart(
                 else 0.px
             )
             .transition(
-                CSSTransition(
+                Transition.of(
                     property = "margin",
                     duration = 500.ms,
-                    delay = experience.ordinal * 80.ms
+                    timingFunction = null, delay = experience.ordinal * 80.ms
                 )
             ),
         experience = experience

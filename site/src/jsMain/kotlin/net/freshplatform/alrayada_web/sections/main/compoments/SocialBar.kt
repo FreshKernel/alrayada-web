@@ -6,7 +6,7 @@ import net.freshplatform.alrayada_web.components.fa.IconCategory
 import net.freshplatform.alrayada_web.components.fa.IconSize
 import net.freshplatform.alrayada_web.models.SocialMediaLink
 import net.freshplatform.alrayada_web.models.ThemeColors
-import com.varabyte.kobweb.compose.css.CSSTransition
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
@@ -16,9 +16,9 @@ import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.style.ComponentStyle
-import com.varabyte.kobweb.silk.components.style.hover
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.selectors.hover
+import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.px
@@ -60,15 +60,16 @@ fun SocialBar(modifier: Modifier = Modifier, isRow: Boolean = false) {
     }
 }
 
-val SocialLinkItemStyle by ComponentStyle {
+val SocialLinkItemStyle = CssStyle {
     base {
         Modifier
             .color(Color("#999999"))
 //            .fontSize(25.px)
             .transition(
-                CSSTransition(
+                Transition.of(
                     property = "color",
-                    duration = 100.ms
+                    duration = 100.ms,
+                    timingFunction = null, delay = null
                 )
             )
     }

@@ -1,17 +1,17 @@
 package net.freshplatform.alrayada_web.styles
 
 import net.freshplatform.alrayada_web.models.ThemeColors
-import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Cursor
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.style.ComponentStyle
-import com.varabyte.kobweb.silk.components.style.hover
+import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.selectors.hover
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.px
 
-val MainButtonStyle by ComponentStyle {
+val MainButtonStyle = CssStyle {
     base {
         Modifier.width(100.px)
             .height(40.px)
@@ -21,8 +21,8 @@ val MainButtonStyle by ComponentStyle {
             .color(Colors.White)
             .cursor(Cursor.Pointer)
             .transition(
-                CSSTransition(property = "width", duration = 200.ms),
-                CSSTransition(property = "background-color", duration = 200.ms),
+                Transition.of(property = "width", duration = 200.ms, timingFunction = null, delay = null),
+                Transition.of(property = "background-color", duration = 200.ms, timingFunction = null, delay = null),
             )
     }
     hover {
