@@ -36,12 +36,10 @@ val DownloadMobileAppButtonStyle = CssStyle {
                 Transition.of(
                     property = "background-color",
                     duration = 200.ms,
-                    timingFunction = null, delay = null
                 ),
                 Transition.of(
                     property = "color",
                     duration = 200.ms,
-                    timingFunction = null, delay = null
                 ),
             )
     }

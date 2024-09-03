@@ -21,8 +21,8 @@ val MySelectStyle = CssStyle {
             .fontSize(18.px)
             .padding(leftRight = 12.px)
             .transition(
-                Transition.of(property = "border-color", duration = 150.ms, timingFunction = null, delay = null),
-                Transition.of(property = "border-shadow", duration = 200.ms, timingFunction = null, delay = null),
+                Transition.of(property = "border-color", duration = 150.ms),
+                Transition.of(property = "border-shadow", duration = 200.ms),
             )
     }
     focus {

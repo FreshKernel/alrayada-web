@@ -60,7 +60,7 @@ fun SkillBar(
                         Transition.of(
                             property = "width",
                             duration = 1000.ms,
-                            timingFunction = null, delay = (index + 1) * 100.ms
+                            delay = (index + 1) * 100.ms
                         )
                     )
             )

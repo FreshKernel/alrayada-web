@@ -70,7 +70,6 @@ private fun ContactContent() {
                     Transition.of(
                         property = "transform",
                         duration = 500.ms,
-                        timingFunction = null,
                         delay = null
                     )
                 ),

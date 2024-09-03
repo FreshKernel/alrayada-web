@@ -26,7 +26,7 @@ val ProductImageStyle = CssStyle {
     base {
         Modifier
             .filter(grayscale(0.percent))
-            .transition(Transition.of(property = "filter", duration = 240.ms, timingFunction = null, delay = null))
+            .transition(Transition.of(property = "filter", duration = 240.ms))
     }
     hover {
         Modifier

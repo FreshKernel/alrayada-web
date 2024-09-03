@@ -26,17 +26,14 @@ val CheckIndicatorStyle = CssStyle {
                 Transition.of(
                     property = "color",
                     duration = 200.ms,
-                    timingFunction = null, delay = null
                 ),
                 Transition.of(
                     property = "border-color",
                     duration = 200.ms,
-                    timingFunction = null, delay = null
                 ),
                 Transition.of(
                     property = "border-width",
                     duration = 200.ms,
-                    timingFunction = null, delay = null
                 ),
             )
     }

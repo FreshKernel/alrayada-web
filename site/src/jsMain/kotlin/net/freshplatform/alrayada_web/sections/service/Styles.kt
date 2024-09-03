@@ -26,9 +26,9 @@ val ServiceCardStyle = CssStyle {
                 property("box-shadow", "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px")
             }
             .transition(
-                Transition.of(property = "border", duration = 100.ms, timingFunction = null, delay = null),
-                Transition.of(property = "background", duration = 100.ms, timingFunction = null, delay = null),
-                Transition.of(property = "box-shadow", duration = 100.ms, timingFunction = null, delay = null),
+                Transition.of(property = "border", duration = 100.ms),
+                Transition.of(property = "background", duration = 100.ms),
+                Transition.of(property = "box-shadow", duration = 100.ms),
             )
     }
     hover {
@@ -49,7 +49,7 @@ val ServiceCardStyle = CssStyle {
         Modifier
             .backgroundColor(Colors.Transparent)
             .transition(
-                Transition.of(property = "background", duration = 100.ms, timingFunction = null, delay = null),
+                Transition.of(property = "background", duration = 100.ms),
             )
     }
 
@@ -61,7 +61,7 @@ val ServiceCardStyle = CssStyle {
         Modifier
             .color(ThemeColors.Secondary.colorValue)
             .transition(
-                Transition.of(property = "color", duration = 100.ms, timingFunction = null, delay = null),
+                Transition.of(property = "color", duration = 100.ms),
             )
     }
 

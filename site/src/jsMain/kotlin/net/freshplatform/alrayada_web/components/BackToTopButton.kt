@@ -49,8 +49,8 @@ val BackToTopButtonStyle = CssStyle {
         Modifier.rotate(a = 180.deg)
             .backgroundColor(ThemeColors.Primary.colorValue)
             .transition(
-                Transition.of(property = "rotate", duration = 200.ms, timingFunction = null, delay = null),
-                Transition.of(property = "background-color", duration = 150.ms, timingFunction = null, delay = null)
+                Transition.of(property = "rotate", duration = 200.ms),
+                Transition.of(property = "background-color", duration = 150.ms)
             )
     }
     hover {

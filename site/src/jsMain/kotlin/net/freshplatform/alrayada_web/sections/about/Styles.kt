@@ -23,7 +23,6 @@ val AboutImageStyle = CssStyle {
                 Transition.of(
                     property = TransitionProperty.All,
                     duration = 200.ms,
-                    timingFunction = null,
                     delay = null
                 )
             )

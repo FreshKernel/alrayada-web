@@ -21,8 +21,8 @@ val MainButtonStyle = CssStyle {
             .color(Colors.White)
             .cursor(Cursor.Pointer)
             .transition(
-                Transition.of(property = "width", duration = 200.ms, timingFunction = null, delay = null),
-                Transition.of(property = "background-color", duration = 200.ms, timingFunction = null, delay = null),
+                Transition.of(property = "width", duration = 200.ms),
+                Transition.of(property = "background-color", duration = 200.ms),
             )
     }
     hover {

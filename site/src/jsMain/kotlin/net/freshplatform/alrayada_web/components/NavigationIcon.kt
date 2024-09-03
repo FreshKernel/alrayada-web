@@ -21,7 +21,7 @@ val NavigationIconStyle = CssStyle {
         Modifier
             .color(ThemeColors.Primary.colorValue)
             .transition(
-                Transition.of(property = "color", duration = 50.ms, timingFunction = null, delay = null)
+                Transition.of(property = "color", duration = 50.ms)
             )
     }
     hover {

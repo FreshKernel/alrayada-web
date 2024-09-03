@@ -16,7 +16,7 @@ val DescTextStyle1 = CssStyle {
     base {
         Modifier
             .color(Color("#898E9A"))
-            .transition(Transition.of(property = "color", duration = 150.ms, timingFunction = null, delay = null))
+            .transition(Transition.of(property = "color", duration = 150.ms))
     }
     hover {
         Modifier

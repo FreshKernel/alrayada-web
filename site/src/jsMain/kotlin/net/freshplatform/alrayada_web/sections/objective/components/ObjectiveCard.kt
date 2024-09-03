@@ -36,17 +36,14 @@ val ObjectiveCardStyle = CssStyle {
                 Transition.of(
                     property = "background-color",
                     duration = 150.ms,
-                    timingFunction = null, delay = null
                 ),
                 Transition.of(
                     property = "box-shadow",
                     duration = 100.ms,
-                    timingFunction = null, delay = null
                 ),
                 Transition.of(
                     property = "color",
                     duration = 50.ms,
-                    timingFunction = null, delay = null
                 ),
             )
     }

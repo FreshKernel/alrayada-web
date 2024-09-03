@@ -66,7 +66,7 @@ fun SectionTitle(
                     bottom = 0.px
                 )
                 .transition(
-                    Transition.of(property = "margin", duration = 300.ms, timingFunction = null, delay = null)
+                    Transition.of(property = "margin", duration = 300.ms)
                 ),
             fontSize = 25.px,
             color = ThemeColors.Primary.colorValue
@@ -86,7 +86,7 @@ fun SectionTitle(
                     top = 0.px
                 )
                 .transition(
-                    Transition.of(property = "margin", duration = 300.ms, timingFunction = null, delay = null)
+                    Transition.of(property = "margin", duration = 300.ms)
                 )
                 .fontWeight(FontWeight.Bold),
             fontSize = 35.px,

@@ -36,8 +36,8 @@ val NavigationItemStyle = CssStyle {
     base {
         Modifier.color(ThemeColors.Secondary.colorValue)
             .transition(
-                Transition.of(property = "color", duration = 200.ms, timingFunction = null, delay = null),
-                Transition.of(property = "scale", duration = 200.ms, timingFunction = null, delay = null),
+                Transition.of(property = "color", duration = 200.ms),
+                Transition.of(property = "scale", duration = 200.ms),
 //                CSSTransition(property = "rotate", duration = 200.ms)
             )
     }
@@ -56,7 +56,7 @@ val NavigationItemStyle = CssStyle {
 val BrandingLogoStyle = CssStyle {
     base {
         Modifier.transition(
-            Transition.of(property = "scale", duration = 200.ms, timingFunction = null, delay = null)
+            Transition.of(property = "scale", duration = 200.ms)
         )
     }
     onlyChild {

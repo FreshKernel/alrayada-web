@@ -114,7 +114,7 @@ val helloTextStyle = CssStyle {
             .fontSize(45.px)
             .color(ThemeColors.PreviousPrimary.colorValue)
             .transition(
-                Transition.of(property = "scale", duration = 200.ms, timingFunction = null, delay = null),
+                Transition.of(property = "scale", duration = 200.ms),
             )
     }
     hover {
@@ -258,7 +258,7 @@ val MainImageStyle = CssStyle {
     base {
         Modifier
             .filter(grayscale(100.percent))
-            .transition(Transition.of(property = "filter", duration = 240.ms, timingFunction = null, delay = null))
+            .transition(Transition.of(property = "filter", duration = 240.ms))
     }
     hover {
         Modifier

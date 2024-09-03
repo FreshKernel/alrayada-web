@@ -24,11 +24,9 @@ fun MobileNavigation(modifier: Modifier = Modifier) {
             .transition(
                 Transition.of(
                     property = "height", duration = 330.ms,
-                    timingFunction = null, delay = null
                 ),
                 Transition.of(
-                    property = "background-color", duration = 300.ms,
-                    timingFunction = null, delay = null
+                    property = "background-color", duration = 300.ms
                 ),
             )
             .classNames("hidden")

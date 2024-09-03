@@ -17,7 +17,7 @@ val PortfolioSectionStyle = CssStyle {
     cssRule(" > #columnParent > #imageBox > #greenOverlay") {
         Modifier.width(0.px)
             .transition(
-                Transition.of(property = "width", duration = 350.ms, timingFunction = null, delay = null)
+                Transition.of(property = "width", duration = 350.ms)
             )
     }
 
@@ -33,8 +33,8 @@ val PortfolioSectionStyle = CssStyle {
         Modifier.visibility(Visibility.Hidden)
             .opacity(0.percent)
             .transition(
-                Transition.of(property = "visibility", duration = duration, timingFunction = null, delay = null),
-                Transition.of(property = "opacity", duration = duration, timingFunction = null, delay = null),
+                Transition.of(property = "visibility", duration = duration),
+                Transition.of(property = "opacity", duration = duration),
             )
     }
 
@@ -52,8 +52,8 @@ val PortfolioSectionStyle = CssStyle {
             .color(ThemeColors.Secondary.colorValue)
             .translateX(0.percent)
             .transition(
-                Transition.of(property = "color", duration = 200.ms, timingFunction = null, delay = null),
-                Transition.of(property = "translate", duration = 200.ms, timingFunction = null, delay = null),
+                Transition.of(property = "color", duration = 200.ms),
+                Transition.of(property = "translate", duration = 200.ms),
             )
     }
 
@@ -70,7 +70,7 @@ val PortfolioSectionStyle = CssStyle {
     cssRule(" > #columnParent > #portfolioDesc") {
         Modifier
             .translateX(0.percent)
-            .transition(Transition.of(property = "translate", duration = 200.ms, timingFunction = null, delay = null))
+            .transition(Transition.of(property = "translate", duration = 200.ms))
     }
 
     cssRule(":hover > #columnParent > #portfolioDesc") {
@@ -85,7 +85,7 @@ val PortfolioArrowIconStyle = CssStyle {
     base {
         Modifier
             .color(ThemeColors.Gray.colorValue)
-            .transition(Transition.of(property = "color", duration = 100.ms, timingFunction = null, delay = null))
+            .transition(Transition.of(property = "color", duration = 100.ms))
     }
     hover {
         Modifier.color(ThemeColors.Primary.colorValue)

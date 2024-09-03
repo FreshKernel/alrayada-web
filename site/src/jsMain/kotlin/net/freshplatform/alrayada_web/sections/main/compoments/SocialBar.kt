@@ -69,7 +69,6 @@ val SocialLinkItemStyle = CssStyle {
                 Transition.of(
                     property = "color",
                     duration = 100.ms,
-                    timingFunction = null, delay = null
                 )
             )
     }

@@ -124,7 +124,7 @@ private fun ExperienceSecondPart(
                 Transition.of(
                     property = "margin",
                     duration = 500.ms,
-                    timingFunction = null, delay = experience.ordinal * 80.ms
+                    delay = experience.ordinal * 80.ms,
                 )
             ),
         experience = experience
