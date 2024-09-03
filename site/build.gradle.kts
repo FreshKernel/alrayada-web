@@ -2,10 +2,11 @@ import com.varabyte.kobweb.gradle.application.extensions.AppBlock
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
 import kotlinx.html.link
 import kotlinx.html.meta
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.jetbrains.compose)
+    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kobweb.application)
 }
 
@@ -132,26 +133,26 @@ kobweb {
             }
             description.set(webDesc)
         }
-
-        // Only legacy sites need this set. Sites built after 0.16.0 should default to DISALLOW.
-        // See https://github.com/varabyte/kobweb#legacy-routes for more information.
-        legacyRouteRedirectStrategy.set(AppBlock.LegacyRouteRedirectStrategy.DISALLOW)
     }
 }
 
 kotlin {
     configAsKobwebApplication("app", includeServer = false)
+    js {
+        @OptIn(ExperimentalKotlinGradlePluginApi::class)
+        compilerOptions.target = "es2015"
+    }
 
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(compose.runtime)
+                implementation(libs.compose.runtime)
             }
         }
 
         val jsMain by getting {
             dependencies {
-                implementation(compose.html.core)
+                implementation(libs.compose.html.core)
                 implementation(libs.kobweb.silk)
 //                implementation(libs.silk.icons.fa)
 //                implementation(libs.kobweb.silk.icons.fa)

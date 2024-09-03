@@ -7,7 +7,7 @@ import net.freshplatform.alrayada_web.utils.extensions.requireElementByThisId
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px

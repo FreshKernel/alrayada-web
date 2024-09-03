@@ -6,13 +6,13 @@ import net.freshplatform.alrayada_web.models.HomePageSections
 import net.freshplatform.alrayada_web.sections.contact.components.ContactForm
 import net.freshplatform.alrayada_web.utils.ObserveViewportEntered
 import net.freshplatform.alrayada_web.utils.constants.Constants
-import com.varabyte.kobweb.compose.css.CSSTransition
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -66,7 +66,13 @@ private fun ContactContent() {
                     if (!Constants.ANIMATION_ENABLED) return@transform
                     rotate(animatedRotation.deg)
                 }
-                .transition(CSSTransition(property = "transform", duration = 500.ms)),
+                .transition(
+                    Transition.of(
+                        property = "transform",
+                        duration = 500.ms,
+                        delay = null
+                    )
+                ),
             section = HomePageSections.Contact,
             alignment = Alignment.CenterHorizontally
         )

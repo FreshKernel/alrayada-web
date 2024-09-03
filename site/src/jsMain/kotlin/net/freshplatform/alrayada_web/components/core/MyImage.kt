@@ -4,7 +4,6 @@ import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.attrsModifier
 import com.varabyte.kobweb.silk.components.graphics.Image
-import com.varabyte.kobweb.silk.components.style.ComponentVariant
 
 @Composable
 fun MyImage(
@@ -12,7 +11,6 @@ fun MyImage(
     contentDescription: String,
     modifier: Modifier = Modifier,
     autoPrefix: Boolean = true,
-    variant: ComponentVariant? = null,
     lazyLoading: Boolean = true,
 ) {
 //    var isLoading by remember { mutableStateOf(true) }
@@ -46,6 +44,5 @@ fun MyImage(
                 }
             },
         autoPrefix = autoPrefix,
-        variant = variant
     )
 }

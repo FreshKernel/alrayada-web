@@ -11,9 +11,9 @@ import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
-import com.varabyte.kobweb.silk.components.style.ComponentStyle
-import com.varabyte.kobweb.silk.components.style.hover
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.selectors.hover
+import com.varabyte.kobweb.silk.style.toModifier
 import kotlinx.browser.window
 import net.freshplatform.alrayada_web.components.core.MyImage
 import net.freshplatform.alrayada_web.components.stars.RatingBar
@@ -25,11 +25,11 @@ import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 
-val OldProductImageStyle by ComponentStyle {
+val OldProductImageStyle = CssStyle {
     base {
         Modifier
             .filter(grayscale(0.percent))
-            .transition(CSSTransition(property = "filter", duration = 240.ms))
+            .transition(Transition.of(property = "filter", duration = 240.ms))
     }
     hover {
         Modifier

@@ -1,8 +1,8 @@
 package net.freshplatform.alrayada_web.sections.main.compoments
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.TextAlign
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -22,10 +22,10 @@ fun MobileNavigation(modifier: Modifier = Modifier) {
 //            .backgroundColor(rgba(128, 128, 128, 0.5))
 //            .fillMaxWidth()
             .transition(
-                CSSTransition(
-                    property = "height", duration = 330.ms
+                Transition.of(
+                    property = "height", duration = 330.ms,
                 ),
-                CSSTransition(
+                Transition.of(
                     property = "background-color", duration = 300.ms
                 ),
             )

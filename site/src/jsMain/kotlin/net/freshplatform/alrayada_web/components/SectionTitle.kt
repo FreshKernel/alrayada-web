@@ -7,9 +7,9 @@ import net.freshplatform.alrayada_web.models.HomePageSections
 import net.freshplatform.alrayada_web.models.ThemeColors
 import net.freshplatform.alrayada_web.utils.ObserveViewportEntered
 import net.freshplatform.alrayada_web.utils.constants.Constants
-import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextAlign
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
@@ -66,7 +66,7 @@ fun SectionTitle(
                     bottom = 0.px
                 )
                 .transition(
-                    CSSTransition(property = "margin", duration = 300.ms)
+                    Transition.of(property = "margin", duration = 300.ms)
                 ),
             fontSize = 25.px,
             color = ThemeColors.Primary.colorValue
@@ -86,7 +86,7 @@ fun SectionTitle(
                     top = 0.px
                 )
                 .transition(
-                    CSSTransition(property = "margin", duration = 300.ms)
+                    Transition.of(property = "margin", duration = 300.ms)
                 )
                 .fontWeight(FontWeight.Bold),
             fontSize = 35.px,

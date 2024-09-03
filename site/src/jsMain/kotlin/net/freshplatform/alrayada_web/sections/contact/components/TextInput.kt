@@ -2,19 +2,19 @@ package net.freshplatform.alrayada_web.sections.contact.components
 
 import androidx.compose.runtime.Composable
 import net.freshplatform.alrayada_web.models.ThemeColors
-import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.Resize
+import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.attrsModifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
-import com.varabyte.kobweb.silk.components.style.ComponentStyle
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.components.style.focus
-import com.varabyte.kobweb.silk.components.style.placeholderShown
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.selectors.focus
+import com.varabyte.kobweb.silk.style.selectors.placeholderShown
+import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.attributes.InputType
 import org.jetbrains.compose.web.css.Color
@@ -26,7 +26,7 @@ import org.jetbrains.compose.web.dom.Label
 import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.dom.TextArea
 
-val MyTextInputStyle by ComponentStyle {
+val MyTextInputStyle = CssStyle {
     base {
         Modifier
             .border(width = 2.px, style = LineStyle.Solid, color = ThemeColors.LightGray.colorValue)
@@ -35,9 +35,9 @@ val MyTextInputStyle by ComponentStyle {
             .fontSize(18.px)
             .padding(12.px)
             .transition(
-                CSSTransition(property = "border-color", duration = 150.ms),
+                Transition.of(property = "border-color", duration = 150.ms),
 //                CSSTransition(property = "border-width", duration = 150.ms),
-                CSSTransition(property = "border-shadow", duration = 200.ms),
+                Transition.of(property = "border-shadow", duration = 200.ms),
             )
     }
     placeholderShown {

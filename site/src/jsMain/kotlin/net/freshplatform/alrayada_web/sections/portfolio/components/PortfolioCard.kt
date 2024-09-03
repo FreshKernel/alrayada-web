@@ -23,7 +23,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.style.toModifier
 import kotlinx.browser.window
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
