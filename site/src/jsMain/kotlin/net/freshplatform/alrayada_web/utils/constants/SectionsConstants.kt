@@ -1,6 +1,6 @@
 package net.freshplatform.alrayada_web.utils.constants
 
-import net.freshplatform.alrayada_web.core.router.AppRouter
+import net.freshplatform.alrayada_web.core.router.Routes
 
 object SectionsConstants {
     object Location {
@@ -19,7 +19,7 @@ object SectionsConstants {
     }
 
     object MobileApp {
-        private const val DYNAMIC_DOWNLOAD_LINK = AppRouter.DOWNLOAD_MOBILE_APP
+        private const val DYNAMIC_DOWNLOAD_LINK = Routes.DOWNLOAD_MOBILE_APP
         const val GOOGLE_PLAY = "https://play.google.com/store/apps/details?id=net.freshplatform.alrayada"
         const val APPLE_APP_STORE = DYNAMIC_DOWNLOAD_LINK
     }

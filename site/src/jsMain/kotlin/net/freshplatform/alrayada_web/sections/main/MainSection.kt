@@ -83,13 +83,12 @@ private fun MainContent() = Column(
     ) {
         val numColumns = numColumns(base = 1, md = 2)
         val breakpoint = rememberBreakpoint()
-        println(if(breakpoint >= Breakpoint.LG) 80.percent else 90.percent)
         SimpleGrid(
             modifier = Modifier
                 .displayIfAtLeast(Breakpoint.LG)
                 .fillMaxHeight()
                 .fillMaxWidth(
-                    if(breakpoint >= Breakpoint.LG) 80.percent else 90.percent
+                    if (breakpoint >= Breakpoint.LG) 80.percent else 90.percent
                 ),
             numColumns = numColumns
         ) {

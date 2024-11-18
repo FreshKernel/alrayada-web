@@ -1,65 +1,91 @@
-# Alrayada Web
+# 🌐 Alrayada Web
 
-## Table of Contents
-- [Alrayada Web](#alrayada-web)
-  - [Table of Contents](#table-of-contents)
-  - [About](#about)
-  - [How to run](#how-to-run)
-  - [Export as static website](#export-as-static-website)
-  - [Known issues](#known-issues)
-  - [License](#license)
-  - [Credits](#credits)
+A production landing page for [**Alrayada Alarabiah**](https://alrayada.net/)
+built using [Kobweb](https://kobweb.varabyte.com/),
+a [Kotlin](https://kotlinlang.org/) web framework
+built on [Compose HTML](https://github.com/JetBrains/compose-multiplatform#compose-html)
+that targets [Kotlin/JS](https://kotlinlang.org/docs/js-overview.html).
 
-## About
+---
 
-A productive project developed for [Alrayada Alarabiah](https://alrayada.net/)
-using Kotlin JS
+<p>
+  <img alt="A screenshot of the main section on the website" src="readme-assets/main-section.png" width="1450" />
+  <img alt="A screenshot of our values section on the website" src="readme-assets/our-values-section.png" height="400" />
+  &nbsp;&nbsp;
+  <img alt="A screenshot of the work experience section on the website" src="readme-assets/work-experience-section.png" height="400" />
+</p>
 
-The project is built using [Kobweb](https://kobweb.varabyte.com/) framework which is
-built on top of Compose for HTML
+## 📚 Table of contents
 
-Compose for HTML is under active development
-and Kobweb is built on top of it, and
-it adds some extra features, like static rendering for improved SEO
+- [▶️ Run](#-run)
+- [📋 Development Prerequisites](#-development-prerequisites)
+- [📦 Export](#-export)
+- [🐞 Known issues](#-known-issues)
+- [🍴Forking Guidelines](#forking-guidelines)
+- [📜 Acknowledgments](#-acknowledgments)
 
-Better live reload, markdown, the basics more similar to Compose Multiplatform
+## 📋 Development Prerequisites
 
-## How to run
-1. Clone the repository and download IntelliJ IDEA or use your favorite IDE
-2. Make sure you have at least JDK 11, I recommend JDK 17 at the current time 
-3. Download the [Kobweb binary](https://github.com/varabyte/kobweb#install-the-kobweb-binary) and follow the steps there
-4. Go to **SectionsConstants.kt** in `utils.constants` and please make sure the `FORM_URL` constant in the object `About` is empty or replace it with yours
-5. Open the project in the terminal or in the integrated terminal in IDE and cd to `site` folder
-6. Run `kobweb run` in the command line
+* [Kobweb CLI](https://github.com/varabyte/kobweb#install-the-kobweb-binary).
+* JDK 11 or newer versions.
+  Suggests [Adoptium](https://adoptium.net/)
+  or [Amazon Corretto](https://aws.amazon.com/corretto/).
+* Suggests [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/) installed
+  using [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/).
 
-![Website 1](images/img.png)
-![Website 2](images/img2.png)
+## ▶️ Run
 
-## Export as static website
-First navigate to the site module.
-Run
-`kobweb export --layout static`
-in the command line and you will get the output in
-`site/.kobweb/site`
+**To run in development mode**:
 
-To try it out, run `kobweb run --layout static --env prod`
+```shell
+$ git clone https://github.com/FreshKernel/alrayada-web.git --depth 1
+$ (cd alrayada-web && kobweb run -p site --layout static)
+```
 
-or you can run it in development mode directly
-`kobweb run`
+For more details,
+refer to [Kobweb static layout vs full stack sites](https://github.com/varabyte/kobweb#static-layout-vs-full-stack-sites).
 
-## Known issues
-* When navigate to the policy page in the menu and scroll to the very end, you will get error messages about the sections of previous page if the Animations is enabled, by `ObserveViewportEntered()` function, the error messages are in the log are NullPointerException, it doesn't cause any issues, but it shouldn't happen, when we navigate to different page, all the listeners and things registered should be disposed or paused automatically by the framework to save some memory.
-* Rtl direction is not supported yet, but it's not needed for now.
-* When you open the localized page url and navigate to different url, then refresh it will revert the language to the default device language, but as I said 95% of the users of this landing page are english users, I will wait while kobweb is getting improved to the next level then I plan on improve the website to the next level, the multi-language support is still experimental
+## 📦 Export
 
-## License
-This project is licensed under the MIT License.
-Just remember to change assets that related to the branding or the naming in your fork.
+**To export the site for production**:
 
-## Credits
-* Thanks to [Kobweb](https://kobweb.varabyte.com/) to make the core UI elements from Compose Multiplatform like Row, Column, Box, Modifier as well as other features
-* Thanks to [Jetbrains](https://www.jetbrains.com/) for Kotlin, IntelliJ IDEA Community Edition, and Compose for Web
-* Thanks to the welcoming community
-* Thanks to [FontAwesome](https://fontawesome.com/) for crafting the Awesome Icons
-* Thanks to [Alrayada Alarabiah](https://alrayada.net/) to actually use the website to provide the services, I often create toy projects and push them on GitHub with no use
-* The base design is inspired by [Tanbir Ahmed](https://www.behance.net/gallery/90079519/Resume-Landing-page/modules/520796495), thanks to his time
+```shell
+$ cd site # Inside the repo root directory
+$ kobweb export --layout static # Output in site/.kobweb/site 
+$ kobweb run --layout static --env prod # To run the exported site
+```
+
+For more details, refer to [Kobweb exporting and running](https://github.com/varabyte/kobweb#exporting-and-running).
+
+## 🐞 Known issues
+
+* Navigate to the privacy policy page using the menu, scroll to the very end, a `NullPointerException` will be thrown
+  from the sections of previous page if the animations are enabled, specifically from the `ObserveViewportEntered()`,
+  all listeners and events should be disposed when no longer needed.
+* Rtl isn't supported yet, currently not a priority.
+* Open the localized page URL (`/en`), navigate to the privacy policy page, refresh the page and will load the site
+  default language.
+
+## 🍴Forking Guidelines
+
+This information is for internal use and should be replaced when forking or adapting this project.
+
+* The details in the
+  file [SectionsConstants.kt](./site/src/jsMain/kotlin/net/freshplatform/alrayada_web/utils/constants/SectionsConstants.kt)
+  especially the `FORM_URL`.
+* The images related to the brand are in the [assets](./site/src/jsMain/resources/public/assets) directory.
+* The naming in:
+    * [site.webmanifest](./site/src/jsMain/resources/public/site.webmanifest), [sitemap.xml](./site/src/jsMain/resources/public/sitemap.xml).
+    * The domain `alrayada.net`.
+    * In the [site's source code](site/src/jsMain/kotlin/net/freshplatform/alrayada_web).
+    * In the [site's build.gradle.kts](./site/build.gradle.kts).
+
+## 📜 Acknowledgments
+
+* [Kobweb](https://kobweb.varabyte.com/) - For providing essential tools for building web applications.
+* [Jetbrains](https://www.jetbrains.com/) - For their development tools,
+  including [IntelliJ IDEA Community Edition](https://github.com/JetBrains/intellij-community)
+  and [Kotlin](https://kotlinlang.org/).
+* [FontAwesome](https://fontawesome.com/) - For the awesome icons.
+* [Tanbir Ahmed](https://www.behance.net/gallery/90079519/Resume-Landing-page/modules/520796495) - For the design
+  inspiration.

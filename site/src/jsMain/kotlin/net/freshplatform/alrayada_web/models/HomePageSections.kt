@@ -2,7 +2,7 @@ package net.freshplatform.alrayada_web.models
 
 import androidx.compose.runtime.Composable
 import net.freshplatform.alrayada_web.core.data.StringRes
-import net.freshplatform.alrayada_web.core.router.AppRouter
+import net.freshplatform.alrayada_web.core.router.Routes
 import net.freshplatform.alrayada_web.sections.about.AboutSection
 import net.freshplatform.alrayada_web.sections.achievement.AchievementSection
 import net.freshplatform.alrayada_web.sections.assistance.AssistanceSection
@@ -150,7 +150,7 @@ enum class HomePageSections(
             NavigationLink.HomePageSection(Products),
             NavigationLink.Page(
                 StringRes.Privacy,
-                AppRouter.PRIVACY_POLICY
+                Routes.PRIVACY_POLICY
             )
         )
     }

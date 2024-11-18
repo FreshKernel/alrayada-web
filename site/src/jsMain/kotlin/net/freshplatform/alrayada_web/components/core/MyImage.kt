@@ -10,7 +10,6 @@ fun MyImage(
     src: String,
     contentDescription: String,
     modifier: Modifier = Modifier,
-    autoPrefix: Boolean = true,
     lazyLoading: Boolean = true,
 ) {
 //    var isLoading by remember { mutableStateOf(true) }
@@ -43,6 +42,5 @@ fun MyImage(
                     attr("loading", "lazy")
                 }
             },
-        autoPrefix = autoPrefix,
     )
 }

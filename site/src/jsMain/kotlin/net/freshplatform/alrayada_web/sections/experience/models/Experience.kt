@@ -30,7 +30,7 @@ enum class Experience(
         number = "03",
         jobPosition = "Web Developer",
         description = Constants.LOREM_IPSUM_LONG,
-        company = "Fresh Platform",
+        company = "Fresh Kernel",
         from = "March 2015",
         to = "2019"
     ),

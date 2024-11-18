@@ -3,6 +3,7 @@ package net.freshplatform.alrayada_web
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import com.varabyte.kobweb.compose.css.Overflow
+import com.varabyte.kobweb.compose.css.ScrollBehavior
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
@@ -11,6 +12,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.minHeight
 import com.varabyte.kobweb.compose.ui.modifiers.overflow
 import com.varabyte.kobweb.compose.ui.modifiers.rotate
+import com.varabyte.kobweb.compose.ui.modifiers.scrollBehavior
 import com.varabyte.kobweb.compose.ui.modifiers.width
 import com.varabyte.kobweb.core.App
 import com.varabyte.kobweb.silk.SilkApp
@@ -23,6 +25,8 @@ import com.varabyte.kobweb.silk.style.toModifier
 import net.freshplatform.alrayada_web.core.data.StringRes
 import net.freshplatform.alrayada_web.core.services.localization.getStringResource
 import net.freshplatform.alrayada_web.utils.updateDocument
+import org.jetbrains.compose.web.css.CSSMediaQuery
+import org.jetbrains.compose.web.css.StylePropertyValue
 import org.jetbrains.compose.web.css.deg
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.rgba
@@ -58,11 +62,20 @@ fun initSilk(ctx: InitSilkContext) {
     }
 }
 
+// https://github.com/varabyte/kobweb/releases/tag/v0.19.2
+@InitSilk
+fun enableSiteWideSmoothScrolling(ctx: InitSilkContext) = ctx.stylesheet.apply {
+    registerStyle("html") {
+        cssRule(CSSMediaQuery.MediaFeature("prefers-reduced-motion", StylePropertyValue("no-preference"))) {
+            Modifier.scrollBehavior(ScrollBehavior.Smooth)
+        }
+    }
+}
+
 @App
 @Composable
-fun MyApp(content: @Composable () -> Unit) {
+fun AppEntry(content: @Composable () -> Unit) {
     SilkApp {
-
         LaunchedEffect(Unit) {
             updateDocument {
                 title = getStringResource(StringRes.AlrayadaAlarabiah)
