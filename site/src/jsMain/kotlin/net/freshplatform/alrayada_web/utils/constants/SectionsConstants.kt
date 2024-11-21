@@ -1,6 +1,7 @@
 package net.freshplatform.alrayada_web.utils.constants
 
 import net.freshplatform.alrayada_web.core.router.Routes
+import net.freshplatform.alrayada_web.js.encodeURIComponent
 
 object SectionsConstants {
     object Location {
@@ -15,7 +16,7 @@ object SectionsConstants {
         const val FORM_URL = "https://formspree.io/f/xjvqwrjq"
         private const val WHATSAPP_URL = "https://wa.me/+9647901520604"
 
-        fun whatsappUrlWithText(text: String) = "${WHATSAPP_URL}?text=${js("encodeURIComponent")(text) as String}"
+        fun whatsappUrlWithText(text: String) = "${WHATSAPP_URL}?text=${encodeURIComponent(text)}"
     }
 
     object MobileApp {

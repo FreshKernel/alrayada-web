@@ -141,6 +141,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(libs.compose.runtime)
+            implementation(kotlin("test"))
         }
 
         jsMain.dependencies {
