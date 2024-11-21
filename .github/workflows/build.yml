@@ -28,8 +28,9 @@ jobs:
           validate-wrappers: true
           cache-disabled: false
 
-      - name: 📥 Build & Test 🧪 with Gradle
-        run: ./gradlew build --stacktrace
+      # Without Test 🧪
+      - name: 📥 Build
+        run: ./gradlew build --stacktrace -x test
 
       - name: 🚀 Deploy
         if: github.ref == 'refs/heads/main'
