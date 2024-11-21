@@ -38,7 +38,7 @@ that targets [Kotlin/JS](https://kotlinlang.org/docs/js-overview.html).
 **To run in development mode**:
 
 ```shell
-$ git clone https://github.com/FreshKernel/alrayada-web.git --depth 1
+$ git clone --depth 1 https://github.com/FreshKernel/alrayada-web.git
 $ (cd alrayada-web && kobweb run -p site --layout static)
 ```
 
@@ -75,10 +75,10 @@ This information is for internal use and should be replaced when forking or adap
   especially the `FORM_URL`.
 * The images related to the brand are in the [assets](./site/src/jsMain/resources/public/assets) directory.
 * The naming in:
-    * [site.webmanifest](./site/src/jsMain/resources/public/site.webmanifest), [sitemap.xml](./site/src/jsMain/resources/public/sitemap.xml).
-    * The domain `alrayada.net`.
-    * In the [site's source code](site/src/jsMain/kotlin/net/freshplatform/alrayada_web).
-    * In the [site's build.gradle.kts](./site/build.gradle.kts).
+  * [site.webmanifest](./site/src/jsMain/resources/public/site.webmanifest), [sitemap.xml](./site/src/jsMain/resources/public/sitemap.xml).
+  * The domain `alrayada.net`.
+  * In the [site's source code](site/src/jsMain/kotlin/net/freshplatform/alrayada_web).
+  * In the [site's build.gradle.kts](./site/build.gradle.kts).
 
 ## 📜 Acknowledgments
 
