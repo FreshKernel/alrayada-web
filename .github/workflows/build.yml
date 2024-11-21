@@ -30,7 +30,7 @@ jobs:
 
       # Without Test 🧪
       - name: 📥 Build
-        run: ./gradlew build --stacktrace -x test
+        run: ./gradlew build --stacktrace -x jsTest -x jsBrowserTest
 
       - name: 🚀 Deploy
         if: github.ref == 'refs/heads/main'
